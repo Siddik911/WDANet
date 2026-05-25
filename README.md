@@ -108,3 +108,31 @@ Smoke test:
 ```bash
 python scripts/week3_smoke_test.py
 ```
+
+
+## Week 4–6 execution
+
+### Week 4: Cross-subject experiments
+```bash
+python -m pip install torch numpy
+python scripts/run_week4_cross_subject.py
+```
+
+### Week 5: Cross-dataset + ablations
+```bash
+python scripts/run_week5_cross_dataset.py
+```
+
+### Week 6: Final metrics + report
+```bash
+python scripts/run_week6_report.py
+cat outputs/week6_report/summary.json
+cat outputs/week6_report/report.md
+```
+
+### One-shot run (Week 4 -> 6)
+```bash
+python scripts/run_week4_cross_subject.py && \
+python scripts/run_week5_cross_dataset.py && \
+python scripts/run_week6_report.py
+```
