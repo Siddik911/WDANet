@@ -86,3 +86,25 @@ Smoke test:
 ```bash
 python scripts/week2_smoke_test.py
 ```
+
+
+## Week 3 implementation (WTC/Sinkhorn + dynamic integration)
+
+Implemented under `src/wdanet_week3`:
+
+- `wtc.py`:
+  - cost matrix `M` via squared Euclidean distance
+  - Sinkhorn/WTC iterative updates for `u`, `v`, `T`, `T_rev`
+- `wasserstein.py`:
+  - forward/reverse Wasserstein distribution discriminator losses
+- `integration.py`:
+  - Eq. (21) integration:
+    `L_total = L_y - (omega * L_g + (1 - omega) * L_l + L_w)`
+
+Also updated Week 2 dynamic adversarial factor to Eq. (6)-(8)-style using per-class local losses.
+
+Smoke test:
+
+```bash
+python scripts/week3_smoke_test.py
+```
