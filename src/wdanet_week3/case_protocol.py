@@ -116,7 +116,19 @@ def run_five_cases(manifest_csv: Path, out_json: Path, cfg: CaseConfig):
 
     datasets = sorted(df["dataset"].unique())
     if len(datasets) < 3:
-        raise RuntimeError(f"Need 3 datasets in manifest; found {datasets}")
+        # graceful fallback: run cross-subject on available datasets only
+        for ds in datasets:
+            sds = df[df.dataset == ds]
+            subs = sorted(sds.subject_id.unique())
+            test_sub = set(subs[::5])
+            tr = sds[~sds.subject_id.isin(test_sub)]
+            te = sds[sds.subject_id.isin(test_sub)]
+            gf, gy, td = train_wdanet_uda(tr, te, cfg, device)
+            out["cases"][f"cross_subject_{ds}"] = eval_classifier(gf, gy, te, td, device)
+        out["warning"] = f"Only {len(datasets)} dataset(s) found in manifest: {datasets}. Cases 3/4 require at least two datasets; full 1-5 protocol requires three."
+        out_json.parent.mkdir(parents=True, exist_ok=True)
+        out_json.write_text(json.dumps(out, indent=2))
+        return out
 
     d1, d2, d3 = datasets[:3]
 

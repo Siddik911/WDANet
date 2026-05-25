@@ -25,12 +25,17 @@ def build_de_feature_store(index_csv: Path, cfg: BuildFeatureConfig) -> Path:
     df = pd.read_csv(index_csv)
     cfg.out_dir.mkdir(parents=True, exist_ok=True)
     rows = []
+    errors = []
+    built_by_dataset = {}
 
     for i, r in df.iterrows():
+        ds = str(r.get("dataset", "unknown"))
         if not bool(r.get("processable_eeg", True)):
+            errors.append({"row": i, "dataset": ds, "file_path": str(r.get("file_path", "")), "reason": "unprocessable_eeg_false"})
             continue
         fp = Path(str(r["file_path"]))
         if not fp.exists():
+            errors.append({"row": i, "dataset": ds, "file_path": str(fp), "reason": "file_not_found"})
             continue
         try:
             windows, fs, ch_names = preprocess_file_to_windows(
@@ -44,7 +49,8 @@ def build_de_feature_store(index_csv: Path, cfg: BuildFeatureConfig) -> Path:
             if windows.shape[0] == 0:
                 continue
             feats, bands = extract_de_features(windows, fs=fs)
-        except Exception:
+        except Exception as e:
+            errors.append({"row": i, "dataset": ds, "file_path": str(fp), "reason": f"preprocess_error:{type(e).__name__}:{e}"})
             continue
 
         out_fp = cfg.out_dir / f"sample_{i:06d}.npz"
@@ -58,6 +64,7 @@ def build_de_feature_store(index_csv: Path, cfg: BuildFeatureConfig) -> Path:
             ch_names=np.array(ch_names, dtype=object),
             bands=np.array(bands, dtype=object),
         )
+        built_by_dataset[ds] = built_by_dataset.get(ds, 0) + 1
         rows.append(
             {
                 "feature_path": str(out_fp),
@@ -77,5 +84,9 @@ def build_de_feature_store(index_csv: Path, cfg: BuildFeatureConfig) -> Path:
         "notch_hz": cfg.notch_hz,
         "apply_car": cfg.apply_car,
     }
+    meta["built_by_dataset"] = built_by_dataset
+    meta["n_errors"] = len(errors)
     (cfg.out_dir / "meta.json").write_text(json.dumps(meta, indent=2))
+    if errors:
+        pd.DataFrame(errors).to_csv(cfg.out_dir / "errors.csv", index=False)
     return manifest

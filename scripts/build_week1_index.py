@@ -25,7 +25,9 @@ def main() -> None:
     ds1 = _first_existing(
         [
             Path("/home/hasan/EEG/Dataset/MODMA_128_channel_resting/EEG_128channels_ERP_lanzhou_2015"),
+            Path("/home/hasan/EEG/Dataset/MODMA_128_channel_resting"),
             Path.home() / "EEG/Dataset/MODMA_128_channel_resting/EEG_128channels_ERP_lanzhou_2015",
+            Path.home() / "EEG/Dataset/MODMA_128_channel_resting",
         ]
     )
     ds2 = _first_existing(

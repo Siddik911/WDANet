@@ -26,6 +26,12 @@ def main() -> None:
         BuildFeatureConfig(out_dir=args.out, win_sec=args.win_sec, stride_sec=args.stride_sec),
     )
     print(f"Wrote feature manifest: {manifest}")
+    meta = args.out / "meta.json"
+    err = args.out / "errors.csv"
+    if meta.exists():
+        print(f"Meta: {meta}")
+    if err.exists():
+        print(f"Errors logged: {err}")
 
 
 if __name__ == "__main__":
