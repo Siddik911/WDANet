@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import numpy as np
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'))) 
 from wdanet_week1.de_features import extract_de_features
 from wdanet_week1.preprocess import preprocess_signal
 
