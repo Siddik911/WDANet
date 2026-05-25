@@ -174,3 +174,17 @@ If you mix datasets with different channel counts, keep `--dim-strategy max` to 
 - Per-fold subject-level validation split is used for model selection.
 - Training includes warmup epochs (supervised-only) before full adversarial+WTC objective.
 - GRL strength `alpha` follows a DANN schedule across epochs.
+
+
+## Author-style evaluation (Cases 1-5 + baselines)
+
+Run:
+```bash
+python scripts/evaluate_author_protocol.py --manifest data/features_de/manifest.csv
+```
+
+Outputs `outputs/author_eval/author_style_eval.json` with:
+- cross-subject per dataset (Cases 1/2/5)
+- cross-dataset transfers (Cases 3/4 approximation)
+- baseline metrics (DT, kNN, SVM, NB, BNN)
+- metrics: accuracy, F1, sensitivity, specificity
