@@ -35,26 +35,50 @@ def _suffix2(path: Path) -> str:
 
 def index_modma_128(cfg: DatasetConfig) -> pd.DataFrame:
     info_files = list(cfg.path.glob("*subjects_information*.xlsx"))
-    recordings = sorted(cfg.path.glob("*.raw"))
     info_df = pd.read_excel(info_files[0]) if info_files else pd.DataFrame()
 
+    eeg_files: list[Path] = []
+    for pat in ["*.edf", "*.edf.gz", "*.set", "*.set.gz", "*.bdf", "*.bdf.gz", "*.fif", "*.fif.gz"]:
+        eeg_files.extend(sorted(cfg.path.glob(pat)))
+
+    raw_files = sorted(cfg.path.glob("*.raw"))
+
     rows = []
-    for rec in recordings:
+    for rec in sorted(set(eeg_files)):
         rows.append(
             {
                 "dataset": cfg.name,
-                "subject_id": _safe_subject_id(rec.stem),
+                "subject_id": _safe_subject_id(rec.stem.replace(".edf", "")),
                 "session": "rest",
                 "label": None,
                 "file_path": str(rec),
-                "format": "raw",
+                "format": _suffix2(rec).lstrip("."),
                 "modality": "eeg",
                 "channels": 128,
                 "metadata_found": not info_df.empty,
-                "processable_eeg": False,
-                "note": "NetStation .raw needs conversion to EDF/SET/BDF/FIF for MNE",
+                "processable_eeg": True,
+                "note": "MODMA EEG file processable via MNE",
             }
         )
+
+    if not rows:
+        for rec in raw_files:
+            rows.append(
+                {
+                    "dataset": cfg.name,
+                    "subject_id": _safe_subject_id(rec.stem),
+                    "session": "rest",
+                    "label": None,
+                    "file_path": str(rec),
+                    "format": "raw",
+                    "modality": "eeg",
+                    "channels": 128,
+                    "metadata_found": not info_df.empty,
+                    "processable_eeg": False,
+                    "note": "NetStation .raw needs conversion to EDF/SET/BDF/FIF for MNE",
+                }
+            )
+
     return pd.DataFrame(rows)
 
 
@@ -92,7 +116,7 @@ def index_openneuro_bids(cfg: DatasetConfig) -> pd.DataFrame:
                 "channels": None,
                 "metadata_found": participants_tsv.exists(),
                 "processable_eeg": processable_eeg,
-                "note": "fMRI file in ds002748" if modality == "fmri" else "",
+                "note": "fMRI file (non-EEG modality)" if modality == "fmri" else "",
             }
         )
     return pd.DataFrame(rows)
