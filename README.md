@@ -152,7 +152,7 @@ python scripts/build_week1_features.py --index data/week1_dataset_index.csv --ou
 
 3) Train WDANet with 10-fold cross-subject:
 ```bash
-python scripts/train_wdanet_real.py --manifest data/features_de/manifest.csv --epochs 30 --batch-size 48 --num-workers 4
+python scripts/train_wdanet_real.py --manifest data/features_de/manifest.csv --epochs 30 --batch-size 48 --num-workers 4 --dim-strategy max
 ```
 
 4) Results:
@@ -164,3 +164,6 @@ cat outputs/real_training/cross_subject_results.json
 - `--batch-size 48` (paper-aligned starting point)
 - if OOM: `--batch-size 24`
 - keep `--num-workers 4` (or 2 on Windows)
+
+
+If you mix datasets with different channel counts, keep `--dim-strategy max` to pad smaller feature vectors and avoid DataLoader stack errors.

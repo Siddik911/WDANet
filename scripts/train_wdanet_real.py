@@ -18,14 +18,14 @@ from torch.optim import Adam
 from wdanet_week2 import FeatureExtractor, LabelClassifier, GlobalDomainDiscriminator, LocalDomainDiscriminatorBank
 from wdanet_week2 import label_classification_loss, global_domain_loss, local_domain_loss, dynamic_adversarial_factor
 from wdanet_week3.integration import compute_wdanet_objective
-from wdanet_week3.real_data import SplitConfig, make_loader, subject_kfold
+from wdanet_week3.real_data import SplitConfig, make_loader, subject_kfold, infer_target_dim
 
 
-def run_fold(train_df, test_df, args, device):
-    train_loader = make_loader(train_df, SplitConfig(batch_size=args.batch_size, num_workers=args.num_workers), shuffle=True)
-    test_loader = make_loader(test_df, SplitConfig(batch_size=args.batch_size, num_workers=args.num_workers), shuffle=False)
+def run_fold(train_df, test_df, args, device, target_dim):
+    train_loader = make_loader(train_df, SplitConfig(batch_size=args.batch_size, num_workers=args.num_workers, target_dim=target_dim), shuffle=True)
+    test_loader = make_loader(test_df, SplitConfig(batch_size=args.batch_size, num_workers=args.num_workers, target_dim=target_dim), shuffle=False)
 
-    in_dim = train_loader.dataset[0][0].numel()
+    in_dim = target_dim
     n_classes = int(max(2, pd.to_numeric(train_df["label"], errors="coerce").fillna(0).astype(int).max() + 1))
 
     gf = FeatureExtractor(in_dim=in_dim, feat_dim=args.feat_dim).to(device)
@@ -88,6 +88,7 @@ def main():
     ap.add_argument("--sinkhorn-lambda", type=float, default=5.0)
     ap.add_argument("--sinkhorn-eps", type=float, default=1e-4)
     ap.add_argument("--sinkhorn-iters", type=int, default=50)
+    ap.add_argument("--dim-strategy", type=str, default="max", choices=["max", "min", "median"])
     args = ap.parse_args()
 
     df = pd.read_csv(args.manifest)
@@ -96,9 +97,12 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
+    target_dim = infer_target_dim(df, strategy=args.dim_strategy)
+    print(f"Using unified feature dim: {target_dim} (strategy={args.dim_strategy})")
+
     results = []
     for k, train_df, test_df in subject_kfold(df, n_splits=10):
-        r = run_fold(train_df, test_df, args, device)
+        r = run_fold(train_df, test_df, args, device, target_dim=target_dim)
         r["fold"] = k
         results.append(r)
         print(f"fold={k} acc={r['acc']:.4f} n_test={r['n_test']}")
