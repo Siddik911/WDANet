@@ -30,9 +30,9 @@ def main() -> None:
     )
     ds2 = _first_existing(
         [
-            Path("/home/hasan/EEG/Dataset/Open Neuro ds002748"),
-            Path.home() / "EEG/Dataset/Open Neuro ds002748",
-            Path("/home/hasan/EEG/Dataset/Mumtaz/open neuro ds002748"),
+            Path("/home/hasan/EEG/Dataset/ds003478-download"),
+            Path.home() / "EEG/Dataset/ds003478-download",
+            Path("/home/hasan/EEG/Dataset/Mumtaz/ds003478-download"),
         ]
     )
     ds3 = _first_existing(
@@ -44,7 +44,7 @@ def main() -> None:
 
     configs = [
         DatasetConfig(name="dataset1_modma128", path=ds1, fmt="modma_raw_128"),
-        DatasetConfig(name="dataset2_openneuro_ds002748", path=ds2, fmt="openneuro_bids", label_key="group"),
+        DatasetConfig(name="dataset2_openneuro_ds003478", path=ds2, fmt="openneuro_bids", label_key="group"),
         DatasetConfig(name="dataset3_mumtaz_edf", path=ds3, fmt="mumtaz_edf"),
     ]
 
