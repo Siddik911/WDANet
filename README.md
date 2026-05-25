@@ -48,3 +48,18 @@ python scripts/convert_to_edf.py \
   ~/EEG/Dataset/ds003478-download/sub-001/eeg/sub-001_task-Rest_run-01_eeg.set \
   ~/EEG/Dataset/ds003478-download/sub-001/eeg/sub-001_task-Rest_run-01_eeg.edf
 ```
+
+
+### EDF export notes
+
+This project uses `mne.export.export_raw(..., fmt="edf")` in `scripts/convert_to_edf.py`.
+For 10-20 datasets, use `--set-1020-montage`.
+If you have unapplied projectors, use `--apply-proj` before export.
+
+Example:
+
+```bash
+python scripts/convert_to_edf.py \
+  --set-1020-montage --apply-proj \
+  <input_eeg_file> <output_file.edf>
+```
