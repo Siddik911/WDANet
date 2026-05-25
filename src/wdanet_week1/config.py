@@ -14,7 +14,7 @@ DEFAULT_BANDS = {
 }
 
 
-@dataclass(slots=True)
+@dataclass
 class DatasetConfig:
     name: str
     path: Path
@@ -22,7 +22,7 @@ class DatasetConfig:
     label_key: str | None = None
 
 
-@dataclass(slots=True)
+@dataclass
 class PipelineConfig:
     sample_rate: float | None = None
     window_sec: float = 10.0
