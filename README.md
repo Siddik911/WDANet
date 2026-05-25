@@ -28,3 +28,9 @@ PYTHONPATH=src python scripts/week1_smoke_test.py
 Output index file:
 
 - `data/week1_dataset_index.csv`
+
+
+## ds002748 note
+
+The provided `ds002748` tree (`sub-*/func/*_bold.nii.gz`) is fMRI, not EEG.
+It is indexed with `modality=fmri` and `processable_eeg=False`, and will be skipped by EEG preprocessing.

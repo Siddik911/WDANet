@@ -32,7 +32,8 @@ def main() -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(out, index=False)
     print(f"Wrote {len(df)} records to {out}")
-    print(df.groupby("dataset").size())
+    if not df.empty:
+        print(df.groupby(["dataset", "modality", "processable_eeg"]).size())
 
 
 if __name__ == "__main__":
