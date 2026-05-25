@@ -33,10 +33,8 @@ def load_raw_with_mne(file_path: str | Path, preload: bool = True) -> mne.io.Bas
         raise UnsupportedModalityError(f"NIfTI fMRI file is not EEG and cannot be loaded by this EEG pipeline: {p}")
 
     if suffixes and suffixes[-1] == ".raw":
-        raise ValueError(
-            f"MNE cannot directly parse NetStation .raw file: {p}. "
-            "Convert to EDF/SET/BDF/FIF first."
-        )
+        # EGI/NetStation raw support via MNE's EGI reader.
+        return mne.io.read_raw_egi(p, preload=preload, verbose="ERROR")
 
     if suffixes and suffixes[-1] == ".gz":
         base_suffix = suffixes[-2] if len(suffixes) >= 2 else ""
