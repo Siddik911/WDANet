@@ -136,3 +136,31 @@ python scripts/run_week4_cross_subject.py && \
 python scripts/run_week5_cross_dataset.py && \
 python scripts/run_week6_report.py
 ```
+
+
+## Real dataset pipeline (RTX 3060 ready)
+
+1) Build index (edit dataset paths if needed):
+```bash
+python scripts/build_week1_index.py
+```
+
+2) Build DE feature store from EEG files:
+```bash
+python scripts/build_week1_features.py --index data/week1_dataset_index.csv --out data/features_de --win-sec 4 --stride-sec 4
+```
+
+3) Train WDANet with 10-fold cross-subject:
+```bash
+python scripts/train_wdanet_real.py --manifest data/features_de/manifest.csv --epochs 30 --batch-size 48 --num-workers 4
+```
+
+4) Results:
+```bash
+cat outputs/real_training/cross_subject_results.json
+```
+
+### Suggested RTX 3060 settings
+- `--batch-size 48` (paper-aligned starting point)
+- if OOM: `--batch-size 24`
+- keep `--num-workers 4` (or 2 on Windows)
