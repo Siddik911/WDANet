@@ -167,3 +167,10 @@ cat outputs/real_training/cross_subject_results.json
 
 
 If you mix datasets with different channel counts, keep `--dim-strategy max` to pad smaller feature vectors and avoid DataLoader stack errors.
+
+
+### Accuracy debugging updates
+- Labels are now remapped to contiguous class IDs at train time.
+- Per-fold subject-level validation split is used for model selection.
+- Training includes warmup epochs (supervised-only) before full adversarial+WTC objective.
+- GRL strength `alpha` follows a DANN schedule across epochs.
