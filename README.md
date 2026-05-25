@@ -63,3 +63,26 @@ python scripts/convert_to_edf.py \
   --set-1020-montage --apply-proj \
   <input_eeg_file> <output_file.edf>
 ```
+
+
+## Week 2 implementation (WDANet modules + GRL + core losses)
+
+Implemented under `src/wdanet_week2`:
+
+- `grl.py`: Gradient Reversal Layer (`GradientReversal`, `grad_reverse`)
+- `models.py`:
+  - `FeatureExtractor` (MLP)
+  - `LabelClassifier`
+  - `GlobalDomainDiscriminator` (with GRL)
+  - `LocalDomainDiscriminator` and `LocalDomainDiscriminatorBank`
+- `losses.py`:
+  - source label CE loss
+  - global domain BCE loss
+  - local class-conditional domain BCE loss
+  - dynamic adversarial factor `omega`
+
+Smoke test:
+
+```bash
+python scripts/week2_smoke_test.py
+```
