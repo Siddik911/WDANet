@@ -136,11 +136,17 @@ def main():
     ap.add_argument("--feat-dim", type=int, default=128)
     ap.add_argument("--lr", type=float, default=5e-4)
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--random-seed", type=int, default=None, help="Alias for --seed")
     ap.add_argument("--sinkhorn-lambda", type=float, default=5.0)
     ap.add_argument("--sinkhorn-eps", type=float, default=1e-4)
     ap.add_argument("--sinkhorn-iters", type=int, default=50)
     ap.add_argument("--dim-strategy", type=str, default="max", choices=["max", "min", "median"])
-    args = ap.parse_args()
+    args, unknown = ap.parse_known_args()
+    if unknown:
+        print(f"Warning: ignoring unknown args: {unknown}")
+
+    if args.random_seed is not None:
+        args.seed = args.random_seed
 
     random.seed(args.seed); torch.manual_seed(args.seed)
 
