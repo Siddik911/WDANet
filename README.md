@@ -188,3 +188,13 @@ Outputs `outputs/author_eval/author_style_eval.json` with:
 - cross-dataset transfers (Cases 3/4 approximation)
 - baseline metrics (DT, kNN, SVM, NB, BNN)
 - metrics: accuracy, F1, sensitivity, specificity
+
+
+## True WDANet five-case evaluation (paper-style protocol)
+
+Run genuine WDANet case runs (not sklearn baselines):
+```bash
+python scripts/run_wdanet_five_cases.py --manifest data/features_de/manifest.csv --epochs 30 --batch-size 48 --lr 5e-4
+```
+
+This writes: `outputs/wdanet_five_cases/results.json` with Case 1..5 metrics (acc, F1, sensitivity, specificity).
