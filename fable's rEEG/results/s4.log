@@ -1,0 +1,188 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage s4 (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...
+      epoch  10/50  loss=0.0067
+      epoch  20/50  loss=0.0012
+      epoch  30/50  loss=0.0012
+      epoch  40/50  loss=0.0003
+      epoch  50/50  loss=0.0008
+    1   2010002  MDD  0.008   HC   .  146     -       -     117.5s
+  ... fold  2/53: training on 52 subjects (held-out sid=2010004) ...
+      epoch  10/50  loss=0.0064
+      epoch  20/50  loss=0.0088
+      epoch  30/50  loss=0.0026
+      epoch  40/50  loss=0.0003
+      epoch  50/50  loss=0.0004
+    2   2010004  MDD  0.105   HC   .   44     -       -     118.9s
+  ... fold  3/53: training on 52 subjects (held-out sid=2010005) ...
+      epoch  10/50  loss=0.0086
+      epoch  20/50  loss=0.0011
+      epoch  30/50  loss=0.0016
+      epoch  40/50  loss=0.0011
+      epoch  50/50  loss=0.0003
+    3   2010005  MDD  0.217   HC   .  120     -       -     121.8s
+  ... fold  4/53: training on 52 subjects (held-out sid=2010006) ...
+      epoch  10/50  loss=0.0113
+      epoch  20/50  loss=0.0025
+      epoch  30/50  loss=0.0005
+      epoch  40/50  loss=0.0003
+      epoch  50/50  loss=0.0008
+    4   2010006  MDD  0.238   HC   .  144     -       -     117.6s
+  ... fold  5/53: training on 52 subjects (held-out sid=2010008) ...
+      epoch  10/50  loss=0.0103
+      epoch  20/50  loss=0.0040
+      epoch  30/50  loss=0.0004
+      epoch  40/50  loss=0.0004
+      epoch  50/50  loss=0.0107
+    5   2010008  MDD  0.825  MDD   Y  130     -       -     126.7s
+  ... fold  6/53: training on 52 subjects (held-out sid=2010010) ...
+      epoch  10/50  loss=0.0068
+      epoch  20/50  loss=0.0013
+      epoch  30/50  loss=0.0011
+      epoch  40/50  loss=0.0002
+      epoch  50/50  loss=0.0003
+    6   2010010  MDD  0.176   HC   .   92     -       -     116.0s
+  ... fold  7/53: training on 52 subjects (held-out sid=2010011) ...
+      epoch  10/50  loss=0.0372
+      epoch  20/50  loss=0.0036
+      epoch  30/50  loss=0.0015
+      epoch  40/50  loss=0.0051
+      epoch  50/50  loss=0.0011
+    7   2010011  MDD  0.000   HC   .  129     -       -     120.4s
+  ... fold  8/53: training on 52 subjects (held-out sid=2010012) ...
+      epoch  10/50  loss=0.0059
+      epoch  20/50  loss=0.0057
+      epoch  30/50  loss=0.0080
+      epoch  40/50  loss=0.0006
+      epoch  50/50  loss=0.0002
+    8   2010012  MDD  0.607  MDD   Y  112     -       -     116.5s
+  ... fold  9/53: training on 52 subjects (held-out sid=2010013) ...
+      epoch  10/50  loss=0.0075
+      epoch  20/50  loss=0.0103
+      epoch  30/50  loss=0.0006
+      epoch  40/50  loss=0.0011
+      epoch  50/50  loss=0.0003
+    9   2010013  MDD  0.944  MDD   Y  141     -       -     117.8s
+  ... fold 10/53: training on 52 subjects (held-out sid=2010015) ...
+      epoch  10/50  loss=0.0042
+      epoch  20/50  loss=0.0020
+      epoch  30/50  loss=0.0005
+      epoch  40/50  loss=0.0004
+      epoch  50/50  loss=0.0017
+   10   2010015  MDD  0.072   HC   .  121     -       -     120.4s
+  ... fold 11/53: training on 52 subjects (held-out sid=2010016) ...
+      epoch  10/50  loss=0.0039
+      epoch  20/50  loss=0.0016
+      epoch  30/50  loss=0.0010
+      epoch  40/50  loss=0.0004
+      epoch  50/50  loss=0.0005
+   11   2010016  MDD  0.599  MDD   Y  146     -       -     113.0s
+  ... fold 12/53: training on 52 subjects (held-out sid=2010018) ...
+      epoch  10/50  loss=0.0331
+      epoch  20/50  loss=0.0013
+      epoch  30/50  loss=0.0020
+      epoch  40/50  loss=0.0005
+      epoch  50/50  loss=0.0003
+   12   2010018  MDD  0.451   HC   .  128     -       -     113.4s
+  ... fold 13/53: training on 52 subjects (held-out sid=2010019) ...
+      epoch  10/50  loss=0.0183
+      epoch  20/50  loss=0.0067
+      epoch  30/50  loss=0.0026
+      epoch  40/50  loss=0.0008
+      epoch  50/50  loss=0.0009
+   13   2010019  MDD  0.109   HC   .  129     -       -     120.2s
+  ... fold 14/53: training on 52 subjects (held-out sid=2010021) ...
+      epoch  10/50  loss=0.0069
+      epoch  20/50  loss=0.0041
+      epoch  30/50  loss=0.0004
+      epoch  40/50  loss=0.0026
+      epoch  50/50  loss=0.0002
+   14   2010021  MDD  0.006   HC   .  134     -       -     115.7s
+  ... fold 15/53: training on 52 subjects (held-out sid=2010022) ...
+      epoch  10/50  loss=0.0056
+      epoch  20/50  loss=0.0013
+      epoch  30/50  loss=0.0014
+      epoch  40/50  loss=0.0006
+      epoch  50/50  loss=0.0005
+   15   2010022  MDD  0.947  MDD   Y  107     -       -     115.8s
+  ... fold 16/53: training on 52 subjects (held-out sid=2010023) ...
+      epoch  10/50  loss=0.0060
+      epoch  20/50  loss=0.0036
+      epoch  30/50  loss=0.0025
+      epoch  40/50  loss=0.0052
+      epoch  50/50  loss=0.0001
+   16   2010023  MDD  0.113   HC   .  139     -       -     116.5s
+  ... fold 17/53: training on 52 subjects (held-out sid=2010024) ...
+      epoch  10/50  loss=0.0046
+      epoch  20/50  loss=0.0029
+      epoch  30/50  loss=0.0009
+      epoch  40/50  loss=0.0020
+      epoch  50/50  loss=0.0002
+   17   2010024  MDD  0.784  MDD   Y  127     -       -     113.8s
+  ... fold 18/53: training on 52 subjects (held-out sid=2010025) ...
+      epoch  10/50  loss=0.0055
+      epoch  20/50  loss=0.0049
+      epoch  30/50  loss=0.0005
+      epoch  40/50  loss=0.0005
+      epoch  50/50  loss=0.0006
+   18   2010025  MDD  0.237   HC   .  135     -       -     112.5s
+  ... fold 19/53: training on 52 subjects (held-out sid=2010026) ...
+      epoch  10/50  loss=0.0082
+      epoch  20/50  loss=0.0016
+      epoch  30/50  loss=0.0009
+      epoch  40/50  loss=0.0004
+      epoch  50/50  loss=0.0002
+   19   2010026  MDD  0.382   HC   .  115     -       -     115.4s
+  ... fold 20/53: training on 52 subjects (held-out sid=2010028) ...
+      epoch  10/50  loss=0.0073
+      epoch  20/50  loss=0.0033
+      epoch  30/50  loss=0.0014
+      epoch  40/50  loss=0.0005
+      epoch  50/50  loss=0.0002
+   20   2010028  MDD  0.700  MDD   Y  134     -       -     117.8s
+  ... fold 21/53: training on 52 subjects (held-out sid=2010030) ...
+      epoch  10/50  loss=0.0047
+      epoch  20/50  loss=0.0034
+      epoch  30/50  loss=0.0007
+      epoch  40/50  loss=0.0016
+      epoch  50/50  loss=0.0004
+   21   2010030  MDD  0.959  MDD   Y  139     -       -     118.1s
+  ... fold 22/53: training on 52 subjects (held-out sid=2010033) ...
+      epoch  10/50  loss=0.0075
+      epoch  20/50  loss=0.0010
+      epoch  30/50  loss=0.0005
+      epoch  40/50  loss=0.0005
+      epoch  50/50  loss=0.0006
+   22   2010033  MDD  0.014   HC   .  144     -       -     114.1s
+  ... fold 23/53: training on 52 subjects (held-out sid=2010034) ...
+      epoch  10/50  loss=0.0046
+      epoch  20/50  loss=0.0013
+      epoch  30/50  loss=0.0007
+      epoch  40/50  loss=0.0006
+      epoch  50/50  loss=0.0002
+   23   2010034  MDD  0.796  MDD   Y   70     -       -     118.6s
+  ... fold 24/53: training on 52 subjects (held-out sid=2010036) ...
+      epoch  10/50  loss=0.0121
+      epoch  20/50  loss=0.0011
+      epoch  30/50  loss=0.0012
+      epoch  40/50  loss=0.0008
+      epoch  50/50  loss=0.0040
+   24   2010036  MDD  0.717  MDD   Y   99     -       -     117.8s
+  ... fold 25/53: training on 52 subjects (held-out sid=2020008) ...
+      epoch  10/50  loss=0.0081
+      epoch  20/50  loss=0.0067
+      epoch  30/50  loss=0.0005
+      epoch  40/50  loss=0.0006
+      epoch  50/50  loss=0.0006
+   25   2020008   HC  0.971  MDD   .   42  0.0000   0.2083  125.6s
+  ... fold 26/53: training on 52 subjects (held-out sid=2020010) ...
+      epoch  10/50  loss=0.0050
+      epoch  20/50  loss=0.0013
+      epoch  30/50  loss=0.0007
+      epoch  40/50  loss=0.0007
+      epoch  50/50  loss=0.0002
+   26   2020010   HC  0.873  MDD   .  112  0.0625   0.2083  117.4s
+  ... fold 27/53: training on 52 subjects (held-out sid=2020013) ...

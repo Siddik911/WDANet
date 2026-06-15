@@ -1,0 +1,57 @@
+Loading MODMA subjects (cached) ...
+  53 subjects total: 24 MDD / 29 HC, 125 channels, 60 windows/subj
+
+Selected domains (subjects) for detailed recenter test:
+  MDD: [2010002, 2010004, 2010005, 2010006, 2010008, 2010010, 2010011, 2010012, 2010013, 2010015]
+  HC : [2020008, 2020010, 2020013, 2020014, 2020015, 2020016, 2020018, 2020019, 2020020, 2020021] 
+
+========================================================================
+[A] Per-domain recenter check:  dist(mean, I)  before -> after
+========================================================================
+       sid  cls   dist_to_I (orig)  dist_to_I (recentred)
+   2010002  MDD            48.2165               1.63e-12
+   2010004  MDD            50.2736               3.08e-12
+   2010005  MDD            41.1600               9.64e-13
+   2010006  MDD            36.2845               4.25e-13
+   2010008  MDD            35.8212               5.21e-13
+   2010010  MDD            36.5961               5.22e-13
+   2010011  MDD            37.0106               7.29e-13
+   2010012  MDD            40.8434               9.31e-13
+   2010013  MDD            52.0357               2.86e-12
+   2010015  MDD            28.5401               2.75e-13
+   2020008   HC            38.4878               4.88e-13
+   2020010   HC            26.7032               2.85e-13
+   2020013   HC            34.1492               3.46e-13
+   2020014   HC            37.9974               5.40e-13
+   2020015   HC            54.3548               5.31e-12
+   2020016   HC            36.9306               4.64e-13
+   2020018   HC            31.0918               4.31e-13
+   2020019   HC            26.8917               2.33e-13
+   2020020   HC            38.4463               8.23e-13
+   2020021   HC            36.3169               5.25e-13
+
+  mean dist(mean, I):  orig = 38.4076   recentred = 1.07e-12
+  => recentring collapses every domain's mean onto I (signal in the mean is erased).
+
+========================================================================
+[B] Decompose the signal: between-subject mean  vs  within-subject residual
+========================================================================
+  subject-mean Riemannian distance:  between-class = 21.3421   within-class = 21.1043
+
+  LOSO AUC from the SUBJECT MEAN only (between-subject signal) : 0.540
+  LOSO AUC from FULL window tangent vectors (mean + residual)  : 0.690
+  LOSO AUC from WITHIN-subject RESIDUAL only (recentring keeps): 0.250
+  => the depression signal lives in the subject MEAN; the within-subject
+     residual that survives recentring is ~chance.
+
+========================================================================
+[C] Actual tangent-space LR head, mini-LOSO on selected domains
+========================================================================
+  [S2 done]
+  S2  corr, NO recenter : AUC = 0.560   mean||LR weights|| = 2.364e+00
+  S3  corr, recenter    : AUC = 0.500   mean||LR weights|| = 0.000e+00
+  => after recentring the LR has nothing to fit (weights ~0) -> AUC ~0.5.
+
+========================================================================
+[D] Control: synthetic WITHIN-subject label (same shift in every domain)
+========================================================================

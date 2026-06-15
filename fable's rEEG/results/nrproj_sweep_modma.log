@@ -1,0 +1,6 @@
+### MODMA-LODO nr-proj-dim sweep (vs proj64=0.592, original=0.707) ###
+--- nr-proj-dim 8 ---
+  Subject-level ROC-AUC : 0.5761   (primary)
+--- nr-proj-dim 16 ---
+  Subject-level ROC-AUC : 0.6322   (primary)
+ALL DONE

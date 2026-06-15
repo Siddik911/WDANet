@@ -1,0 +1,95 @@
+# Papers requiring manual BibTeX entry
+# Updated: 2026-06-15 | refs.bib = 58 verified entries (TNSRE target ~50)
+# Only pursue entries below if you actually \cite them in the paper.
+# Priority marked with *
+
+## NOT YET PUBLISHED — do not cite
+P45 — ReTa-Diffusion (ICLR 2026 under review — not yet published)
+P71 — ICLR 2026 under review — not yet published
+P81 — ICLR 2026 under review — not yet published
+
+## Unstable preprints (cite with caution)
+P18 — Research Square preprint — no stable DOI; not appropriate to cite
+P21 — Research Square preprint — no stable DOI
+P47 — medRxiv preprint — search for published journal version manually
+
+## Theses (use @phdthesis/@mastersthesis if needed)
+P58 — MSc Thesis, Université Laval — cite as @phdthesis if needed
+P59 — PhD Thesis, Università degli Studi di Verona
+P60 — PhD Thesis, Sapienza University of Rome
+P62 — PhD Thesis, University of Auckland
+P63 — Technical Report, University of West Bohemia
+P64 — PhD Thesis, Politecnico di Bari
+
+## Chinese/blocked journal (manual fetch required)
+P43 — Chinese journal (10.7507/1001-5515.202507056) — HTTP 403; add manually if needed
+
+## Unknown venue (manual search required)
+P87 — Unknown venue — Sheaf Neural Networks on SPD Manifolds
+P89 — Unknown venue — Fast and Stable Riemannian SPD Methods
+P90 — Unknown venue — Building Transformation Layers for SPDNet
+
+## API resolution failed (retry or manual lookup)
+P26 — Routing on the Stiefel Manifold: When Does Adaptive Subspace Selection Help for 
+  Reason: arXiv: no match found (Jaccard < 0.45)
+
+P75 — SPDLearn: A Geometric Deep Learning Python Library for Neural Decoding Through T
+  Reason: arXiv: no match found (Jaccard < 0.45)
+
+P80 — Latte: Hyperbolic Lorentz Attention for Joint-Subject EEG Classification
+  Reason: arXiv: no match found (Jaccard < 0.45)
+
+P84 — Beyond Rigid Geometries: The Spline-Pullback Metric for Universal Diffeomorphic 
+  Reason: arXiv: no match found (Jaccard < 0.45)
+
+P85 — Riemannian Adversarial Attacks on Symmetric Positive Definite Matrices
+  Reason: arXiv: no match found (Jaccard < 0.45)
+
+P88 — Riemannian Optimization over Symmetric Positive Definite Matrices with the Alpha
+  Reason: arXiv: no match found (Jaccard < 0.45)
+
+P49 — Riemannian Flow Matching for Brain Connectivity Matrices via Pullback Geometry
+  Reason: Semantic Scholar: no match
+
+P73 — Towards a General Attention Framework on Gyrovector Spaces for Matrix Manifolds
+  Reason: Semantic Scholar: no match
+
+P96 — NEED: Cross-Subject and Cross-Task Generalization for Video and Image Reconstruc
+  Reason: Semantic Scholar: no match
+
+P3 — Riemannian High-Order Pooling for Brain Foundation Models
+  Reason: Semantic Scholar: no match
+
+P27 — Geometric Moment Alignment for Domain Adaptation via Siegel Embeddings
+  Reason: Semantic Scholar: no match
+
+P46 — HybridRDG: Zero-Shot ASD Biomarker Detection from Multi-Paradigm EEG via Hybrid 
+  Reason: Semantic Scholar: no match
+
+P50 — PSDNorm: Test-Time Temporal Normalization for Deep Learning in Sleep Staging
+  Reason: Semantic Scholar: no match
+
+P76 — Channel Adaptation for EEG Foundation Models: A Systematic Benchmark
+  Reason: Semantic Scholar: no match
+
+P77 — EEG-Deformer: A Dense Convolutional Transformer for Brain-Computer Interfaces
+  Reason: Semantic Scholar: no match
+
+P78 — NeuroPhysNet: A FitzHugh-Nagumo-Based Physics-Informed Neural Network for EEG An
+  Reason: Semantic Scholar: no match
+
+P70 — Res2SPDNet: Multi-Granularity SPD Matrix Residual Learning for Signal Classifica
+  Reason: Semantic Scholar: no match
+
+P97 — Outlier Detection for Riemannian Manifold-Valued Functional Data
+  Reason: Semantic Scholar: no match
+
+P4 — A Sliced-Wasserstein Framework on Correlation Matrices for EEG Decoding
+  Reason: DOI fetch failed (tried doi.org + CrossRef + S2)
+
+P34 — FB-RCSP-RA: A Filter-Bank Regularized CSP Framework with Per-Band Riemannian Ali
+  Reason: HAL: no match
+
+P66 — ARMAGNAC: A New Parametric Batch Normalization Layer for SPDNet Architecture
+  Reason: HAL: no match
+

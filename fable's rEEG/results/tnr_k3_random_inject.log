@@ -1,0 +1,177 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage tnr (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...
+      [tnr sid=2010002 ctrl=random_inject] Vdrift=0.498rad  score=0.555
+    1   2010002  MDD  0.555  MDD   Y  120     -       -     172.9s
+  ... fold  2/53: training on 52 subjects (held-out sid=2010004) ...
+      [tnr sid=2010004 ctrl=random_inject] Vdrift=0.033rad  score=0.921
+    2   2010004  MDD  0.921  MDD   Y   44     -       -      14.5s
+  ... fold  3/53: training on 52 subjects (held-out sid=2010005) ...
+      [tnr sid=2010005 ctrl=random_inject] Vdrift=0.121rad  score=0.214
+    3   2010005  MDD  0.214   HC   .  120     -       -      11.8s
+  ... fold  4/53: training on 52 subjects (held-out sid=2010006) ...
+      [tnr sid=2010006 ctrl=random_inject] Vdrift=0.046rad  score=0.090
+    4   2010006  MDD  0.090   HC   .  120     -       -      11.4s
+  ... fold  5/53: training on 52 subjects (held-out sid=2010008) ...
+      [tnr sid=2010008 ctrl=random_inject] Vdrift=0.257rad  score=0.619
+    5   2010008  MDD  0.619  MDD   Y  120     -       -      11.4s
+  ... fold  6/53: training on 52 subjects (held-out sid=2010010) ...
+      [tnr sid=2010010 ctrl=random_inject] Vdrift=0.258rad  score=0.637
+    6   2010010  MDD  0.637  MDD   Y   92     -       -      12.3s
+  ... fold  7/53: training on 52 subjects (held-out sid=2010011) ...
+      [tnr sid=2010011 ctrl=random_inject] Vdrift=0.373rad  score=0.064
+    7   2010011  MDD  0.064   HC   .  120     -       -      12.9s
+  ... fold  8/53: training on 52 subjects (held-out sid=2010012) ...
+      [tnr sid=2010012 ctrl=random_inject] Vdrift=0.044rad  score=0.971
+    8   2010012  MDD  0.971  MDD   Y  112     -       -      12.0s
+  ... fold  9/53: training on 52 subjects (held-out sid=2010013) ...
+      [tnr sid=2010013 ctrl=random_inject] Vdrift=0.383rad  score=0.999
+    9   2010013  MDD  0.999  MDD   Y  120     -       -       9.8s
+  ... fold 10/53: training on 52 subjects (held-out sid=2010015) ...
+      [tnr sid=2010015 ctrl=random_inject] Vdrift=0.160rad  score=0.018
+   10   2010015  MDD  0.018   HC   .  120     -       -       9.0s
+  ... fold 11/53: training on 52 subjects (held-out sid=2010016) ...
+      [tnr sid=2010016 ctrl=random_inject] Vdrift=0.032rad  score=0.083
+   11   2010016  MDD  0.083   HC   .  120     -       -       8.8s
+  ... fold 12/53: training on 52 subjects (held-out sid=2010018) ...
+      [tnr sid=2010018 ctrl=random_inject] Vdrift=0.543rad  score=0.981
+   12   2010018  MDD  0.981  MDD   Y  120     -       -       8.9s
+  ... fold 13/53: training on 52 subjects (held-out sid=2010019) ...
+      [tnr sid=2010019 ctrl=random_inject] Vdrift=0.089rad  score=0.869
+   13   2010019  MDD  0.869  MDD   Y  120     -       -       8.9s
+  ... fold 14/53: training on 52 subjects (held-out sid=2010021) ...
+      [tnr sid=2010021 ctrl=random_inject] Vdrift=0.590rad  score=0.005
+   14   2010021  MDD  0.005   HC   .  120     -       -       8.8s
+  ... fold 15/53: training on 52 subjects (held-out sid=2010022) ...
+      [tnr sid=2010022 ctrl=random_inject] Vdrift=0.267rad  score=0.913
+   15   2010022  MDD  0.913  MDD   Y  107     -       -       9.0s
+  ... fold 16/53: training on 52 subjects (held-out sid=2010023) ...
+      [tnr sid=2010023 ctrl=random_inject] Vdrift=0.408rad  score=0.466
+   16   2010023  MDD  0.466   HC   .  120     -       -       9.1s
+  ... fold 17/53: training on 52 subjects (held-out sid=2010024) ...
+      [tnr sid=2010024 ctrl=random_inject] Vdrift=0.503rad  score=0.997
+   17   2010024  MDD  0.997  MDD   Y  120     -       -       8.9s
+  ... fold 18/53: training on 52 subjects (held-out sid=2010025) ...
+      [tnr sid=2010025 ctrl=random_inject] Vdrift=0.185rad  score=0.281
+   18   2010025  MDD  0.281   HC   .  120     -       -       9.1s
+  ... fold 19/53: training on 52 subjects (held-out sid=2010026) ...
+      [tnr sid=2010026 ctrl=random_inject] Vdrift=0.042rad  score=0.760
+   19   2010026  MDD  0.760  MDD   Y  115     -       -       9.0s
+  ... fold 20/53: training on 52 subjects (held-out sid=2010028) ...
+      [tnr sid=2010028 ctrl=random_inject] Vdrift=0.176rad  score=0.472
+   20   2010028  MDD  0.472   HC   .  120     -       -       9.0s
+  ... fold 21/53: training on 52 subjects (held-out sid=2010030) ...
+      [tnr sid=2010030 ctrl=random_inject] Vdrift=0.046rad  score=0.997
+   21   2010030  MDD  0.997  MDD   Y  120     -       -       8.8s
+  ... fold 22/53: training on 52 subjects (held-out sid=2010033) ...
+      [tnr sid=2010033 ctrl=random_inject] Vdrift=0.023rad  score=0.182
+   22   2010033  MDD  0.182   HC   .  120     -       -      10.2s
+  ... fold 23/53: training on 52 subjects (held-out sid=2010034) ...
+      [tnr sid=2010034 ctrl=random_inject] Vdrift=0.078rad  score=0.500
+   23   2010034  MDD  0.500   HC   .   70     -       -       9.6s
+  ... fold 24/53: training on 52 subjects (held-out sid=2010036) ...
+      [tnr sid=2010036 ctrl=random_inject] Vdrift=0.024rad  score=0.841
+   24   2010036  MDD  0.841  MDD   Y   99     -       -      10.3s
+  ... fold 25/53: training on 52 subjects (held-out sid=2020008) ...
+      [tnr sid=2020008 ctrl=random_inject] Vdrift=0.185rad  score=0.789
+   25   2020008   HC  0.789  MDD   .   42  0.3750   0.2708    9.6s
+  ... fold 26/53: training on 52 subjects (held-out sid=2020010) ...
+      [tnr sid=2020010 ctrl=random_inject] Vdrift=0.492rad  score=0.005
+   26   2020010   HC  0.005   HC   Y  112  0.6667   0.5208    9.5s
+  ... fold 27/53: training on 52 subjects (held-out sid=2020013) ...
+      [tnr sid=2020013 ctrl=random_inject] Vdrift=0.075rad  score=0.005
+   27   2020013   HC  0.005   HC   Y  113  0.7639   0.6042    9.7s
+  ... fold 28/53: training on 52 subjects (held-out sid=2020014) ...
+      [tnr sid=2020014 ctrl=random_inject] Vdrift=0.495rad  score=0.530
+   28   2020014   HC  0.530  MDD   .   66  0.7083   0.5208    9.6s
+  ... fold 29/53: training on 52 subjects (held-out sid=2020015) ...
+      [tnr sid=2020015 ctrl=random_inject] Vdrift=0.064rad  score=0.846
+   29   2020015   HC  0.846  MDD   .  120  0.6333   0.4708    9.5s
+  ... fold 30/53: training on 52 subjects (held-out sid=2020016) ...
+      [tnr sid=2020016 ctrl=random_inject] Vdrift=0.259rad  score=0.343
+   30   2020016   HC  0.343   HC   Y  119  0.6389   0.5208    8.5s
+  ... fold 31/53: training on 52 subjects (held-out sid=2020018) ...
+      [tnr sid=2020018 ctrl=random_inject] Vdrift=0.318rad  score=0.003
+   31   2020018   HC  0.003   HC   Y   95  0.6905   0.5565    8.5s
+  ... fold 32/53: training on 52 subjects (held-out sid=2020019) ...
+      [tnr sid=2020019 ctrl=random_inject] Vdrift=0.153rad  score=0.013
+   32   2020019   HC  0.013   HC   Y   90  0.7240   0.5833    8.8s
+  ... fold 33/53: training on 52 subjects (held-out sid=2020020) ...
+      [tnr sid=2020020 ctrl=random_inject] Vdrift=0.488rad  score=0.164
+   33   2020020   HC  0.164   HC   Y  120  0.7315   0.6042    8.6s
+  ... fold 34/53: training on 52 subjects (held-out sid=2020021) ...
+      [tnr sid=2020021 ctrl=random_inject] Vdrift=0.259rad  score=0.062
+   34   2020021   HC  0.062   HC   Y  120  0.7500   0.6208    8.6s
+  ... fold 35/53: training on 52 subjects (held-out sid=2020022) ...
+      [tnr sid=2020022 ctrl=random_inject] Vdrift=0.036rad  score=0.005
+   35   2020022   HC  0.005   HC   Y  120  0.7689   0.6345    9.1s
+  ... fold 36/53: training on 52 subjects (held-out sid=2020023) ...
+      [tnr sid=2020023 ctrl=random_inject] Vdrift=0.184rad  score=0.958
+   36   2020023   HC  0.958  MDD   .  120  0.7222   0.6042    9.6s
+  ... fold 37/53: training on 52 subjects (held-out sid=2020025) ...
+      [tnr sid=2020025 ctrl=random_inject] Vdrift=0.067rad  score=0.175
+   37   2020025   HC  0.175   HC   Y  120  0.7276   0.6170    9.9s
+  ... fold 38/53: training on 52 subjects (held-out sid=2020026) ...
+      [tnr sid=2020026 ctrl=random_inject] Vdrift=0.248rad  score=0.146
+   38   2020026   HC  0.146   HC   Y  120  0.7321   0.6280    9.9s
+  ... fold 39/53: training on 52 subjects (held-out sid=2020027) ...
+      [tnr sid=2020027 ctrl=random_inject] Vdrift=0.127rad  score=0.291
+   39   2020027   HC  0.291   HC   Y  120  0.7278   0.6375    9.5s
+  ... fold 40/53: training on 52 subjects (held-out sid=2020029) ...
+      [tnr sid=2020029 ctrl=random_inject] Vdrift=0.307rad  score=0.007
+   40   2020029   HC  0.007   HC   Y   96  0.7422   0.6458    9.5s
+  ... fold 41/53: training on 52 subjects (held-out sid=2030002) ...
+      [tnr sid=2030002 ctrl=random_inject] Vdrift=0.162rad  score=0.165
+   41   2030002   HC  0.165   HC   Y  120  0.7451   0.6532    9.4s
+  ... fold 42/53: training on 52 subjects (held-out sid=2030003) ...
+      [tnr sid=2030003 ctrl=random_inject] Vdrift=0.475rad  score=0.163
+   42   2030003   HC  0.163   HC   Y   94  0.7477   0.6597    9.4s
+  ... fold 43/53: training on 52 subjects (held-out sid=2030004) ...
+      [tnr sid=2030004 ctrl=random_inject] Vdrift=0.012rad  score=0.600
+   43   2030004   HC  0.600  MDD   .  120  0.7346   0.6393    9.6s
+  ... fold 44/53: training on 52 subjects (held-out sid=2030005) ...
+      [tnr sid=2030005 ctrl=random_inject] Vdrift=0.051rad  score=0.215
+   44   2030005   HC  0.215   HC   Y   90  0.7333   0.6458    9.9s
+  ... fold 45/53: training on 52 subjects (held-out sid=2030006) ...
+      [tnr sid=2030006 ctrl=random_inject] Vdrift=0.257rad  score=0.000
+   45   2030006   HC  0.000   HC   Y  120  0.7460   0.6518    9.5s
+  ... fold 46/53: training on 52 subjects (held-out sid=2030007) ...
+      [tnr sid=2030007 ctrl=random_inject] Vdrift=0.227rad  score=0.000
+   46   2030007   HC  0.000   HC   Y  120  0.7576   0.6572    9.6s
+  ... fold 47/53: training on 52 subjects (held-out sid=2030009) ...
+      [tnr sid=2030009 ctrl=random_inject] Vdrift=0.202rad  score=0.036
+   47   2030009   HC  0.036   HC   Y   95  0.7645   0.6621    9.7s
+  ... fold 48/53: training on 52 subjects (held-out sid=2030014) ...
+      [tnr sid=2030014 ctrl=random_inject] Vdrift=0.025rad  score=0.939
+   48   2030014   HC  0.939  MDD   .  120  0.7413   0.6458   26.5s
+  ... fold 49/53: training on 52 subjects (held-out sid=2030017) ...
+      [tnr sid=2030017 ctrl=random_inject] Vdrift=0.069rad  score=0.502
+   49   2030017   HC  0.502  MDD   .  120  0.7333   0.6308    9.7s
+  ... fold 50/53: training on 52 subjects (held-out sid=2030018) ...
+      [tnr sid=2030018 ctrl=random_inject] Vdrift=0.122rad  score=0.816
+   50   2030018   HC  0.816  MDD   .  104  0.7196   0.6170   10.0s
+  ... fold 51/53: training on 52 subjects (held-out sid=2030019) ...
+      [tnr sid=2030019 ctrl=random_inject] Vdrift=0.090rad  score=0.001
+   51   2030019   HC  0.001   HC   Y  120  0.7299   0.6227    9.5s
+  ... fold 52/53: training on 52 subjects (held-out sid=2030020) ...
+      [tnr sid=2030020 ctrl=random_inject] Vdrift=0.157rad  score=0.866
+   52   2030020   HC  0.866  MDD   .  120  0.7158   0.6101    9.6s
+  ... fold 53/53: training on 52 subjects (held-out sid=2030021) ...
+      [tnr sid=2030021 ctrl=random_inject] Vdrift=0.026rad  score=0.004
+   53   2030021   HC  0.004   HC   Y  120  0.7256   0.6157    9.5s
+------------------------------------------------------------------------------
+
+FINAL  stage tnr  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.7256   (primary)
+  Balanced accuracy     : 0.6157  @thr=0.50   |  0.6889  @thr=0.182 (Youden)
+  Macro-F1              : 0.6159  @thr=0.50   |  0.6788  @thr=0.182
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        20         9
+  MDD       11        13
+
+Total wall time: 696.9s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/tnr_loso.json

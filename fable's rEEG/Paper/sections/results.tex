@@ -1,0 +1,35 @@
+% ============================================================
+%  Section: Experimental Results
+%  Writing order: SECOND (write after Methods)
+% ============================================================
+\section{Experimental Results}
+\label{sec:results}
+% TODO: Write results.
+% Recommended subsection structure:
+%
+%   \subsection{Datasets}
+%     - Table: dataset name, N subjects, channels, sampling rate, label balance
+%     - MODMA: N~53, note small-N implication for deep networks
+%     - Mumtaz / other datasets used
+%
+%   \subsection{Within-Dataset Performance (Nr\,DE, K=3)}
+%     - Table: per-dataset AUC mean +/- std across LOSO folds
+%     - Claims.csv entries: result claim for K=3 nrde AUC
+%     - Ablation: K=1,2,3,5,10 AUC curve (if available)
+%
+%   \subsection{Cross-Dataset Performance (SpecSPD-DANN)}
+%     - Table: source -> target AUC, mean +/- std, N folds
+%     - Claims.csv entries: result claim for SpecSPD-DANN cross-dataset
+%     - Seed stability analysis (3-5 seeds; report std across seeds)
+%
+%   \subsection{Ablation: Deep Heads vs.\ Riemannian Features}
+%     - Motivation: deep networks overfit at N~53 (see claims.csv BG-003)
+%     - Show AUC degradation with MLP/CNN heads on MODMA
+%
+%   \subsection{Comparison with Prior Work}
+%     - Table: method, dataset, evaluation protocol, AUC/acc reported
+%     - IMPORTANT: only compare methods using equivalent protocols
+%       (no apples-to-oranges with within-subject results) — CLAUDE.md Rule 7
+%
+% Every numeric claim in this section MUST have a claims.csv row
+% with evidence_file pointing to results/*.json or results/*.log.

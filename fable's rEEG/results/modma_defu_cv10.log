@@ -1,0 +1,135 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== 10-fold CV training/evaluation — stage defu (53 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/10: training on 47 subjects (held-out: 2010005, 2010012, 2010016, 2020019, 2020021, 2030002) ...
+      [defu sid=2010005 y=1] nr=0.266  de=0.079  fused=0.173
+    1   2010005  MDD  0.173   HC   .  120     -       -      33.7s
+      [defu sid=2010012 y=1] nr=0.980  de=0.437  fused=0.708
+    2   2010012  MDD  0.708  MDD   Y  112     -       -      33.4s
+      [defu sid=2010016 y=1] nr=0.030  de=0.284  fused=0.157
+    3   2010016  MDD  0.157   HC   .  120     -       -      33.7s
+      [defu sid=2020019 y=0] nr=0.010  de=0.067  fused=0.039
+    4   2020019   HC  0.039   HC   Y   90  1.0000   0.6667   32.8s
+      [defu sid=2020021 y=0] nr=0.040  de=0.027  fused=0.033
+    5   2020021   HC  0.033   HC   Y  120  1.0000   0.6667   33.2s
+      [defu sid=2030002 y=0] nr=0.253  de=0.000  fused=0.126
+    6   2030002   HC  0.126   HC   Y  120  1.0000   0.6667   33.2s
+  ... fold  2/10: training on 47 subjects (held-out: 2010015, 2010021, 2010022, 2020016, 2020020, 2020029) ...
+      [defu sid=2010015 y=1] nr=0.033  de=0.024  fused=0.029
+    7   2010015  MDD  0.029   HC   .  120  0.7500   0.6250    1.6s
+      [defu sid=2010021 y=1] nr=0.341  de=0.012  fused=0.176
+    8   2010021  MDD  0.176   HC   .  120  0.8000   0.6000    1.5s
+      [defu sid=2010022 y=1] nr=0.815  de=0.657  fused=0.736
+    9   2010022  MDD  0.736  MDD   Y  107  0.8333   0.6667    1.5s
+      [defu sid=2020016 y=0] nr=0.402  de=0.150  fused=0.276
+   10   2020016   HC  0.276   HC   Y  119  0.7083   0.6667    1.5s
+      [defu sid=2020020 y=0] nr=0.081  de=0.039  fused=0.060
+   11   2020020   HC  0.060   HC   Y  120  0.7333   0.6667    1.5s
+      [defu sid=2020029 y=0] nr=0.024  de=0.059  fused=0.041
+   12   2020029   HC  0.041   HC   Y   96  0.7500   0.6667    1.5s
+  ... fold  3/10: training on 47 subjects (held-out: 2010002, 2010028, 2010036, 2020013, 2020023, 2020026) ...
+      [defu sid=2010002 y=1] nr=0.744  de=0.050  fused=0.397
+   13   2010002  MDD  0.397   HC   .  120  0.7857   0.6429    1.6s
+      [defu sid=2010028 y=1] nr=0.805  de=0.858  fused=0.831
+   14   2010028  MDD  0.831  MDD   Y  120  0.8125   0.6875    1.5s
+      [defu sid=2010036 y=1] nr=0.917  de=0.340  fused=0.628
+   15   2010036  MDD  0.628  MDD   Y   99  0.8333   0.7222    1.5s
+      [defu sid=2020013 y=0] nr=0.009  de=0.645  fused=0.327
+   16   2020013   HC  0.327   HC   Y  113  0.7937   0.7222    1.6s
+      [defu sid=2020023 y=0] nr=0.983  de=0.620  fused=0.801
+   17   2020023   HC  0.801  MDD   .  120  0.7083   0.6597    1.5s
+      [defu sid=2020026 y=0] nr=0.144  de=0.359  fused=0.251
+   18   2020026   HC  0.251   HC   Y  120  0.6914   0.6667    1.5s
+  ... fold  4/10: training on 48 subjects (held-out: 2010008, 2010010, 2010030, 2020010, 2030009) ...
+      [defu sid=2010008 y=1] nr=0.777  de=0.012  fused=0.395
+   19   2010008  MDD  0.395   HC   .  120  0.7111   0.6444    1.9s
+      [defu sid=2010010 y=1] nr=0.561  de=0.070  fused=0.315
+   20   2010010  MDD  0.315   HC   .   92  0.7172   0.6263    1.8s
+      [defu sid=2010030 y=1] nr=0.991  de=0.997  fused=0.994
+   21   2010030  MDD  0.994  MDD   Y  120  0.7407   0.6528    1.8s
+      [defu sid=2020010 y=0] nr=0.014  de=0.853  fused=0.433
+   22   2020010   HC  0.433   HC   Y  112  0.7083   0.6583    1.8s
+      [defu sid=2030009 y=0] nr=0.012  de=0.798  fused=0.405
+   23   2030009   HC  0.405   HC   Y   95  0.6818   0.6629    1.8s
+  ... fold  5/10: training on 48 subjects (held-out: 2010011, 2010018, 2020014, 2020022, 2030021) ...
+      [defu sid=2010011 y=1] nr=0.062  de=0.958  fused=0.510
+   24   2010011  MDD  0.510  MDD   Y  120  0.6993   0.6853    1.8s
+      [defu sid=2010018 y=1] nr=0.537  de=0.943  fused=0.740
+   25   2010018  MDD  0.740  MDD   Y  120  0.7143   0.7045    1.8s
+      [defu sid=2020014 y=0] nr=0.467  de=0.016  fused=0.241
+   26   2020014   HC  0.241   HC   Y   66  0.7143   0.7083    1.7s
+      [defu sid=2020022 y=0] nr=0.009  de=0.941  fused=0.475
+   27   2020022   HC  0.475   HC   Y  120  0.6978   0.7115    1.8s
+      [defu sid=2030021 y=0] nr=0.003  de=0.137  fused=0.070
+   28   2030021   HC  0.070   HC   Y  120  0.7143   0.7143    1.8s
+  ... fold  6/10: training on 48 subjects (held-out: 2010019, 2010033, 2030006, 2030007, 2030014) ...
+      [defu sid=2010019 y=1] nr=0.849  de=0.114  fused=0.481
+   29   2010019  MDD  0.481   HC   .  120  0.7286   0.6976    1.8s
+      [defu sid=2010033 y=1] nr=0.147  de=0.894  fused=0.520
+   30   2010033  MDD  0.520  MDD   Y  120  0.7411   0.7143    1.8s
+      [defu sid=2030006 y=0] nr=0.000  de=0.975  fused=0.487
+   31   2030006   HC  0.487   HC   Y  120  0.7250   0.7167    1.8s
+      [defu sid=2030007 y=0] nr=0.000  de=0.051  fused=0.026
+   32   2030007   HC  0.026   HC   Y  120  0.7422   0.7188    1.8s
+      [defu sid=2030014 y=0] nr=0.889  de=0.998  fused=0.943
+   33   2030014   HC  0.943  MDD   .  120  0.7022   0.6912    1.8s
+  ... fold  7/10: training on 48 subjects (held-out: 2010004, 2010024, 2020008, 2020018, 2030004) ...
+      [defu sid=2010004 y=1] nr=0.894  de=0.984  fused=0.939
+   34   2010004  MDD  0.939  MDD   Y   44  0.7163   0.7059    1.9s
+      [defu sid=2010024 y=1] nr=0.998  de=0.999  fused=0.999
+   35   2010024  MDD  0.999  MDD   Y  120  0.7320   0.7190    1.9s
+      [defu sid=2020008 y=0] nr=0.883  de=0.781  fused=0.832
+   36   2020008   HC  0.832  MDD   .   42  0.7006   0.6944    1.7s
+      [defu sid=2020018 y=0] nr=0.025  de=0.149  fused=0.087
+   37   2020018   HC  0.087   HC   Y   95  0.7135   0.6988    1.8s
+      [defu sid=2030004 y=0] nr=0.937  de=0.182  fused=0.559
+   38   2030004   HC  0.559  MDD   .  120  0.7000   0.6778    1.9s
+  ... fold  8/10: training on 48 subjects (held-out: 2010006, 2010034, 2020015, 2030005, 2030019) ...
+      [defu sid=2010006 y=1] nr=0.060  de=0.783  fused=0.421
+   39   2010006  MDD  0.421   HC   .  120  0.6974   0.6632    1.9s
+      [defu sid=2010034 y=1] nr=0.186  de=0.081  fused=0.133
+   40   2010034  MDD  0.133   HC   .   70  0.6825   0.6500    1.7s
+      [defu sid=2020015 y=0] nr=0.814  de=0.339  fused=0.576
+   41   2020015   HC  0.576  MDD   .  120  0.6690   0.6310    1.8s
+      [defu sid=2030005 y=0] nr=0.191  de=0.975  fused=0.583
+   42   2030005   HC  0.583  MDD   .   90  0.6568   0.6136    1.8s
+      [defu sid=2030019 y=0] nr=0.003  de=0.000  fused=0.002
+   43   2030019   HC  0.002   HC   Y  120  0.6717   0.6196    1.8s
+  ... fold  9/10: training on 48 subjects (held-out: 2010013, 2010025, 2020027, 2030017, 2030020) ...
+      [defu sid=2010013 y=1] nr=0.993  de=1.000  fused=0.997
+   44   2010013  MDD  0.997  MDD   Y  120  0.6874   0.6315    1.9s
+      [defu sid=2010025 y=1] nr=0.213  de=0.026  fused=0.120
+   45   2010025  MDD  0.120   HC   .  120  0.6719   0.6196    1.8s
+      [defu sid=2020027 y=0] nr=0.259  de=0.818  fused=0.539
+   46   2020027   HC  0.539  MDD   .  120  0.6610   0.6042    1.8s
+      [defu sid=2030017 y=0] nr=0.491  de=0.009  fused=0.250
+   47   2030017   HC  0.250   HC   Y  120  0.6636   0.6100    1.8s
+      [defu sid=2030020 y=0] nr=0.934  de=1.000  fused=0.967
+   48   2030020   HC  0.967  MDD   .  120  0.6434   0.5962    1.9s
+  ... fold 10/10: training on 48 subjects (held-out: 2010023, 2010026, 2020025, 2030003, 2030018) ...
+      [defu sid=2010023 y=1] nr=0.338  de=0.391  fused=0.365
+   49   2010023  MDD  0.365   HC   .  120  0.6388   0.5853    1.9s
+      [defu sid=2010026 y=1] nr=0.566  de=0.667  fused=0.616
+   50   2010026  MDD  0.616  MDD   Y  115  0.6474   0.5962    1.9s
+      [defu sid=2020025 y=0] nr=0.151  de=0.008  fused=0.080
+   51   2020025   HC  0.080   HC   Y  120  0.6590   0.6019    1.8s
+      [defu sid=2030003 y=0] nr=0.032  de=0.568  fused=0.300
+   52   2030003   HC  0.300   HC   Y   94  0.6622   0.6071    1.9s
+      [defu sid=2030018 y=0] nr=0.749  de=0.068  fused=0.409
+   53   2030018   HC  0.409   HC   Y  104  0.6595   0.6121    1.8s
+------------------------------------------------------------------------------
+
+FINAL  stage defu  [10-fold CV]  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.6595   (primary)
+  Balanced accuracy     : 0.6121  @thr=0.50   |  0.6394  @thr=0.616 (Youden)
+  Macro-F1              : 0.6114  @thr=0.50   |  0.6308  @thr=0.616
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        21         8
+  MDD       12        12
+
+Total wall time: 282.4s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/defu_cv10.json

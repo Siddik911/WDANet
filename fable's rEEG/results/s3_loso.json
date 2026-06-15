@@ -1,0 +1,348 @@
+{
+  "n": 53,
+  "n_mdd": 24,
+  "n_hc": 29,
+  "auc": 0.5,
+  "bacc": 0.5,
+  "f1": 0.3116883116883117,
+  "cm": [
+    [
+      0,
+      29
+    ],
+    [
+      0,
+      24
+    ]
+  ],
+  "threshold": 0.5,
+  "youden_threshold": 0.5,
+  "bacc_youden": 0.5,
+  "f1_youden": 0.3116883116883117,
+  "stage": "s3",
+  "model_kwargs": {
+    "max_windows": 120,
+    "C_reg": 1.0
+  },
+  "wall_time_s": 566.0,
+  "per_fold": [
+    {
+      "sid": 2010002,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010004,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 44
+    },
+    {
+      "sid": 2010005,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010006,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010008,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010010,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 92
+    },
+    {
+      "sid": 2010011,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010012,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 112
+    },
+    {
+      "sid": 2010013,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010015,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010016,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010018,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010019,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010021,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010022,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 107
+    },
+    {
+      "sid": 2010023,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010024,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010025,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010026,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 115
+    },
+    {
+      "sid": 2010028,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010030,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010033,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010034,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 70
+    },
+    {
+      "sid": 2010036,
+      "label": 1,
+      "score": 0.5,
+      "n_windows": 99
+    },
+    {
+      "sid": 2020008,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 42
+    },
+    {
+      "sid": 2020010,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 112
+    },
+    {
+      "sid": 2020013,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 113
+    },
+    {
+      "sid": 2020014,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 66
+    },
+    {
+      "sid": 2020015,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020016,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 119
+    },
+    {
+      "sid": 2020018,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 95
+    },
+    {
+      "sid": 2020019,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 90
+    },
+    {
+      "sid": 2020020,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020021,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020022,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020023,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020025,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020026,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020027,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020029,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 96
+    },
+    {
+      "sid": 2030002,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030003,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 94
+    },
+    {
+      "sid": 2030004,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030005,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 90
+    },
+    {
+      "sid": 2030006,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030007,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030009,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 95
+    },
+    {
+      "sid": 2030014,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030017,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030018,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 104
+    },
+    {
+      "sid": 2030019,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030020,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    },
+    {
+      "sid": 2030021,
+      "label": 0,
+      "score": 0.5,
+      "n_windows": 120
+    }
+  ]
+}

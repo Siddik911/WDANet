@@ -1,0 +1,128 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+  [train] mumtaz     58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=79 med=141 max=187
+  [train] opennuero  121 subjects  (46 MDD / 75 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=44 med=142 max=209
+  [test ] modma      53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=50 med=144 max=165
+** harmonised to shared 17-channel 10-20 montage **
+
+=== LODO mumtaz+opennuero -> modma training/evaluation — stage defu (53 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+      [defu sid=2010002 y=1] nr=0.992  de=0.263  fused=0.628
+    1   2010002  MDD  0.628  MDD   Y  120     -       -       0.7s
+      [defu sid=2010004 y=1] nr=0.807  de=0.564  fused=0.686
+    2   2010004  MDD  0.686  MDD   Y   50     -       -       0.6s
+      [defu sid=2010005 y=1] nr=0.031  de=0.595  fused=0.313
+    3   2010005  MDD  0.313   HC   .  120     -       -       0.7s
+      [defu sid=2010006 y=1] nr=0.871  de=0.833  fused=0.852
+    4   2010006  MDD  0.852  MDD   Y  120     -       -       0.7s
+      [defu sid=2010008 y=1] nr=0.941  de=0.571  fused=0.756
+    5   2010008  MDD  0.756  MDD   Y  120     -       -       0.7s
+      [defu sid=2010010 y=1] nr=0.170  de=0.523  fused=0.346
+    6   2010010  MDD  0.346   HC   .  120     -       -       0.7s
+      [defu sid=2010011 y=1] nr=0.985  de=0.838  fused=0.912
+    7   2010011  MDD  0.912  MDD   Y  120     -       -       0.7s
+      [defu sid=2010012 y=1] nr=0.826  de=0.607  fused=0.716
+    8   2010012  MDD  0.716  MDD   Y  120     -       -       0.7s
+      [defu sid=2010013 y=1] nr=1.000  de=0.250  fused=0.625
+    9   2010013  MDD  0.625  MDD   Y  120     -       -       0.7s
+      [defu sid=2010015 y=1] nr=0.282  de=0.338  fused=0.310
+   10   2010015  MDD  0.310   HC   .  120     -       -       0.7s
+      [defu sid=2010016 y=1] nr=0.843  de=0.595  fused=0.719
+   11   2010016  MDD  0.719  MDD   Y  120     -       -       0.7s
+      [defu sid=2010018 y=1] nr=1.000  de=0.426  fused=0.713
+   12   2010018  MDD  0.713  MDD   Y  120     -       -       0.7s
+      [defu sid=2010019 y=1] nr=0.187  de=0.595  fused=0.391
+   13   2010019  MDD  0.391   HC   .  120     -       -       0.7s
+      [defu sid=2010021 y=1] nr=0.007  de=0.103  fused=0.055
+   14   2010021  MDD  0.055   HC   .  120     -       -       0.7s
+      [defu sid=2010022 y=1] nr=0.993  de=0.849  fused=0.921
+   15   2010022  MDD  0.921  MDD   Y  120     -       -       0.7s
+      [defu sid=2010023 y=1] nr=0.933  de=0.770  fused=0.851
+   16   2010023  MDD  0.851  MDD   Y  120     -       -       0.7s
+      [defu sid=2010024 y=1] nr=0.982  de=0.358  fused=0.670
+   17   2010024  MDD  0.670  MDD   Y  120     -       -       0.7s
+      [defu sid=2010025 y=1] nr=0.490  de=0.182  fused=0.336
+   18   2010025  MDD  0.336   HC   .  120     -       -       0.7s
+      [defu sid=2010026 y=1] nr=0.134  de=0.161  fused=0.148
+   19   2010026  MDD  0.148   HC   .  120     -       -       0.7s
+      [defu sid=2010028 y=1] nr=0.992  de=0.858  fused=0.925
+   20   2010028  MDD  0.925  MDD   Y  120     -       -       0.7s
+      [defu sid=2010030 y=1] nr=1.000  de=0.558  fused=0.779
+   21   2010030  MDD  0.779  MDD   Y  120     -       -       0.7s
+      [defu sid=2010033 y=1] nr=0.527  de=0.052  fused=0.290
+   22   2010033  MDD  0.290   HC   .  120     -       -       0.7s
+      [defu sid=2010034 y=1] nr=0.587  de=0.750  fused=0.669
+   23   2010034  MDD  0.669  MDD   Y  120     -       -       0.7s
+      [defu sid=2010036 y=1] nr=0.084  de=0.792  fused=0.438
+   24   2010036  MDD  0.438   HC   .  120     -       -       0.7s
+      [defu sid=2020008 y=0] nr=0.262  de=0.583  fused=0.423
+   25   2020008   HC  0.423   HC   Y  104  0.6667   0.8125    0.7s
+      [defu sid=2020010 y=0] nr=0.757  de=0.400  fused=0.578
+   26   2020010   HC  0.578  MDD   .  120  0.6458   0.5625    0.7s
+      [defu sid=2020013 y=0] nr=0.929  de=0.701  fused=0.815
+   27   2020013   HC  0.815  MDD   .  120  0.5000   0.4792    0.7s
+      [defu sid=2020014 y=0] nr=0.370  de=0.259  fused=0.314
+   28   2020014   HC  0.314   HC   Y  103  0.5729   0.5625    0.7s
+      [defu sid=2020015 y=0] nr=0.003  de=0.098  fused=0.050
+   29   2020015   HC  0.050   HC   Y  120  0.6583   0.6125    0.7s
+      [defu sid=2020016 y=0] nr=0.904  de=0.725  fused=0.815
+   30   2020016   HC  0.815  MDD   .  120  0.5833   0.5625    0.7s
+      [defu sid=2020018 y=0] nr=0.255  de=0.427  fused=0.341
+   31   2020018   HC  0.341   HC   Y  120  0.6071   0.5982    0.7s
+      [defu sid=2020019 y=0] nr=0.770  de=0.296  fused=0.533
+   32   2020019   HC  0.533  MDD   .  110  0.6094   0.5625    0.7s
+      [defu sid=2020020 y=0] nr=0.159  de=0.557  fused=0.358
+   33   2020020   HC  0.358   HC   Y  120  0.6204   0.5903    0.7s
+      [defu sid=2020021 y=0] nr=0.567  de=0.575  fused=0.571
+   34   2020021   HC  0.571  MDD   .  120  0.6208   0.5625    0.7s
+      [defu sid=2020022 y=0] nr=0.996  de=0.333  fused=0.665
+   35   2020022   HC  0.665  MDD   .  120  0.6136   0.5398    0.7s
+      [defu sid=2020023 y=0] nr=0.830  de=0.476  fused=0.653
+   36   2020023   HC  0.653  MDD   .  120  0.6076   0.5208    0.7s
+      [defu sid=2020025 y=0] nr=0.948  de=0.684  fused=0.816
+   37   2020025   HC  0.816  MDD   .  120  0.5769   0.5048    0.7s
+      [defu sid=2020026 y=0] nr=0.165  de=0.780  fused=0.472
+   38   2020026   HC  0.472   HC   Y  120  0.5804   0.5268    0.7s
+      [defu sid=2020027 y=0] nr=0.909  de=0.621  fused=0.765
+   39   2020027   HC  0.765  MDD   .  120  0.5583   0.5125    0.7s
+      [defu sid=2020029 y=0] nr=0.836  de=0.441  fused=0.639
+   40   2020029   HC  0.639  MDD   .  120  0.5573   0.5000    0.7s
+      [defu sid=2030002 y=0] nr=0.202  de=0.382  fused=0.292
+   41   2030002   HC  0.292   HC   Y  120  0.5760   0.5184    0.7s
+      [defu sid=2030003 y=0] nr=0.984  de=0.444  fused=0.714
+   42   2030003   HC  0.714  MDD   .  120  0.5648   0.5069    0.7s
+      [defu sid=2030004 y=0] nr=0.284  de=0.869  fused=0.576
+   43   2030004   HC  0.576  MDD   .  120  0.5680   0.4967    0.7s
+      [defu sid=2030005 y=0] nr=0.826  de=0.410  fused=0.618
+   44   2030005   HC  0.618  MDD   .  120  0.5708   0.4875    0.7s
+      [defu sid=2030006 y=0] nr=0.998  de=0.157  fused=0.578
+   45   2030006   HC  0.578  MDD   .  120  0.5734   0.4792    0.7s
+      [defu sid=2030007 y=0] nr=0.999  de=0.131  fused=0.565
+   46   2030007   HC  0.565  MDD   .  120  0.5758   0.4716    0.7s
+      [defu sid=2030009 y=0] nr=0.513  de=0.271  fused=0.392
+   47   2030009   HC  0.392   HC   Y  120  0.5797   0.4864    0.7s
+      [defu sid=2030014 y=0] nr=1.000  de=0.685  fused=0.842
+   48   2030014   HC  0.842  MDD   .  120  0.5642   0.4792    0.7s
+      [defu sid=2030017 y=0] nr=0.936  de=0.414  fused=0.675
+   49   2030017   HC  0.675  MDD   .  120  0.5600   0.4725    0.7s
+      [defu sid=2030018 y=0] nr=0.105  de=0.387  fused=0.246
+   50   2030018   HC  0.246   HC   Y  120  0.5737   0.4856    0.7s
+      [defu sid=2030019 y=0] nr=0.881  de=0.692  fused=0.787
+   51   2030019   HC  0.787  MDD   .  120  0.5602   0.4792    0.7s
+      [defu sid=2030020 y=0] nr=1.000  de=0.508  fused=0.754
+   52   2030020   HC  0.754  MDD   .  120  0.5506   0.4732    0.7s
+      [defu sid=2030021 y=0] nr=0.815  de=0.402  fused=0.608
+   53   2030021   HC  0.608  MDD   .  120  0.5532   0.4677    0.7s
+------------------------------------------------------------------------------
+
+FINAL  stage defu  [LODO mumtaz+opennuero -> modma]  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.5532   (primary)
+  Balanced accuracy     : 0.4677  @thr=0.50   |  0.6157  @thr=0.669 (Youden)
+  Macro-F1              : 0.4457  @thr=0.50   |  0.6159  @thr=0.669
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC         9        20
+  MDD        9        15
+
+Total wall time: 35.7s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/lodo_modma_defu_harm.json

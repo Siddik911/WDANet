@@ -1,0 +1,6 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage mb (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...

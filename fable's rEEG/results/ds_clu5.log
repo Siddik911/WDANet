@@ -1,0 +1,27 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage ds (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...
+      [ds sid=2010002 y=1] meanp=0.398 medp=0.387 meanlogit=-0.416
+    1   2010002  MDD  0.398   HC   .  120     -       -      24.0s
+  ... fold  2/53: training on 52 subjects (held-out sid=2010004) ...
+      [ds sid=2010004 y=1] meanp=0.419 medp=0.419 meanlogit=-0.328
+    2   2010004  MDD  0.419   HC   .   44     -       -       9.1s
+  ... fold  3/53: training on 52 subjects (held-out sid=2010005) ...
+      [ds sid=2010005 y=1] meanp=0.247 medp=0.236 meanlogit=-1.135
+    3   2010005  MDD  0.247   HC   .  120     -       -      19.6s
+  ... fold  4/53: training on 52 subjects (held-out sid=2010006) ...
+      [ds sid=2010006 y=1] meanp=0.416 medp=0.410 meanlogit=-0.341
+    4   2010006  MDD  0.416   HC   .  120     -       -       7.6s
+  ... fold  5/53: training on 52 subjects (held-out sid=2010008) ...
+      [ds sid=2010008 y=1] meanp=0.602 medp=0.595 meanlogit=+0.422
+    5   2010008  MDD  0.602  MDD   Y  120     -       -      21.4s
+  ... fold  6/53: training on 52 subjects (held-out sid=2010010) ...
+      [ds sid=2010010 y=1] meanp=0.395 medp=0.389 meanlogit=-0.429
+    6   2010010  MDD  0.395   HC   .   92     -       -      13.7s
+  ... fold  7/53: training on 52 subjects (held-out sid=2010011) ...
+      [ds sid=2010011 y=1] meanp=0.386 medp=0.374 meanlogit=-0.468
+    7   2010011  MDD  0.386   HC   .  120     -       -      11.3s
+  ... fold  8/53: training on 52 subjects (held-out sid=2010012) ...

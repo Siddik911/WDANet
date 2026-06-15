@@ -1,0 +1,138 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+  [train] modma      53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=50 med=144 max=165
+  [train] opennuero  121 subjects  (46 MDD / 75 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=44 med=142 max=209
+  [test ] mumtaz     58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=79 med=141 max=187
+** harmonised to shared 17-channel 10-20 montage **
+
+=== LODO modma+opennuero -> mumtaz training/evaluation — stage ds (58 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+      [ds sid=1 y=0] meanp=0.461 medp=0.458 meanlogit=-0.157
+    1         1   HC  0.461   HC   Y  120     -       -       0.7s
+      [ds sid=2 y=0] meanp=0.457 medp=0.458 meanlogit=-0.172
+    2         2   HC  0.457   HC   Y  120     -       -       0.7s
+      [ds sid=3 y=0] meanp=0.451 medp=0.440 meanlogit=-0.198
+    3         3   HC  0.451   HC   Y  120     -       -       0.7s
+      [ds sid=4 y=0] meanp=0.443 medp=0.443 meanlogit=-0.230
+    4         4   HC  0.443   HC   Y  120     -       -       0.7s
+      [ds sid=5 y=0] meanp=0.438 medp=0.433 meanlogit=-0.251
+    5         5   HC  0.438   HC   Y  120     -       -       0.7s
+      [ds sid=6 y=0] meanp=0.455 medp=0.455 meanlogit=-0.181
+    6         6   HC  0.455   HC   Y   96     -       -       0.7s
+      [ds sid=7 y=0] meanp=0.438 medp=0.438 meanlogit=-0.252
+    7         7   HC  0.438   HC   Y  120     -       -       0.7s
+      [ds sid=8 y=0] meanp=0.425 medp=0.426 meanlogit=-0.302
+    8         8   HC  0.425   HC   Y  120     -       -       0.7s
+      [ds sid=9 y=0] meanp=0.471 medp=0.470 meanlogit=-0.115
+    9         9   HC  0.471   HC   Y  120     -       -       0.7s
+      [ds sid=10 y=0] meanp=0.470 medp=0.479 meanlogit=-0.120
+   10        10   HC  0.470   HC   Y  120     -       -       0.7s
+      [ds sid=11 y=0] meanp=0.457 medp=0.454 meanlogit=-0.173
+   11        11   HC  0.457   HC   Y  101     -       -       0.7s
+      [ds sid=13 y=0] meanp=0.412 medp=0.411 meanlogit=-0.358
+   12        13   HC  0.412   HC   Y  120     -       -       0.7s
+      [ds sid=14 y=0] meanp=0.379 medp=0.373 meanlogit=-0.495
+   13        14   HC  0.379   HC   Y  120     -       -       0.7s
+      [ds sid=15 y=0] meanp=0.488 medp=0.484 meanlogit=-0.046
+   14        15   HC  0.488   HC   Y  120     -       -       0.7s
+      [ds sid=16 y=0] meanp=0.457 medp=0.447 meanlogit=-0.172
+   15        16   HC  0.457   HC   Y  118     -       -       0.7s
+      [ds sid=17 y=0] meanp=0.456 medp=0.460 meanlogit=-0.176
+   16        17   HC  0.456   HC   Y  115     -       -       0.7s
+      [ds sid=19 y=0] meanp=0.448 medp=0.433 meanlogit=-0.211
+   17        19   HC  0.448   HC   Y  120     -       -       0.7s
+      [ds sid=20 y=0] meanp=0.445 medp=0.440 meanlogit=-0.220
+   18        20   HC  0.445   HC   Y  120     -       -       0.7s
+      [ds sid=21 y=0] meanp=0.504 medp=0.506 meanlogit=+0.015
+   19        21   HC  0.504  MDD   .  117     -       -       0.7s
+      [ds sid=22 y=0] meanp=0.450 medp=0.448 meanlogit=-0.202
+   20        22   HC  0.450   HC   Y  120     -       -       0.7s
+      [ds sid=23 y=0] meanp=0.490 medp=0.488 meanlogit=-0.040
+   21        23   HC  0.490   HC   Y  117     -       -       0.7s
+      [ds sid=24 y=0] meanp=0.516 medp=0.515 meanlogit=+0.063
+   22        24   HC  0.516  MDD   .  120     -       -       0.7s
+      [ds sid=25 y=0] meanp=0.437 medp=0.427 meanlogit=-0.254
+   23        25   HC  0.437   HC   Y  120     -       -       0.7s
+      [ds sid=26 y=0] meanp=0.428 medp=0.425 meanlogit=-0.292
+   24        26   HC  0.428   HC   Y  120     -       -       0.7s
+      [ds sid=27 y=0] meanp=0.469 medp=0.468 meanlogit=-0.124
+   25        27   HC  0.469   HC   Y  120     -       -       0.7s
+      [ds sid=28 y=0] meanp=0.425 medp=0.422 meanlogit=-0.305
+   26        28   HC  0.425   HC   Y  120     -       -       0.7s
+      [ds sid=29 y=0] meanp=0.461 medp=0.463 meanlogit=-0.157
+   27        29   HC  0.461   HC   Y  120     -       -       0.7s
+      [ds sid=30 y=0] meanp=0.411 medp=0.408 meanlogit=-0.362
+   28        30   HC  0.411   HC   Y  120     -       -       0.7s
+      [ds sid=1001 y=1] meanp=0.426 medp=0.422 meanlogit=-0.301
+   29      1001  MDD  0.426   HC   .   79  0.1786   0.4643    0.7s
+      [ds sid=1002 y=1] meanp=0.392 medp=0.385 meanlogit=-0.439
+   30      1002  MDD  0.392   HC   .  120  0.1071   0.4643    0.7s
+      [ds sid=1003 y=1] meanp=0.459 medp=0.459 meanlogit=-0.164
+   31      1003  MDD  0.459   HC   .   84  0.2976   0.4643    0.7s
+      [ds sid=1005 y=1] meanp=0.476 medp=0.475 meanlogit=-0.095
+   32      1005  MDD  0.476   HC   .  120  0.4375   0.4643    0.7s
+      [ds sid=1006 y=1] meanp=0.427 medp=0.425 meanlogit=-0.296
+   33      1006  MDD  0.427   HC   .  120  0.3857   0.4643    0.7s
+      [ds sid=1007 y=1] meanp=0.486 medp=0.485 meanlogit=-0.056
+   34      1007  MDD  0.486   HC   .  111  0.4643   0.4643    0.7s
+      [ds sid=1009 y=1] meanp=0.450 medp=0.451 meanlogit=-0.201
+   35      1009  MDD  0.450   HC   .  120  0.4643   0.4643    0.7s
+      [ds sid=1010 y=1] meanp=0.405 medp=0.405 meanlogit=-0.384
+   36      1010  MDD  0.405   HC   .  120  0.4107   0.4643    0.7s
+      [ds sid=1011 y=1] meanp=0.465 medp=0.468 meanlogit=-0.142
+   37      1011  MDD  0.465   HC   .  120  0.4484   0.4643    0.7s
+      [ds sid=1013 y=1] meanp=0.424 medp=0.422 meanlogit=-0.305
+   38      1013  MDD  0.424   HC   .  120  0.4143   0.4643    0.7s
+      [ds sid=1014 y=1] meanp=0.543 medp=0.543 meanlogit=+0.171
+   39      1014  MDD  0.543  MDD   Y  120  0.4675   0.5097    0.7s
+      [ds sid=1015 y=1] meanp=0.455 medp=0.455 meanlogit=-0.183
+   40      1015  MDD  0.455   HC   .  120  0.4702   0.5060    0.7s
+      [ds sid=1017 y=1] meanp=0.430 medp=0.431 meanlogit=-0.282
+   41      1017  MDD  0.430   HC   .  120  0.4505   0.5027    0.7s
+      [ds sid=1018 y=1] meanp=0.517 medp=0.519 meanlogit=+0.067
+   42      1018  MDD  0.517  MDD   Y  120  0.4898   0.5357    0.7s
+      [ds sid=1019 y=1] meanp=0.403 medp=0.405 meanlogit=-0.393
+   43      1019  MDD  0.403   HC   .  120  0.4595   0.5310    0.7s
+      [ds sid=1020 y=1] meanp=0.450 medp=0.450 meanlogit=-0.200
+   44      1020  MDD  0.450   HC   .  120  0.4598   0.5268    0.7s
+      [ds sid=1021 y=1] meanp=0.455 medp=0.455 meanlogit=-0.181
+   45      1021  MDD  0.455   HC   .  120  0.4622   0.5231    0.7s
+      [ds sid=1022 y=1] meanp=0.470 medp=0.468 meanlogit=-0.120
+   46      1022  MDD  0.470   HC   .  120  0.4802   0.5198    0.7s
+      [ds sid=1023 y=1] meanp=0.425 medp=0.424 meanlogit=-0.304
+   47      1023  MDD  0.425   HC   .  120  0.4624   0.5169    0.7s
+      [ds sid=1024 y=1] meanp=0.436 medp=0.436 meanlogit=-0.257
+   48      1024  MDD  0.436   HC   .  120  0.4500   0.5143    0.7s
+      [ds sid=1025 y=1] meanp=0.479 medp=0.474 meanlogit=-0.083
+   49      1025  MDD  0.479   HC   .  120  0.4694   0.5119    0.7s
+      [ds sid=1026 y=1] meanp=0.456 medp=0.451 meanlogit=-0.178
+   50      1026  MDD  0.456   HC   .  120  0.4724   0.5097    0.7s
+      [ds sid=1027 y=1] meanp=0.555 medp=0.558 meanlogit=+0.223
+   51      1027  MDD  0.555  MDD   Y  120  0.4953   0.5295    0.7s
+      [ds sid=1028 y=1] meanp=0.438 medp=0.438 meanlogit=-0.248
+   52      1028  MDD  0.438   HC   .  119  0.4881   0.5268    0.7s
+      [ds sid=1029 y=1] meanp=0.495 medp=0.495 meanlogit=-0.019
+   53      1029  MDD  0.495   HC   .  120  0.5057   0.5243    0.7s
+      [ds sid=1030 y=1] meanp=0.496 medp=0.495 meanlogit=-0.015
+   54      1030  MDD  0.496   HC   .  119  0.5220   0.5220    0.7s
+      [ds sid=1031 y=1] meanp=0.454 medp=0.450 meanlogit=-0.186
+   55      1031  MDD  0.454   HC   .  120  0.5212   0.5198    0.7s
+      [ds sid=1032 y=1] meanp=0.446 medp=0.446 meanlogit=-0.218
+   56      1032  MDD  0.446   HC   .  120  0.5166   0.5179    0.7s
+      [ds sid=1033 y=1] meanp=0.435 medp=0.434 meanlogit=-0.263
+   57      1033  MDD  0.435   HC   .  120  0.5062   0.5160    0.7s
+      [ds sid=1034 y=1] meanp=0.435 medp=0.434 meanlogit=-0.263
+   58      1034  MDD  0.435   HC   .  120  0.4964   0.5143    0.7s
+------------------------------------------------------------------------------
+
+FINAL  stage ds  [LODO modma+opennuero -> mumtaz]  |  58 subjects (30 MDD / 28 HC)
+  Subject-level ROC-AUC : 0.4964   (primary)
+  Balanced accuracy     : 0.5143  @thr=0.50   |  0.5619  @thr=0.476 (Youden)
+  Macro-F1              : 0.4067  @thr=0.50   |  0.5148  @thr=0.476
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        26         2
+  MDD       27         3
+
+Total wall time: 41.5s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/lodo_mumtaz_ds_harm.json

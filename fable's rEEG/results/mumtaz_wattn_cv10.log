@@ -1,0 +1,265 @@
+[dataset] mumtaz  raw=/home/hasan/fable's rEEG/Mumtaz  cache=/home/hasan/fable's rEEG/cache/mumtaz  fs_orig=256->125Hz  ch=19
+Cache not found — building (one-off preprocessing) ...
+  [pass1  1/58] sid=1  ok
+  [pass1  2/58] sid=10  ok
+  [pass1  3/58] sid=11  ok
+  [pass1  4/58] sid=13  ok
+  [pass1  5/58] sid=14  ok
+  [pass1  6/58] sid=15  ok
+  [pass1  7/58] sid=16  ok
+  [pass1  8/58] sid=17  ok
+  [pass1  9/58] sid=19  ok
+  [pass1 10/58] sid=2  ok
+  [pass1 11/58] sid=20  ok
+  [pass1 12/58] sid=21  ok
+  [pass1 13/58] sid=22  ok
+  [pass1 14/58] sid=23  ok
+  [pass1 15/58] sid=24  ok
+  [pass1 16/58] sid=25  ok
+  [pass1 17/58] sid=26  ok
+  [pass1 18/58] sid=27  ok
+  [pass1 19/58] sid=28  ok
+  [pass1 20/58] sid=29  ok
+  [pass1 21/58] sid=3  ok
+  [pass1 22/58] sid=30  ok
+  [pass1 23/58] sid=4  ok
+  [pass1 24/58] sid=5  ok
+  [pass1 25/58] sid=6  ok
+  [pass1 26/58] sid=7  ok
+  [pass1 27/58] sid=8  ok
+  [pass1 28/58] sid=9  ok
+  [pass1 29/58] sid=1001  BAD=[14]
+  [pass1 30/58] sid=1010  ok
+  [pass1 31/58] sid=1011  ok
+  [pass1 32/58] sid=1013  ok
+  [pass1 33/58] sid=1014  ok
+  [pass1 34/58] sid=1015  ok
+  [pass1 35/58] sid=1017  ok
+  [pass1 36/58] sid=1018  ok
+  [pass1 37/58] sid=1019  ok
+  [pass1 38/58] sid=1002  ok
+  [pass1 39/58] sid=1020  ok
+  [pass1 40/58] sid=1021  ok
+  [pass1 41/58] sid=1022  ok
+  [pass1 42/58] sid=1023  ok
+  [pass1 43/58] sid=1024  ok
+  [pass1 44/58] sid=1025  ok
+  [pass1 45/58] sid=1026  ok
+  [pass1 46/58] sid=1027  ok
+  [pass1 47/58] sid=1028  ok
+  [pass1 48/58] sid=1029  ok
+  [pass1 49/58] sid=1003  ok
+  [pass1 50/58] sid=1030  ok
+  [pass1 51/58] sid=1031  ok
+  [pass1 52/58] sid=1032  ok
+  [pass1 53/58] sid=1033  ok
+  [pass1 54/58] sid=1034  ok
+  [pass1 55/58] sid=1005  ok
+  [pass1 56/58] sid=1006  ok
+  [pass1 57/58] sid=1007  ok
+  [pass1 58/58] sid=1009  ok
+
+  keeping full 19-channel montage (per-window artifact rejection handles transients; flagged-by-subject for info only)
+
+  [pass2  1/58] saved   sid=1  label=HC  shape=(19, 37500)
+  [pass2  2/58] saved   sid=10  label=HC  shape=(19, 47000)
+  [pass2  3/58] saved   sid=11  label=HC  shape=(19, 37500)
+  [pass2  4/58] saved   sid=13  label=HC  shape=(19, 37500)
+  [pass2  5/58] saved   sid=14  label=HC  shape=(19, 37750)
+  [pass2  6/58] saved   sid=15  label=HC  shape=(19, 37500)
+  [pass2  7/58] saved   sid=16  label=HC  shape=(19, 36500)
+  [pass2  8/58] saved   sid=17  label=HC  shape=(19, 38625)
+  [pass2  9/58] saved   sid=19  label=HC  shape=(19, 37500)
+  [pass2 10/58] saved   sid=2  label=HC  shape=(19, 37750)
+  [pass2 11/58] saved   sid=20  label=HC  shape=(19, 38375)
+  [pass2 12/58] saved   sid=21  label=HC  shape=(19, 37625)
+  [pass2 13/58] saved   sid=22  label=HC  shape=(19, 37625)
+  [pass2 14/58] saved   sid=23  label=HC  shape=(19, 37750)
+  [pass2 15/58] saved   sid=24  label=HC  shape=(19, 37375)
+  [pass2 16/58] saved   sid=25  label=HC  shape=(19, 37625)
+  [pass2 17/58] saved   sid=26  label=HC  shape=(19, 37750)
+  [pass2 18/58] saved   sid=27  label=HC  shape=(19, 37500)
+  [pass2 19/58] saved   sid=28  label=HC  shape=(19, 37625)
+  [pass2 20/58] saved   sid=29  label=HC  shape=(19, 37875)
+  [pass2 21/58] saved   sid=3  label=HC  shape=(19, 37625)
+  [pass2 22/58] saved   sid=30  label=HC  shape=(19, 37500)
+  [pass2 23/58] saved   sid=4  label=HC  shape=(19, 37625)
+  [pass2 24/58] saved   sid=5  label=HC  shape=(19, 37875)
+  [pass2 25/58] saved   sid=6  label=HC  shape=(19, 37625)
+  [pass2 26/58] saved   sid=7  label=HC  shape=(19, 44500)
+  [pass2 27/58] saved   sid=8  label=HC  shape=(19, 37750)
+  [pass2 28/58] saved   sid=9  label=HC  shape=(19, 37625)
+  [pass2 29/58] saved   sid=1001  label=MDD  shape=(19, 37875)
+  [pass2 30/58] saved   sid=1010  label=MDD  shape=(19, 37625)
+  [pass2 31/58] saved   sid=1011  label=MDD  shape=(19, 37375)
+  [pass2 32/58] saved   sid=1013  label=MDD  shape=(19, 37500)
+  [pass2 33/58] saved   sid=1014  label=MDD  shape=(19, 37500)
+  [pass2 34/58] saved   sid=1015  label=MDD  shape=(19, 37500)
+  [pass2 35/58] saved   sid=1017  label=MDD  shape=(19, 37125)
+  [pass2 36/58] saved   sid=1018  label=MDD  shape=(19, 37500)
+  [pass2 37/58] saved   sid=1019  label=MDD  shape=(19, 37375)
+  [pass2 38/58] saved   sid=1002  label=MDD  shape=(19, 37125)
+  [pass2 39/58] saved   sid=1020  label=MDD  shape=(19, 37375)
+  [pass2 40/58] saved   sid=1021  label=MDD  shape=(19, 37500)
+  [pass2 41/58] saved   sid=1022  label=MDD  shape=(19, 37125)
+  [pass2 42/58] saved   sid=1023  label=MDD  shape=(19, 37875)
+  [pass2 43/58] saved   sid=1024  label=MDD  shape=(19, 37625)
+  [pass2 44/58] saved   sid=1025  label=MDD  shape=(19, 37500)
+  [pass2 45/58] saved   sid=1026  label=MDD  shape=(19, 37500)
+  [pass2 46/58] saved   sid=1027  label=MDD  shape=(19, 37625)
+  [pass2 47/58] saved   sid=1028  label=MDD  shape=(19, 37625)
+  [pass2 48/58] saved   sid=1029  label=MDD  shape=(19, 37500)
+  [pass2 49/58] saved   sid=1003  label=MDD  shape=(19, 22500)
+  [pass2 50/58] saved   sid=1030  label=MDD  shape=(19, 30125)
+  [pass2 51/58] saved   sid=1031  label=MDD  shape=(19, 37750)
+  [pass2 52/58] saved   sid=1032  label=MDD  shape=(19, 37375)
+  [pass2 53/58] saved   sid=1033  label=MDD  shape=(19, 37250)
+  [pass2 54/58] saved   sid=1034  label=MDD  shape=(19, 37250)
+  [pass2 55/58] saved   sid=1005  label=MDD  shape=(19, 37750)
+  [pass2 56/58] saved   sid=1006  label=MDD  shape=(19, 37750)
+  [pass2 57/58] saved   sid=1007  label=MDD  shape=(19, 37500)
+  [pass2 58/58] saved   sid=1009  label=MDD  shape=(19, 37500)
+58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=19  win=4.0s/500smp  windows/subj: min=77 med=141 max=187
+
+=== 10-fold CV training/evaluation — stage wattn (58 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/10: training on 52 subjects (held-out: 5, 13, 16, 1001, 1017, 1023) ...
+      [wattn sid=5 y=0] score=0.535  top-attn windows=[66, 52, 17]
+    1         5   HC  0.535  MDD   .  120     -       -       1.1s
+      [wattn sid=13 y=0] score=0.518  top-attn windows=[104, 24, 103]
+    2        13   HC  0.518  MDD   .  120     -       -       1.1s
+      [wattn sid=16 y=0] score=0.519  top-attn windows=[19, 94, 7]
+    3        16   HC  0.519  MDD   .  120     -       -       1.1s
+      [wattn sid=1001 y=1] score=0.528  top-attn windows=[5, 55, 34]
+    4      1001  MDD  0.528  MDD   Y   77  0.6667   0.5000    1.1s
+      [wattn sid=1017 y=1] score=0.530  top-attn windows=[13, 32, 10]
+    5      1017  MDD  0.530  MDD   Y  120  0.6667   0.5000    1.1s
+      [wattn sid=1023 y=1] score=0.484  top-attn windows=[44, 16, 45]
+    6      1023  MDD  0.484   HC   .  120  0.4444   0.3333    1.2s
+  ... fold  2/10: training on 52 subjects (held-out: 14, 15, 20, 1002, 1015, 1022) ...
+      [wattn sid=14 y=0] score=0.420  top-attn windows=[37, 18, 108]
+    7        14   HC  0.420   HC   Y  120  0.5833   0.4583    0.5s
+      [wattn sid=15 y=0] score=0.658  top-attn windows=[11, 111, 26]
+    8        15   HC  0.658  MDD   .  120  0.4667   0.4333    0.5s
+      [wattn sid=20 y=0] score=0.563  top-attn windows=[23, 22, 99]
+    9        20   HC  0.563  MDD   .  120  0.3889   0.4167    0.5s
+      [wattn sid=1002 y=1] score=0.923  top-attn windows=[100, 66, 90]
+   10      1002  MDD  0.923  MDD   Y  120  0.5417   0.4583    0.5s
+      [wattn sid=1015 y=1] score=0.384  top-attn windows=[86, 92, 101]
+   11      1015  MDD  0.384   HC   .  120  0.4333   0.3833    0.5s
+      [wattn sid=1022 y=1] score=0.498  top-attn windows=[118, 101, 80]
+   12      1022  MDD  0.498   HC   .  120  0.3889   0.3333    0.5s
+  ... fold  3/10: training on 52 subjects (held-out: 3, 26, 30, 1007, 1019, 1021) ...
+      [wattn sid=3 y=0] score=0.491  top-attn windows=[26, 99, 78]
+   13         3   HC  0.491   HC   Y  120  0.4286   0.3929    0.4s
+      [wattn sid=26 y=0] score=0.546  top-attn windows=[119, 87, 70]
+   14        26   HC  0.546  MDD   .  120  0.3958   0.3750    0.4s
+      [wattn sid=30 y=0] score=0.330  top-attn windows=[64, 106, 33]
+   15        30   HC  0.330   HC   Y  120  0.4630   0.4167    0.4s
+      [wattn sid=1007 y=1] score=0.574  top-attn windows=[75, 74, 69]
+   16      1007  MDD  0.574  MDD   Y  111  0.5238   0.4524    0.4s
+      [wattn sid=1019 y=1] score=0.516  top-attn windows=[107, 106, 77]
+   17      1019  MDD  0.516  MDD   Y  120  0.5000   0.4792    0.4s
+      [wattn sid=1021 y=1] score=0.327  top-attn windows=[16, 7, 50]
+   18      1021  MDD  0.327   HC   .  120  0.4444   0.4444    0.4s
+  ... fold  4/10: training on 52 subjects (held-out: 1, 9, 27, 1011, 1030, 1033) ...
+      [wattn sid=1 y=0] score=0.446  top-attn windows=[50, 53, 28]
+   19         1   HC  0.446   HC   Y  120  0.4778   0.4778    0.4s
+      [wattn sid=9 y=0] score=0.511  top-attn windows=[27, 2, 28]
+   20         9   HC  0.511  MDD   .  120  0.4848   0.4596    0.4s
+      [wattn sid=27 y=0] score=0.374  top-attn windows=[119, 42, 105]
+   21        27   HC  0.374   HC   Y  120  0.5185   0.4861    0.4s
+      [wattn sid=1011 y=1] score=0.541  top-attn windows=[94, 43, 28]
+   22      1011  MDD  0.541  MDD   Y  120  0.5417   0.5083    0.4s
+      [wattn sid=1030 y=1] score=0.659  top-attn windows=[14, 8, 15]
+   23      1030  MDD  0.659  MDD   Y  119  0.5833   0.5265    0.4s
+      [wattn sid=1033 y=1] score=0.589  top-attn windows=[98, 70, 97]
+   24      1033  MDD  0.589  MDD   Y  120  0.6111   0.5417    0.4s
+  ... fold  5/10: training on 52 subjects (held-out: 6, 10, 28, 1005, 1013, 1028) ...
+      [wattn sid=6 y=0] score=0.490  top-attn windows=[27, 38, 0]
+   25         6   HC  0.490   HC   Y  120  0.6218   0.5641    0.4s
+      [wattn sid=10 y=0] score=0.510  top-attn windows=[95, 93, 99]
+   26        10   HC  0.510  MDD   .  120  0.6250   0.5476    0.4s
+      [wattn sid=28 y=0] score=0.497  top-attn windows=[0, 102, 103]
+   27        28   HC  0.497   HC   Y  120  0.6333   0.5667    0.4s
+      [wattn sid=1005 y=1] score=0.484  top-attn windows=[87, 88, 58]
+   28      1005  MDD  0.484   HC   .  120  0.6051   0.5410    0.4s
+      [wattn sid=1013 y=1] score=0.500  top-attn windows=[98, 45, 84]
+   29      1013  MDD  0.500  MDD   Y  120  0.5952   0.5548    0.4s
+      [wattn sid=1028 y=1] score=0.494  top-attn windows=[34, 4, 6]
+   30      1028  MDD  0.494   HC   .  119  0.5822   0.5333    0.4s
+  ... fold  6/10: training on 52 subjects (held-out: 7, 11, 17, 1020, 1029, 1031) ...
+      [wattn sid=7 y=0] score=0.482  top-attn windows=[12, 11, 60]
+   31         7   HC  0.482   HC   Y  120  0.6000   0.5500    0.4s
+      [wattn sid=11 y=0] score=0.526  top-attn windows=[35, 96, 62]
+   32        11   HC  0.526  MDD   .  120  0.5922   0.5353    0.4s
+      [wattn sid=17 y=0] score=0.492  top-attn windows=[38, 37, 105]
+   33        17   HC  0.492   HC   Y  120  0.6000   0.5500    0.4s
+      [wattn sid=1020 y=1] score=0.487  top-attn windows=[40, 99, 71]
+   34      1020  MDD  0.487   HC   .  120  0.5799   0.5312    0.4s
+      [wattn sid=1029 y=1] score=0.584  top-attn windows=[69, 70, 109]
+   35      1029  MDD  0.584  MDD   Y  120  0.6013   0.5441    0.4s
+      [wattn sid=1031 y=1] score=0.502  top-attn windows=[13, 78, 22]
+   36      1031  MDD  0.502  MDD   Y  120  0.5957   0.5556    0.4s
+  ... fold  7/10: training on 52 subjects (held-out: 23, 25, 29, 1006, 1024, 1026) ...
+      [wattn sid=23 y=0] score=0.366  top-attn windows=[47, 32, 33]
+   37        23   HC  0.366   HC   Y  120  0.6140   0.5687    0.6s
+      [wattn sid=25 y=0] score=0.328  top-attn windows=[80, 99, 69]
+   38        25   HC  0.328   HC   Y  120  0.6306   0.5806    0.6s
+      [wattn sid=29 y=0] score=0.227  top-attn windows=[117, 87, 28]
+   39        29   HC  0.227   HC   Y  120  0.6481   0.5913    0.6s
+      [wattn sid=1006 y=1] score=0.303  top-attn windows=[88, 87, 90]
+   40      1006  MDD  0.303   HC   .  120  0.6165   0.5752    0.6s
+      [wattn sid=1024 y=1] score=0.178  top-attn windows=[111, 59, 78]
+   41      1024  MDD  0.178   HC   .  120  0.5857   0.5607    0.6s
+      [wattn sid=1026 y=1] score=0.493  top-attn windows=[44, 43, 22]
+   42      1026  MDD  0.493   HC   .  120  0.5828   0.5476    0.6s
+  ... fold  8/10: training on 52 subjects (held-out: 4, 8, 19, 1003, 1014, 1027) ...
+      [wattn sid=4 y=0] score=0.451  top-attn windows=[82, 6, 25]
+   43         4   HC  0.451   HC   Y  120  0.5931   0.5574    0.4s
+      [wattn sid=8 y=0] score=0.547  top-attn windows=[43, 17, 108]
+   44         8   HC  0.547  MDD   .  120  0.5776   0.5445    0.4s
+      [wattn sid=19 y=0] score=0.298  top-attn windows=[30, 60, 97]
+   45        19   HC  0.298   HC   Y  120  0.5933   0.5536    0.4s
+      [wattn sid=1003 y=1] score=0.706  top-attn windows=[48, 47, 65]
+   46      1003  MDD  0.706  MDD   Y   84  0.6117   0.5644    0.4s
+      [wattn sid=1014 y=1] score=0.376  top-attn windows=[19, 18, 22]
+   47      1014  MDD  0.376   HC   .  120  0.5960   0.5525    0.4s
+      [wattn sid=1027 y=1] score=0.580  top-attn windows=[78, 21, 20]
+   48      1027  MDD  0.580  MDD   Y  120  0.6111   0.5625    0.4s
+  ... fold  9/10: training on 53 subjects (held-out: 2, 22, 1010, 1018, 1032) ...
+      [wattn sid=2 y=0] score=0.422  top-attn windows=[47, 71, 70]
+   49         2   HC  0.422   HC   Y  120  0.6183   0.5708    0.5s
+      [wattn sid=22 y=0] score=0.271  top-attn windows=[49, 47, 32]
+   50        22   HC  0.271   HC   Y  120  0.6314   0.5785    0.5s
+      [wattn sid=1010 y=1] score=0.556  top-attn windows=[101, 8, 100]
+   51      1010  MDD  0.556  MDD   Y  120  0.6431   0.5877    0.5s
+      [wattn sid=1018 y=1] score=0.496  top-attn windows=[81, 102, 89]
+   52      1018  MDD  0.496   HC   .  120  0.6405   0.5769    0.5s
+      [wattn sid=1032 y=1] score=0.614  top-attn windows=[0, 1, 3]
+   53      1032  MDD  0.614  MDD   Y  120  0.6524   0.5855    0.5s
+  ... fold 10/10: training on 53 subjects (held-out: 21, 24, 1009, 1025, 1034) ...
+      [wattn sid=21 y=0] score=0.539  top-attn windows=[43, 33, 56]
+   54        21   HC  0.539  MDD   .  120  0.6420   0.5741    0.5s
+      [wattn sid=24 y=0] score=0.535  top-attn windows=[117, 50, 103]
+   55        24   HC  0.535  MDD   .  120  0.6323   0.5635    0.5s
+      [wattn sid=1009 y=1] score=0.508  top-attn windows=[82, 16, 17]
+   56      1009  MDD  0.508  MDD   Y  120  0.6301   0.5714    0.5s
+      [wattn sid=1025 y=1] score=0.535  top-attn windows=[54, 53, 52]
+   57      1025  MDD  0.535  MDD   Y  120  0.6355   0.5788    0.5s
+      [wattn sid=1034 y=1] score=0.529  top-attn windows=[115, 73, 72]
+   58      1034  MDD  0.529  MDD   Y  120  0.6393   0.5857    0.5s
+------------------------------------------------------------------------------
+
+FINAL  stage wattn  [10-fold CV]  |  58 subjects (30 MDD / 28 HC)
+  Subject-level ROC-AUC : 0.6393   (primary)
+  Balanced accuracy     : 0.5857  @thr=0.50   |  0.6345  @thr=0.493 (Youden)
+  Macro-F1              : 0.5857  @thr=0.50   |  0.6326  @thr=0.493
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        16        12
+  MDD       12        18
+
+Total wall time: 31.0s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/mumtaz_wattn_cv10.json

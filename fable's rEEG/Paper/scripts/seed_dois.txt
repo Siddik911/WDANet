@@ -1,0 +1,14 @@
+# Seed DOIs for citation snowballing
+# Format: DOI | bib_key | description
+# Default seeds (WDANet, RCformer, SPD-DANN, Barachant, Barachant) already hardcoded in snowball.py
+
+# Additional high-priority seeds
+10.1038/s41598-026-35316-9 | mlinari2026eeg | EEG Alzheimer/FTD functional connectivity
+10.1016/j.neunet.2026.109076 | cheng2026spd | SPD-DANN UDA cross-subject motor imagery
+10.52202/068431-0450 | hirayama2022spd | TSMNet SPD domain-specific BN NeurIPS 2022
+10.3389/fnhum.2022.1049985 | bleuz2022tangent | TSA tangent-space affine alignment
+10.1016/j.neucom.2012.12.039 | barachant2013classification | Riemannian kernel SVM BCI
+10.1609/aaai.v31i1.10866 | huang2017riemannian | SPDNet deep Riemannian network AAAI 2017
+10.1109/tnsre.2026.3652858 | tibermacine2026stiefel | Stiefel-SPD manifold TNSRE (same journal)
+10.3389/fnins.2021.779231 | xu2021selective | Selective transfer tangent space source selection
+10.3389/fnhum.2020.00103 | xu2020cross | Cross-subject EEG transfer Riemannian

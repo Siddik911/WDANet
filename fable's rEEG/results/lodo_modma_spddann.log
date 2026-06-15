@@ -1,0 +1,86 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+  [train] mumtaz     58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=79 med=141 max=187
+  [train] opennuero  121 subjects  (46 MDD / 75 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=44 med=142 max=209
+  [test ] modma      53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=50 med=144 max=165
+** harmonised to shared 17-channel 10-20 montage **
+
+=== LODO mumtaz+opennuero -> modma training/evaluation — stage spddann (53 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+/home/hasan/fable's rEEG/triad/spddann.py:292: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:838.)
+  tot += float(L_C) * len(bs)
+      epoch  10/80  L_C=0.1045 lambd=0.55
+      epoch  20/80  L_C=0.0838 lambd=0.85
+      epoch  30/80  L_C=0.0794 lambd=0.95
+      epoch  40/80  L_C=0.0750 lambd=0.99
+      epoch  50/80  L_C=0.0655 lambd=1.00
+      epoch  60/80  L_C=0.0626 lambd=1.00
+      epoch  70/80  L_C=0.1172 lambd=1.00
+      epoch  80/80  L_C=0.0774 lambd=1.00
+    1   2010002  MDD  0.598  MDD   Y  100     -       -       7.5s
+    2   2010004  MDD  0.623  MDD   Y   50     -       -       7.4s
+    3   2010005  MDD  0.777  MDD   Y  100     -       -       7.5s
+    4   2010006  MDD  0.725  MDD   Y  100     -       -       7.5s
+    5   2010008  MDD  0.937  MDD   Y  100     -       -       7.5s
+    6   2010010  MDD  0.376   HC   .  100     -       -       7.5s
+    7   2010011  MDD  0.898  MDD   Y  100     -       -       7.5s
+    8   2010012  MDD  0.578  MDD   Y  100     -       -       7.5s
+    9   2010013  MDD  0.081   HC   .  100     -       -       7.5s
+   10   2010015  MDD  0.329   HC   .  100     -       -       7.5s
+   11   2010016  MDD  0.912  MDD   Y  100     -       -       7.5s
+   12   2010018  MDD  0.897  MDD   Y  100     -       -       7.5s
+   13   2010019  MDD  0.597  MDD   Y  100     -       -       7.5s
+   14   2010021  MDD  0.185   HC   .  100     -       -       7.5s
+   15   2010022  MDD  0.986  MDD   Y  100     -       -       7.5s
+   16   2010023  MDD  0.655  MDD   Y  100     -       -       7.5s
+   17   2010024  MDD  0.987  MDD   Y  100     -       -       7.5s
+   18   2010025  MDD  0.717  MDD   Y  100     -       -       7.5s
+   19   2010026  MDD  0.966  MDD   Y  100     -       -       7.5s
+   20   2010028  MDD  0.990  MDD   Y  100     -       -       7.5s
+   21   2010030  MDD  0.697  MDD   Y  100     -       -       7.5s
+   22   2010033  MDD  0.001   HC   .  100     -       -       7.5s
+   23   2010034  MDD  0.713  MDD   Y  100     -       -       7.5s
+   24   2010036  MDD  0.189   HC   .  100     -       -       7.5s
+   25   2020008   HC  0.186   HC   Y  100  0.8750   0.8750    7.5s
+   26   2020010   HC  0.686  MDD   .  100  0.7083   0.6250    7.5s
+   27   2020013   HC  0.489   HC   Y  100  0.7222   0.7083    7.5s
+   28   2020014   HC  0.332   HC   Y  100  0.7396   0.7500    7.5s
+   29   2020015   HC  0.109   HC   Y  100  0.7750   0.7750    7.5s
+   30   2020016   HC  0.367   HC   Y  100  0.7778   0.7917    7.5s
+   31   2020018   HC  0.610  MDD   .  100  0.7560   0.7321    7.5s
+   32   2020019   HC  0.226   HC   Y  100  0.7656   0.7500    7.5s
+   33   2020020   HC  0.099   HC   Y  100  0.7824   0.7639    7.5s
+   34   2020021   HC  0.206   HC   Y  100  0.7875   0.7750    7.5s
+   35   2020022   HC  0.035   HC   Y  100  0.8030   0.7841    7.5s
+   36   2020023   HC  0.227   HC   Y  100  0.8056   0.7917    7.5s
+   37   2020025   HC  0.751  MDD   .  100  0.7724   0.7596    7.5s
+   38   2020026   HC  0.917  MDD   .  100  0.7321   0.7321    7.5s
+   39   2020027   HC  0.454   HC   Y  100  0.7333   0.7417    7.5s
+   40   2020029   HC  0.416   HC   Y  100  0.7344   0.7500    7.5s
+   41   2030002   HC  0.274   HC   Y  100  0.7402   0.7574    7.5s
+   42   2030003   HC  0.611  MDD   .  100  0.7338   0.7361    7.5s
+   43   2030004   HC  0.778  MDD   .  100  0.7127   0.7171    7.5s
+   44   2030005   HC  0.761  MDD   .  100  0.6958   0.7000    7.5s
+   45   2030006   HC  0.323   HC   Y  100  0.7024   0.7083    7.5s
+   46   2030007   HC  0.000   HC   Y  100  0.7159   0.7159    7.5s
+   47   2030009   HC  0.000   HC   Y  100  0.7283   0.7228    7.5s
+   48   2030014   HC  0.392   HC   Y  100  0.7292   0.7292    7.5s
+   49   2030017   HC  0.245   HC   Y  100  0.7333   0.7350    7.5s
+   50   2030018   HC  0.387   HC   Y  100  0.7340   0.7404    7.5s
+   51   2030019   HC  1.000  MDD   .  100  0.7068   0.7269    7.5s
+   52   2030020   HC  0.637  MDD   .  100  0.7024   0.7143    7.5s
+   53   2030021   HC  0.282   HC   Y  100  0.7069   0.7198    7.5s
+------------------------------------------------------------------------------
+
+FINAL  stage spddann  [LODO mumtaz+opennuero -> modma]  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.7069   (primary)
+  Balanced accuracy     : 0.7198  @thr=0.50   |  0.7198  @thr=0.578 (Youden)
+  Macro-F1              : 0.7166  @thr=0.50   |  0.7166  @thr=0.578
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        20         9
+  MDD        6        18
+
+Total wall time: 397.3s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/lodo_modma_spddann_harm.json

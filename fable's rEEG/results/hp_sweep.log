@@ -1,0 +1,5 @@
+
+===== H1_base  --subspace 12 --lr 1e-2 --epochs 80 --max-windows 100 =====
+  LODO  modma      AUC=0.6897
+  LODO  mumtaz     AUC=0.6810
+  LODO  opennuero  AUC=0.5890

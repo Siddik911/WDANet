@@ -1,0 +1,13 @@
+### L3a: nrde + recentering (the workhorse) ###
+=== nrde+rc -> mumtaz ===
+=== nrde+rc -> modma ===
+=== nrde+rc -> opennuero ===
+### L3b: nr(auto-K) + recentering (can alignment rescue connectivity?) ###
+=== ncv+rc -> mumtaz ===
+=== ncv+rc -> modma ===
+=== ncv+rc -> opennuero ===
+### L3c: harmonized within-dataset nrde ceiling ###
+=== nrde harm ceiling: modma ===
+=== nrde harm ceiling: mumtaz ===
+=== nrde harm ceiling: opennuero ===
+### L3 ALL DONE ###

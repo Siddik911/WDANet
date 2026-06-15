@@ -1,0 +1,19 @@
+53 subjects — computing correlation tangent features ...
+
+removed-subspace class audit  (d=7875, 53 subjects, 500 perms)
+
+ K uni PC-AUCs (each removed PC)      multivar LR-AUC   perm p  verdict
+--------------------------------------------------------------------------------
+ 1 [0.43]                                       0.121    0.752  IDENTITY (safe to remove)
+ 2 [0.43, 0.48]                                 0.037    0.926  IDENTITY (safe to remove)
+ 3 [0.43, 0.48, 0.59]                           0.450    0.443  IDENTITY (safe to remove)
+ 4 [0.43, 0.48, 0.59, 0.45]                     0.408    0.599  IDENTITY (safe to remove)
+ 5 [0.43, 0.48, 0.59, 0.45, 0.59]               0.476    0.391  IDENTITY (safe to remove)
+ 6 [0.43, 0.48, 0.59, 0.45, 0.59, 0.72]           0.616    0.066  IDENTITY (safe to remove)
+ 7 [0.43..0.45] (7 PCs)                         0.586    0.118  IDENTITY (safe to remove)
+ 8 [0.43..0.63] (8 PCs)                         0.677    0.022  carries DIAGNOSIS — removing hurts
+ 9 [0.43..0.47] (9 PCs)                         0.654    0.040  carries DIAGNOSIS — removing hurts
+10 [0.43..0.5] (10 PCs)                         0.614    0.104  IDENTITY (safe to remove)
+
+Read: nr uses K=3. If K≤3 says IDENTITY (p>0.05) and a larger K flips to DIAGNOSIS, that
+locates exactly where removal starts eating class signal — the honest basis for choosing K.

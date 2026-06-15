@@ -1,0 +1,49 @@
+device=cuda  windows/subj=60  epochs=20
+
+subjects: 10 (train [2010002, 2010004, 2010005, 2020008, 2020010, 2020013], test [2010006, 2010008, 2020014, 2020015])
+
+======================================================================
+[A] PROTOCOL — window-mixed vs subject-independent
+======================================================================
+  window-mixed split  : window AUC=1.000  acc=1.000
+  subject-independent : subject-level AUC=0.000  (scores=['0.34', '0.28', '0.36', '0.58'] lab=[1, 1, 0, 0])
+  >> if mixed >> subject-independent: literature 'success' is mostly window-level leakage, not a better model.
+
+======================================================================
+[B] IDENTITY — do features encode SUBJECT, not class?
+======================================================================
+  subject-ID recoverable from features: acc=0.990  (chance=0.167)
+  >> acc near 1.0 means capacity went to individual identity (the dominant between-subject axis), not depression.
+
+======================================================================
+[C] OVERFIT — train-acc vs held-out AUC across epochs
+======================================================================
+  epoch  train_loss  train_acc  test_subjAUC
+      1      0.6318      0.666         0.000
+      3      0.4909      1.000         0.000
+      5      0.4096      1.000         0.000
+     10      0.2713      1.000         0.000
+     20      0.1296      1.000         0.000
+  >> train_acc -> 1 while test AUC stays low = pure overfit; if test AUC never rises, early stopping won't save the deep model here.
+
+======================================================================
+[D] SHALLOW vs DEEP — same data, is the DATA the problem?
+======================================================================
+  S2 shallow (corr+tangent LR) subject AUC = 0.000
+  S4 deep SPD net              subject AUC = 0.000
+  >> shallow > deep on identical data ⇒ signal EXISTS (data is fine); the deep model overfits it away.
+
+======================================================================
+[E] SHUFFLE — can S4 fit RANDOM labels to ~0 loss?
+======================================================================
+  final train loss  real labels = 0.1296
+  final train loss  RANDOM labels = 0.1329
+  >> if both ≈ 0, then 'loss -> 0' just means the net memorises whatever per-subject label it's given — it is NOT evidence of learning depression.
+
+######################################################################
+# READ TOGETHER:
+#  A: mixed AUC 1.00 vs subject-indep 0.00
+#  B: subject-ID acc 0.99 (chance 0.17)
+#  D: shallow 0.00 vs deep 0.00
+#  E: train loss real 0.130 vs random 0.133
+######################################################################

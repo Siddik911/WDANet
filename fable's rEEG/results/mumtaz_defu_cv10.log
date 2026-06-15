@@ -1,0 +1,145 @@
+[dataset] mumtaz  raw=/home/hasan/fable's rEEG/Mumtaz  cache=/home/hasan/fable's rEEG/cache/mumtaz  fs_orig=256->125Hz  ch=19
+58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=19  win=4.0s/500smp  windows/subj: min=77 med=141 max=187
+
+=== 10-fold CV training/evaluation — stage defu (58 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/10: training on 52 subjects (held-out: 5, 13, 16, 1001, 1017, 1023) ...
+      [defu sid=5 y=0] nr=0.193  de=0.063  fused=0.128
+    1         5   HC  0.128   HC   Y  120     -       -       2.0s
+      [defu sid=13 y=0] nr=0.352  de=0.652  fused=0.502
+    2        13   HC  0.502  MDD   .  120     -       -       2.0s
+      [defu sid=16 y=0] nr=0.371  de=0.562  fused=0.466
+    3        16   HC  0.466   HC   Y  120     -       -       2.0s
+      [defu sid=1001 y=1] nr=0.342  de=0.569  fused=0.455
+    4      1001  MDD  0.455   HC   .   77  0.3333   0.3333    1.9s
+      [defu sid=1017 y=1] nr=0.623  de=0.630  fused=0.627
+    5      1017  MDD  0.627  MDD   Y  120  0.6667   0.5833    2.0s
+      [defu sid=1023 y=1] nr=0.752  de=0.786  fused=0.769
+    6      1023  MDD  0.769  MDD   Y  120  0.7778   0.6667    2.0s
+  ... fold  2/10: training on 52 subjects (held-out: 14, 15, 20, 1002, 1015, 1022) ...
+      [defu sid=14 y=0] nr=0.216  de=0.612  fused=0.414
+    7        14   HC  0.414   HC   Y  120  0.8333   0.7083    0.3s
+      [defu sid=15 y=0] nr=0.702  de=0.687  fused=0.694
+    8        15   HC  0.694  MDD   .  120  0.7333   0.6333    0.3s
+      [defu sid=20 y=0] nr=0.825  de=0.389  fused=0.607
+    9        20   HC  0.607  MDD   .  120  0.7222   0.5833    0.3s
+      [defu sid=1002 y=1] nr=0.987  de=0.607  fused=0.797
+   10      1002  MDD  0.797  MDD   Y  120  0.7917   0.6250    0.3s
+      [defu sid=1015 y=1] nr=0.212  de=0.478  fused=0.345
+   11      1015  MDD  0.345   HC   .  120  0.6667   0.5500    0.3s
+      [defu sid=1022 y=1] nr=0.799  de=0.715  fused=0.757
+   12      1022  MDD  0.757  MDD   Y  120  0.7222   0.5833    0.3s
+  ... fold  3/10: training on 52 subjects (held-out: 3, 26, 30, 1007, 1019, 1021) ...
+      [defu sid=3 y=0] nr=0.468  de=0.384  fused=0.426
+   13         3   HC  0.426   HC   Y  120  0.7381   0.6190    0.2s
+      [defu sid=26 y=0] nr=0.911  de=0.440  fused=0.676
+   14        26   HC  0.676  MDD   .  120  0.7083   0.5833    0.2s
+      [defu sid=30 y=0] nr=0.162  de=0.330  fused=0.246
+   15        30   HC  0.246   HC   Y  120  0.7407   0.6111    0.2s
+      [defu sid=1007 y=1] nr=0.949  de=0.664  fused=0.807
+   16      1007  MDD  0.807  MDD   Y  111  0.7778   0.6349    0.2s
+      [defu sid=1019 y=1] nr=0.813  de=0.480  fused=0.647
+   17      1019  MDD  0.647  MDD   Y  120  0.7778   0.6528    0.2s
+      [defu sid=1021 y=1] nr=0.075  de=0.677  fused=0.376
+   18      1021  MDD  0.376   HC   .  120  0.7160   0.6111    0.2s
+  ... fold  4/10: training on 52 subjects (held-out: 1, 9, 27, 1011, 1030, 1033) ...
+      [defu sid=1 y=0] nr=0.230  de=0.379  fused=0.304
+   19         1   HC  0.304   HC   Y  120  0.7444   0.6333    0.2s
+      [defu sid=9 y=0] nr=0.185  de=0.439  fused=0.312
+   20         9   HC  0.312   HC   Y  120  0.7677   0.6515    0.2s
+      [defu sid=27 y=0] nr=0.170  de=0.362  fused=0.266
+   21        27   HC  0.266   HC   Y  120  0.7870   0.6667    0.2s
+      [defu sid=1011 y=1] nr=0.178  de=0.236  fused=0.207
+   22      1011  MDD  0.207   HC   .  120  0.7167   0.6333    0.2s
+      [defu sid=1030 y=1] nr=0.603  de=0.673  fused=0.638
+   23      1030  MDD  0.638  MDD   Y  119  0.7273   0.6515    0.2s
+      [defu sid=1033 y=1] nr=0.898  de=0.266  fused=0.582
+   24      1033  MDD  0.582  MDD   Y  120  0.7292   0.6667    0.2s
+  ... fold  5/10: training on 52 subjects (held-out: 6, 10, 28, 1005, 1013, 1028) ...
+      [defu sid=6 y=0] nr=0.273  de=0.513  fused=0.393
+   25         6   HC  0.393   HC   Y  120  0.7308   0.6795    0.3s
+      [defu sid=10 y=0] nr=0.178  de=0.720  fused=0.449
+   26        10   HC  0.449   HC   Y  120  0.7321   0.6905    0.3s
+      [defu sid=28 y=0] nr=0.786  de=0.067  fused=0.427
+   27        28   HC  0.427   HC   Y  120  0.7333   0.7000    0.3s
+      [defu sid=1005 y=1] nr=0.732  de=0.389  fused=0.561
+   28      1005  MDD  0.561  MDD   Y  120  0.7385   0.7128    0.3s
+      [defu sid=1013 y=1] nr=0.448  de=0.751  fused=0.599
+   29      1013  MDD  0.599  MDD   Y  120  0.7429   0.7238    0.3s
+      [defu sid=1028 y=1] nr=0.917  de=0.739  fused=0.828
+   30      1028  MDD  0.828  MDD   Y  119  0.7600   0.7333    0.2s
+  ... fold  6/10: training on 52 subjects (held-out: 7, 11, 17, 1020, 1029, 1031) ...
+      [defu sid=7 y=0] nr=0.655  de=0.304  fused=0.479
+   31         7   HC  0.479   HC   Y  120  0.7583   0.7417    0.2s
+      [defu sid=11 y=0] nr=0.244  de=0.117  fused=0.180
+   32        11   HC  0.180   HC   Y  120  0.7725   0.7490    0.2s
+      [defu sid=17 y=0] nr=0.169  de=0.127  fused=0.148
+   33        17   HC  0.148   HC   Y  120  0.7852   0.7556    0.2s
+      [defu sid=1020 y=1] nr=0.268  de=0.529  fused=0.399
+   34      1020  MDD  0.399   HC   .  120  0.7639   0.7326    0.2s
+      [defu sid=1029 y=1] nr=0.407  de=0.403  fused=0.405
+   35      1029  MDD  0.405   HC   .  120  0.7451   0.7124    0.2s
+      [defu sid=1031 y=1] nr=0.787  de=0.734  fused=0.760
+   36      1031  MDD  0.760  MDD   Y  120  0.7593   0.7222    0.2s
+  ... fold  7/10: training on 52 subjects (held-out: 23, 25, 29, 1006, 1024, 1026) ...
+      [defu sid=23 y=0] nr=0.290  de=0.452  fused=0.371
+   37        23   HC  0.371   HC   Y  120  0.7661   0.7281    0.2s
+      [defu sid=25 y=0] nr=0.606  de=0.814  fused=0.710
+   38        25   HC  0.710  MDD   .  120  0.7444   0.7083    0.2s
+      [defu sid=29 y=0] nr=0.096  de=0.365  fused=0.230
+   39        29   HC  0.230   HC   Y  120  0.7540   0.7143    0.2s
+      [defu sid=1006 y=1] nr=0.482  de=0.383  fused=0.433
+   40      1006  MDD  0.433   HC   .  120  0.7469   0.6967    0.2s
+      [defu sid=1024 y=1] nr=0.192  de=0.755  fused=0.473
+   41      1024  MDD  0.473   HC   .  120  0.7452   0.6810    0.2s
+      [defu sid=1026 y=1] nr=0.502  de=0.646  fused=0.574
+   42      1026  MDD  0.574  MDD   Y  120  0.7483   0.6905    0.2s
+  ... fold  8/10: training on 52 subjects (held-out: 4, 8, 19, 1003, 1014, 1027) ...
+      [defu sid=4 y=0] nr=0.704  de=0.873  fused=0.789
+   43         4   HC  0.789  MDD   .  120  0.7208   0.6732    0.3s
+      [defu sid=8 y=0] nr=0.265  de=0.626  fused=0.445
+   44         8   HC  0.445   HC   Y  120  0.7205   0.6791    0.3s
+      [defu sid=19 y=0] nr=0.000  de=0.519  fused=0.260
+   45        19   HC  0.260   HC   Y  120  0.7302   0.6845    0.2s
+      [defu sid=1003 y=1] nr=0.881  de=0.837  fused=0.859
+   46      1003  MDD  0.859  MDD   Y   84  0.7424   0.6932    0.2s
+      [defu sid=1014 y=1] nr=0.450  de=0.674  fused=0.562
+   47      1014  MDD  0.562  MDD   Y  120  0.7446   0.7011    0.2s
+      [defu sid=1027 y=1] nr=0.066  de=0.449  fused=0.258
+   48      1027  MDD  0.258   HC   .  120  0.7222   0.6875    0.2s
+  ... fold  9/10: training on 53 subjects (held-out: 2, 22, 1010, 1018, 1032) ...
+      [defu sid=2 y=0] nr=0.031  de=0.199  fused=0.115
+   49         2   HC  0.115   HC   Y  120  0.7333   0.6925    0.3s
+      [defu sid=22 y=0] nr=0.742  de=0.221  fused=0.482
+   50        22   HC  0.482   HC   Y  120  0.7292   0.6971    0.3s
+      [defu sid=1010 y=1] nr=0.164  de=0.561  fused=0.362
+   51      1010  MDD  0.362   HC   .  120  0.7154   0.6846    0.3s
+      [defu sid=1018 y=1] nr=1.000  de=0.546  fused=0.773
+   52      1018  MDD  0.773  MDD   Y  120  0.7249   0.6923    0.3s
+      [defu sid=1032 y=1] nr=0.952  de=0.551  fused=0.752
+   53      1032  MDD  0.752  MDD   Y  120  0.7336   0.6994    0.3s
+  ... fold 10/10: training on 53 subjects (held-out: 21, 24, 1009, 1025, 1034) ...
+      [defu sid=21 y=0] nr=0.128  de=0.342  fused=0.235
+   54        21   HC  0.235   HC   Y  120  0.7421   0.7037    0.3s
+      [defu sid=24 y=0] nr=0.206  de=0.204  fused=0.205
+   55        24   HC  0.205   HC   Y  120  0.7513   0.7077    0.3s
+      [defu sid=1009 y=1] nr=0.812  de=0.710  fused=0.761
+   56      1009  MDD  0.761  MDD   Y  120  0.7589   0.7143    0.3s
+      [defu sid=1025 y=1] nr=0.333  de=0.078  fused=0.205
+   57      1025  MDD  0.205   HC   .  120  0.7389   0.7032    0.3s
+      [defu sid=1034 y=1] nr=0.842  de=0.222  fused=0.532
+   58      1034  MDD  0.532  MDD   Y  120  0.7417   0.7095    0.3s
+------------------------------------------------------------------------------
+
+FINAL  stage defu  [10-fold CV]  |  58 subjects (30 MDD / 28 HC)
+  Subject-level ROC-AUC : 0.7417   (primary)
+  Balanced accuracy     : 0.7095  @thr=0.50   |  0.7274  @thr=0.532 (Youden)
+  Macro-F1              : 0.7061  @thr=0.50   |  0.7228  @thr=0.532
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        22         6
+  MDD       11        19
+
+Total wall time: 25.4s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/mumtaz_defu_cv10.json

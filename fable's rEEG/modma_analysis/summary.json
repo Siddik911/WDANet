@@ -1,0 +1,92 @@
+{
+  "N": 53,
+  "n_mdd": 24,
+  "n_hc": 29,
+  "median_wins": 60,
+  "total_wins": 3146,
+  "dist_within_mdd": 23.4975,
+  "dist_within_hc": 23.8894,
+  "dist_cross": 23.682,
+  "class_sep_ratio": 0.9995,
+  "class_signal_norm": 4.3666,
+  "identity_spread": 15.9948,
+  "signal_identity_ratio": 0.273,
+  "var_within_subj": 0.0083,
+  "pca_aucs": {
+    "1": 0.0,
+    "2": 0.194,
+    "3": 0.401,
+    "5": 0.443,
+    "8": 0.674,
+    "10": 0.603,
+    "15": 0.636,
+    "20": 0.626,
+    "30": 0.579
+  },
+  "band_results": {
+    "delta": {
+      "auc": 0.493,
+      "dprime": 0.2305,
+      "status": "ok"
+    },
+    "theta": {
+      "auc": 0.441,
+      "dprime": 0.2237,
+      "status": "ok"
+    },
+    "alpha": {
+      "auc": 0.595,
+      "dprime": 0.2261,
+      "status": "ok"
+    },
+    "beta": {
+      "auc": 0.481,
+      "dprime": 0.2382,
+      "status": "ok"
+    }
+  },
+  "within_var_mdd": 0.0079,
+  "within_var_hc": 0.0086,
+  "within_var_pval": 0.363,
+  "var_vs_confidence_r": 0.062,
+  "s2_accuracy_at_thresh_05": 0.623,
+  "discriminant_vs_s2_r": 0.635,
+  "learning_curve": {
+    "6": {
+      "mean": 0.536,
+      "std": 0.084
+    },
+    "10": {
+      "mean": 0.549,
+      "std": 0.073
+    },
+    "14": {
+      "mean": 0.582,
+      "std": 0.082
+    },
+    "18": {
+      "mean": 0.578,
+      "std": 0.094
+    },
+    "24": {
+      "mean": 0.616,
+      "std": 0.099
+    },
+    "32": {
+      "mean": 0.617,
+      "std": 0.096
+    },
+    "40": {
+      "mean": 0.64,
+      "std": 0.162
+    },
+    "48": {
+      "mean": 0.692,
+      "std": 0.34
+    },
+    "52": {
+      "mean": 0.733,
+      "std": 0.442
+    }
+  }
+}

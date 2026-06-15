@@ -1,0 +1,80 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+  [train] modma      53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=50 med=144 max=165
+  [train] opennuero  121 subjects  (46 MDD / 75 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=44 med=142 max=209
+  [test ] mumtaz     58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=79 med=141 max=187
+** harmonised to shared 17-channel 10-20 montage **
+
+=== LODO modma+opennuero -> mumtaz training/evaluation — stage nrde (58 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+    1         1   HC  0.151   HC   Y  120     -       -       0.6s
+    2         2   HC  0.141   HC   Y  120     -       -       0.6s
+    3         3   HC  0.062   HC   Y  120     -       -       0.6s
+    4         4   HC  0.003   HC   Y  120     -       -       0.6s
+    5         5   HC  0.024   HC   Y  120     -       -       0.6s
+    6         6   HC  0.112   HC   Y  120     -       -       0.6s
+    7         7   HC  0.214   HC   Y  120     -       -       0.6s
+    8         8   HC  0.015   HC   Y  120     -       -       0.6s
+    9         9   HC  0.019   HC   Y  120     -       -       0.6s
+   10        10   HC  0.396   HC   Y  120     -       -       0.6s
+   11        11   HC  0.464   HC   Y  120     -       -       0.6s
+   12        13   HC  0.008   HC   Y  120     -       -       0.6s
+   13        14   HC  0.006   HC   Y  120     -       -       0.6s
+   14        15   HC  0.007   HC   Y  120     -       -       0.6s
+   15        16   HC  0.111   HC   Y  120     -       -       0.6s
+   16        17   HC  0.087   HC   Y  120     -       -       0.6s
+   17        19   HC  0.011   HC   Y  120     -       -       0.6s
+   18        20   HC  0.593  MDD   .  120     -       -       0.6s
+   19        21   HC  0.012   HC   Y  120     -       -       0.6s
+   20        22   HC  0.110   HC   Y  120     -       -       0.6s
+   21        23   HC  0.013   HC   Y  120     -       -       0.6s
+   22        24   HC  0.042   HC   Y  120     -       -       0.6s
+   23        25   HC  0.108   HC   Y  120     -       -       0.6s
+   24        26   HC  0.025   HC   Y  120     -       -       0.6s
+   25        27   HC  0.043   HC   Y  120     -       -       0.6s
+   26        28   HC  0.673  MDD   .  120     -       -       0.6s
+   27        29   HC  0.223   HC   Y  120     -       -       0.6s
+   28        30   HC  0.043   HC   Y  120     -       -       0.6s
+   29      1001  MDD  0.277   HC   .   79  0.8571   0.4643    0.6s
+   30      1002  MDD  0.434   HC   .  120  0.8750   0.4643    0.6s
+   31      1003  MDD  0.641  MDD   Y   84  0.9048   0.6310    0.6s
+   32      1005  MDD  0.446   HC   .  120  0.9018   0.5893    0.6s
+   33      1006  MDD  0.138   HC   .  120  0.8643   0.5643    0.6s
+   34      1007  MDD  0.859  MDD   Y  111  0.8869   0.6310    0.6s
+   35      1009  MDD  0.794  MDD   Y  120  0.9031   0.6786    0.6s
+   36      1010  MDD  0.310   HC   .  120  0.8973   0.6518    0.6s
+   37      1011  MDD  0.169   HC   .  120  0.8849   0.6310    0.6s
+   38      1013  MDD  0.264   HC   .  120  0.8821   0.6143    0.6s
+   39      1014  MDD  0.721  MDD   Y  120  0.8929   0.6461    0.6s
+   40      1015  MDD  0.360   HC   .  120  0.8899   0.6310    0.6s
+   41      1017  MDD  0.210   HC   .  120  0.8819   0.6181    0.6s
+   42      1018  MDD  0.484   HC   .  120  0.8852   0.6071    0.6s
+   43      1019  MDD  0.050   HC   .  120  0.8595   0.5976    0.6s
+   44      1020  MDD  0.209   HC   .  120  0.8549   0.5893    0.6s
+   45      1021  MDD  0.360   HC   .  120  0.8550   0.5819    0.6s
+   46      1022  MDD  0.577  MDD   Y  120  0.8591   0.6032    0.6s
+   47      1023  MDD  0.234   HC   .  120  0.8590   0.5959    0.6s
+   48      1024  MDD  0.698  MDD   Y  120  0.8661   0.6143    0.6s
+   49      1025  MDD  0.806  MDD   Y  120  0.8724   0.6310    0.6s
+   50      1026  MDD  0.601  MDD   Y  120  0.8766   0.6461    0.6s
+   51      1027  MDD  0.005   HC   .  120  0.8401   0.6382    0.6s
+   52      1028  MDD  0.403   HC   .  119  0.8423   0.6310    0.6s
+   53      1029  MDD  0.535  MDD   Y  120  0.8457   0.6443    0.6s
+   54      1030  MDD  0.408   HC   .  119  0.8475   0.6374    0.6s
+   55      1031  MDD  0.776  MDD   Y  120  0.8532   0.6495    0.6s
+   56      1032  MDD  0.639  MDD   Y  120  0.8571   0.6607    0.6s
+   57      1033  MDD  0.617  MDD   Y  120  0.8608   0.6712    0.6s
+   58      1034  MDD  0.617  MDD   Y  120  0.8643   0.6810    0.6s
+------------------------------------------------------------------------------
+
+FINAL  stage nrde  [LODO modma+opennuero -> mumtaz]  |  58 subjects (30 MDD / 28 HC)
+  Subject-level ROC-AUC : 0.8643   (primary)
+  Balanced accuracy     : 0.6810  @thr=0.50   |  0.8429  @thr=0.169 (Youden)
+  Macro-F1              : 0.6551  @thr=0.50   |  0.8437  @thr=0.169
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        26         2
+  MDD       17        13
+
+Total wall time: 35.7s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/lodo_mumtaz_nrde_harm.json

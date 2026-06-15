@@ -1,0 +1,177 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage mb (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...
+      [mb sid=2010002 y=1] delta=0.18 theta=0.08 alpha=0.15 beta=0.37 gamma=0.04  mean=0.164
+    1   2010002  MDD  0.164   HC   .  120     -       -     565.6s
+  ... fold  2/53: training on 52 subjects (held-out sid=2010004) ...
+      [mb sid=2010004 y=1] delta=0.44 theta=0.14 alpha=0.65 beta=0.45 gamma=0.83  mean=0.501
+    2   2010004  MDD  0.501  MDD   Y   44     -       -      41.6s
+  ... fold  3/53: training on 52 subjects (held-out sid=2010005) ...
+      [mb sid=2010005 y=1] delta=0.15 theta=0.23 alpha=0.25 beta=0.17 gamma=0.16  mean=0.191
+    3   2010005  MDD  0.191   HC   .  120     -       -      41.6s
+  ... fold  4/53: training on 52 subjects (held-out sid=2010006) ...
+      [mb sid=2010006 y=1] delta=0.39 theta=0.32 alpha=0.03 beta=0.02 gamma=0.04  mean=0.162
+    4   2010006  MDD  0.162   HC   .  120     -       -      41.2s
+  ... fold  5/53: training on 52 subjects (held-out sid=2010008) ...
+      [mb sid=2010008 y=1] delta=0.56 theta=0.26 alpha=0.93 beta=0.05 gamma=0.19  mean=0.398
+    5   2010008  MDD  0.398   HC   .  120     -       -      41.0s
+  ... fold  6/53: training on 52 subjects (held-out sid=2010010) ...
+      [mb sid=2010010 y=1] delta=0.43 theta=0.37 alpha=0.88 beta=0.92 gamma=0.94  mean=0.707
+    6   2010010  MDD  0.707  MDD   Y   92     -       -      41.1s
+  ... fold  7/53: training on 52 subjects (held-out sid=2010011) ...
+      [mb sid=2010011 y=1] delta=0.26 theta=0.22 alpha=0.28 beta=0.21 gamma=0.75  mean=0.346
+    7   2010011  MDD  0.346   HC   .  120     -       -      40.6s
+  ... fold  8/53: training on 52 subjects (held-out sid=2010012) ...
+      [mb sid=2010012 y=1] delta=0.92 theta=0.85 alpha=0.98 beta=0.52 gamma=0.59  mean=0.773
+    8   2010012  MDD  0.773  MDD   Y  112     -       -      40.8s
+  ... fold  9/53: training on 52 subjects (held-out sid=2010013) ...
+      [mb sid=2010013 y=1] delta=0.88 theta=0.83 alpha=0.89 beta=0.95 gamma=0.94  mean=0.897
+    9   2010013  MDD  0.897  MDD   Y  120     -       -      41.1s
+  ... fold 10/53: training on 52 subjects (held-out sid=2010015) ...
+      [mb sid=2010015 y=1] delta=0.29 theta=0.18 alpha=0.19 beta=0.01 gamma=0.04  mean=0.142
+   10   2010015  MDD  0.142   HC   .  120     -       -      43.7s
+  ... fold 11/53: training on 52 subjects (held-out sid=2010016) ...
+      [mb sid=2010016 y=1] delta=0.24 theta=0.15 alpha=0.06 beta=0.09 gamma=0.07  mean=0.121
+   11   2010016  MDD  0.121   HC   .  120     -       -      46.6s
+  ... fold 12/53: training on 52 subjects (held-out sid=2010018) ...
+      [mb sid=2010018 y=1] delta=0.27 theta=0.26 alpha=0.71 beta=0.50 gamma=0.25  mean=0.399
+   12   2010018  MDD  0.399   HC   .  120     -       -      41.9s
+  ... fold 13/53: training on 52 subjects (held-out sid=2010019) ...
+      [mb sid=2010019 y=1] delta=0.33 theta=0.04 alpha=0.06 beta=0.46 gamma=0.95  mean=0.368
+   13   2010019  MDD  0.368   HC   .  120     -       -      56.4s
+  ... fold 14/53: training on 52 subjects (held-out sid=2010021) ...
+      [mb sid=2010021 y=1] delta=0.00 theta=0.01 alpha=0.01 beta=0.01 gamma=0.01  mean=0.009
+   14   2010021  MDD  0.009   HC   .  120     -       -      49.7s
+  ... fold 15/53: training on 52 subjects (held-out sid=2010022) ...
+      [mb sid=2010022 y=1] delta=0.58 theta=0.85 alpha=0.97 beta=0.90 gamma=0.97  mean=0.854
+   15   2010022  MDD  0.854  MDD   Y  107     -       -      55.0s
+  ... fold 16/53: training on 52 subjects (held-out sid=2010023) ...
+      [mb sid=2010023 y=1] delta=0.26 theta=0.05 alpha=0.11 beta=0.42 gamma=0.71  mean=0.308
+   16   2010023  MDD  0.308   HC   .  120     -       -      41.1s
+  ... fold 17/53: training on 52 subjects (held-out sid=2010024) ...
+      [mb sid=2010024 y=1] delta=0.97 theta=0.89 alpha=0.71 beta=0.07 gamma=0.86  mean=0.698
+   17   2010024  MDD  0.698  MDD   Y  120     -       -      41.1s
+  ... fold 18/53: training on 52 subjects (held-out sid=2010025) ...
+      [mb sid=2010025 y=1] delta=0.56 theta=0.85 alpha=0.92 beta=0.71 gamma=0.65  mean=0.740
+   18   2010025  MDD  0.740  MDD   Y  120     -       -      41.4s
+  ... fold 19/53: training on 52 subjects (held-out sid=2010026) ...
+      [mb sid=2010026 y=1] delta=0.47 theta=0.67 alpha=0.32 beta=0.27 gamma=0.28  mean=0.401
+   19   2010026  MDD  0.401   HC   .  115     -       -      41.6s
+  ... fold 20/53: training on 52 subjects (held-out sid=2010028) ...
+      [mb sid=2010028 y=1] delta=0.36 theta=0.30 alpha=0.43 beta=0.33 gamma=0.15  mean=0.312
+   20   2010028  MDD  0.312   HC   .  120     -       -      41.1s
+  ... fold 21/53: training on 52 subjects (held-out sid=2010030) ...
+      [mb sid=2010030 y=1] delta=0.99 theta=0.88 alpha=0.99 beta=0.99 gamma=0.94  mean=0.958
+   21   2010030  MDD  0.958  MDD   Y  120     -       -      41.4s
+  ... fold 22/53: training on 52 subjects (held-out sid=2010033) ...
+      [mb sid=2010033 y=1] delta=0.88 theta=0.80 alpha=0.36 beta=0.55 gamma=0.60  mean=0.637
+   22   2010033  MDD  0.637  MDD   Y  120     -       -      41.2s
+  ... fold 23/53: training on 52 subjects (held-out sid=2010034) ...
+      [mb sid=2010034 y=1] delta=0.70 theta=0.17 alpha=0.04 beta=0.00 gamma=0.05  mean=0.191
+   23   2010034  MDD  0.191   HC   .   70     -       -      40.6s
+  ... fold 24/53: training on 52 subjects (held-out sid=2010036) ...
+      [mb sid=2010036 y=1] delta=0.22 theta=0.17 alpha=0.04 beta=0.03 gamma=0.77  mean=0.245
+   24   2010036  MDD  0.245   HC   .   99     -       -      42.6s
+  ... fold 25/53: training on 52 subjects (held-out sid=2020008) ...
+      [mb sid=2020008 y=0] delta=0.87 theta=0.90 alpha=0.78 beta=0.51 gamma=0.72  mean=0.755
+   25   2020008   HC  0.755  MDD   .   42  0.1667   0.1875   41.3s
+  ... fold 26/53: training on 52 subjects (held-out sid=2020010) ...
+      [mb sid=2020010 y=0] delta=0.05 theta=0.22 alpha=0.39 beta=0.57 gamma=0.77  mean=0.399
+   26   2020010   HC  0.399   HC   Y  112  0.2917   0.4375   41.1s
+  ... fold 27/53: training on 52 subjects (held-out sid=2020013) ...
+      [mb sid=2020013 y=0] delta=0.09 theta=0.10 alpha=0.18 beta=0.31 gamma=0.19  mean=0.173
+   27   2020013   HC  0.173   HC   Y  113  0.4583   0.5208   40.8s
+  ... fold 28/53: training on 52 subjects (held-out sid=2020014) ...
+      [mb sid=2020014 y=0] delta=0.87 theta=0.93 alpha=0.95 beta=0.96 gamma=0.95  mean=0.932
+   28   2020014   HC  0.932  MDD   .   66  0.3542   0.4375   41.2s
+  ... fold 29/53: training on 52 subjects (held-out sid=2020015) ...
+      [mb sid=2020015 y=0] delta=0.26 theta=0.53 alpha=0.48 beta=0.41 gamma=0.12  mean=0.358
+   29   2020015   HC  0.358   HC   Y  120  0.3917   0.4875   40.6s
+  ... fold 30/53: training on 52 subjects (held-out sid=2020016) ...
+      [mb sid=2020016 y=0] delta=0.26 theta=0.12 alpha=0.01 beta=0.05 gamma=0.22  mean=0.132
+   30   2020016   HC  0.132   HC   Y  119  0.4792   0.5208   40.6s
+  ... fold 31/53: training on 52 subjects (held-out sid=2020018) ...
+      [mb sid=2020018 y=0] delta=0.09 theta=0.04 alpha=0.07 beta=0.12 gamma=0.04  mean=0.074
+   31   2020018   HC  0.074   HC   Y   95  0.5476   0.5446   40.7s
+  ... fold 32/53: training on 52 subjects (held-out sid=2020019) ...
+      [mb sid=2020019 y=0] delta=0.06 theta=0.25 alpha=0.00 beta=0.01 gamma=0.02  mean=0.068
+   32   2020019   HC  0.068   HC   Y   90  0.5990   0.5625   40.7s
+  ... fold 33/53: training on 52 subjects (held-out sid=2020020) ...
+      [mb sid=2020020 y=0] delta=0.32 theta=0.16 alpha=0.10 beta=0.36 gamma=0.27  mean=0.240
+   33   2020020   HC  0.240   HC   Y  120  0.6111   0.5764   40.7s
+  ... fold 34/53: training on 52 subjects (held-out sid=2020021) ...
+      [mb sid=2020021 y=0] delta=0.05 theta=0.05 alpha=0.02 beta=0.14 gamma=0.17  mean=0.084
+   34   2020021   HC  0.084   HC   Y  120  0.6458   0.5875   41.1s
+  ... fold 35/53: training on 52 subjects (held-out sid=2020022) ...
+      [mb sid=2020022 y=0] delta=0.14 theta=0.01 alpha=0.00 beta=0.04 gamma=0.32  mean=0.103
+   35   2020022   HC  0.103   HC   Y  120  0.6742   0.5966   40.5s
+  ... fold 36/53: training on 52 subjects (held-out sid=2020023) ...
+      [mb sid=2020023 y=0] delta=0.90 theta=0.93 alpha=0.75 beta=0.41 gamma=0.68  mean=0.737
+   36   2020023   HC  0.737  MDD   .  120  0.6354   0.5625   41.1s
+  ... fold 37/53: training on 52 subjects (held-out sid=2020025) ...
+      [mb sid=2020025 y=0] delta=0.15 theta=0.15 alpha=0.04 beta=0.24 gamma=0.35  mean=0.185
+   37   2020025   HC  0.185   HC   Y  120  0.6474   0.5721   48.0s
+  ... fold 38/53: training on 52 subjects (held-out sid=2020026) ...
+      [mb sid=2020026 y=0] delta=0.50 theta=0.83 alpha=0.64 beta=0.92 gamma=0.97  mean=0.770
+   38   2020026   HC  0.770  MDD   .  120  0.6131   0.5446   55.9s
+  ... fold 39/53: training on 52 subjects (held-out sid=2020027) ...
+      [mb sid=2020027 y=0] delta=0.14 theta=0.09 alpha=0.00 beta=0.16 gamma=0.62  mean=0.201
+   39   2020027   HC  0.201   HC   Y  120  0.6194   0.5542   56.1s
+  ... fold 40/53: training on 52 subjects (held-out sid=2020029) ...
+      [mb sid=2020029 y=0] delta=0.23 theta=0.19 alpha=0.26 beta=0.08 gamma=0.23  mean=0.200
+   40   2020029   HC  0.200   HC   Y   96  0.6250   0.5625   59.1s
+  ... fold 41/53: training on 52 subjects (held-out sid=2030002) ...
+      [mb sid=2030002 y=0] delta=0.08 theta=0.24 alpha=0.22 beta=0.06 gamma=0.02  mean=0.125
+   41   2030002   HC  0.125   HC   Y  120  0.6422   0.5699   51.7s
+  ... fold 42/53: training on 52 subjects (held-out sid=2030003) ...
+      [mb sid=2030003 y=0] delta=0.43 theta=0.29 alpha=0.87 beta=0.46 gamma=0.43  mean=0.495
+   42   2030003   HC  0.495   HC   Y   94  0.6273   0.5764   49.2s
+  ... fold 43/53: training on 52 subjects (held-out sid=2030004) ...
+      [mb sid=2030004 y=0] delta=0.56 theta=0.69 alpha=0.27 beta=0.29 gamma=0.27  mean=0.414
+   43   2030004   HC  0.414   HC   Y  120  0.6140   0.5822   53.7s
+  ... fold 44/53: training on 52 subjects (held-out sid=2030005) ...
+      [mb sid=2030005 y=0] delta=0.64 theta=0.87 alpha=0.97 beta=0.61 gamma=0.22  mean=0.661
+   44   2030005   HC  0.661  MDD   .   90  0.5979   0.5625   53.6s
+  ... fold 45/53: training on 52 subjects (held-out sid=2030006) ...
+      [mb sid=2030006 y=0] delta=0.13 theta=0.17 alpha=0.11 beta=0.01 gamma=0.03  mean=0.092
+   45   2030006   HC  0.092   HC   Y  120  0.6151   0.5685   51.2s
+  ... fold 46/53: training on 52 subjects (held-out sid=2030007) ...
+      [mb sid=2030007 y=0] delta=0.15 theta=0.17 alpha=0.33 beta=0.13 gamma=0.10  mean=0.175
+   46   2030007   HC  0.175   HC   Y  120  0.6231   0.5739   55.8s
+  ... fold 47/53: training on 52 subjects (held-out sid=2030009) ...
+      [mb sid=2030009 y=0] delta=0.00 theta=0.01 alpha=0.02 beta=0.44 gamma=0.10  mean=0.116
+   47   2030009   HC  0.116   HC   Y   95  0.6377   0.5788   52.4s
+  ... fold 48/53: training on 52 subjects (held-out sid=2030014) ...
+      [mb sid=2030014 y=0] delta=0.58 theta=0.19 alpha=0.34 beta=0.73 gamma=0.76  mean=0.519
+   48   2030014   HC  0.519  MDD   .  120  0.6250   0.5625   63.1s
+  ... fold 49/53: training on 52 subjects (held-out sid=2030017) ...
+      [mb sid=2030017 y=0] delta=0.61 theta=0.54 alpha=0.24 beta=0.73 gamma=0.58  mean=0.542
+   49   2030017   HC  0.542  MDD   .  120  0.6133   0.5475   50.1s
+  ... fold 50/53: training on 52 subjects (held-out sid=2030018) ...
+      [mb sid=2030018 y=0] delta=0.81 theta=0.24 alpha=0.05 beta=0.22 gamma=0.80  mean=0.424
+   50   2030018   HC  0.424   HC   Y  104  0.6042   0.5529   48.3s
+  ... fold 51/53: training on 52 subjects (held-out sid=2030019) ...
+      [mb sid=2030019 y=0] delta=0.04 theta=0.01 alpha=0.00 beta=0.00 gamma=0.00  mean=0.011
+   51   2030019   HC  0.011   HC   Y  120  0.6173   0.5579   48.3s
+  ... fold 52/53: training on 52 subjects (held-out sid=2030020) ...
+      [mb sid=2030020 y=0] delta=0.80 theta=0.89 alpha=0.96 beta=0.82 gamma=0.95  mean=0.886
+   52   2030020   HC  0.886  MDD   .  120  0.5982   0.5446   47.1s
+  ... fold 53/53: training on 52 subjects (held-out sid=2030021) ...
+      [mb sid=2030021 y=0] delta=0.04 theta=0.03 alpha=0.02 beta=0.10 gamma=0.02  mean=0.044
+   53   2030021   HC  0.044   HC   Y  120  0.6106   0.5496   46.9s
+------------------------------------------------------------------------------
+
+FINAL  stage mb  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.6106   (primary)
+  Balanced accuracy     : 0.5496  @thr=0.50   |  0.6307  @thr=0.142 (Youden)
+  Macro-F1              : 0.5426  @thr=0.50   |  0.5824  @thr=0.142
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        21         8
+  MDD       15         9
+
+Total wall time: 2941.3s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/mb_loso.json

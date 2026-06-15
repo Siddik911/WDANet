@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2025/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: refs.bib
+Warning--string name "july" is undefined
+--line 347 of file refs.bib
+Warning--string name "june" is undefined
+--line 371 of file refs.bib
+Warning--string name "sept" is undefined
+--line 374 of file refs.bib
+Warning--string name "june" is undefined
+--line 414 of file refs.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 21 entries,
+            4087 wiz_defined-function locations,
+            974 strings with 12416 characters,
+and the built_in function-call counts, 14605 in all, are:
+= -- 1327
+> -- 355
+< -- 36
++ -- 170
+- -- 85
+* -- 689
+:= -- 2346
+add.period$ -- 43
+call.type$ -- 21
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 1170
+empty$ -- 1120
+format.name$ -- 100
+if$ -- 3415
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 216
+newline$ -- 128
+num.names$ -- 21
+pop$ -- 494
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1246
+stack$ -- 0
+substring$ -- 236
+swap$ -- 925
+text.length$ -- 36
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 21
+warning$ -- 0
+while$ -- 34
+width$ -- 23
+write$ -- 282
+(There were 4 warnings)

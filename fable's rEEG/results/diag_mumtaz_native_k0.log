@@ -1,0 +1,86 @@
+[dataset] mumtaz  raw=/home/hasan/fable's rEEG/Mumtaz  cache=/home/hasan/fable's rEEG/cache/mumtaz  fs_orig=256->125Hz  ch=19
+58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=19  win=4.0s/500smp  windows/subj: min=77 med=141 max=187
+
+=== 10-fold CV training/evaluation — stage nr (58 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/10: training on 52 subjects (held-out: 5, 13, 16, 1001, 1017, 1023) ...
+    1         5   HC  0.027   HC   Y  120     -       -       0.9s
+    2        13   HC  0.001   HC   Y  120     -       -       0.8s
+    3        16   HC  0.738  MDD   .  120     -       -       0.8s
+    4      1001  MDD  0.813  MDD   Y   77  1.0000   0.8333    0.8s
+    5      1017  MDD  0.884  MDD   Y  120  1.0000   0.8333    0.8s
+    6      1023  MDD  0.993  MDD   Y  120  1.0000   0.8333    0.8s
+  ... fold  2/10: training on 52 subjects (held-out: 14, 15, 20, 1002, 1015, 1022) ...
+    7        14   HC  0.002   HC   Y  120  1.0000   0.8750    0.1s
+    8        15   HC  0.016   HC   Y  120  1.0000   0.9000    0.1s
+    9        20   HC  0.787  MDD   .  120  1.0000   0.8333    0.1s
+   10      1002  MDD  0.982  MDD   Y  120  1.0000   0.8333    0.1s
+   11      1015  MDD  0.652  MDD   Y  120  0.9333   0.8333    0.1s
+   12      1022  MDD  0.952  MDD   Y  120  0.9444   0.8333    0.1s
+  ... fold  3/10: training on 52 subjects (held-out: 3, 26, 30, 1007, 1019, 1021) ...
+   13         3   HC  0.220   HC   Y  120  0.9524   0.8571    0.1s
+   14        26   HC  0.000   HC   Y  120  0.9583   0.8750    0.1s
+   15        30   HC  0.009   HC   Y  120  0.9630   0.8889    0.1s
+   16      1007  MDD  0.999  MDD   Y  111  0.9683   0.8889    0.1s
+   17      1019  MDD  0.930  MDD   Y  120  0.9722   0.8889    0.1s
+   18      1021  MDD  0.326   HC   .  120  0.9506   0.8333    0.1s
+  ... fold  4/10: training on 52 subjects (held-out: 1, 9, 27, 1011, 1030, 1033) ...
+   19         1   HC  0.417   HC   Y  120  0.9444   0.8444    0.1s
+   20         9   HC  0.108   HC   Y  120  0.9495   0.8535    0.1s
+   21        27   HC  0.007   HC   Y  120  0.9537   0.8611    0.1s
+   22      1011  MDD  0.449   HC   .  120  0.9417   0.8167    0.1s
+   23      1030  MDD  0.841  MDD   Y  119  0.9470   0.8258    0.1s
+   24      1033  MDD  0.987  MDD   Y  120  0.9514   0.8333    0.1s
+  ... fold  5/10: training on 52 subjects (held-out: 6, 10, 28, 1005, 1013, 1028) ...
+   25         6   HC  0.099   HC   Y  120  0.9551   0.8397    0.1s
+   26        10   HC  0.064   HC   Y  120  0.9583   0.8452    0.1s
+   27        28   HC  0.063   HC   Y  120  0.9611   0.8500    0.1s
+   28      1005  MDD  0.947  MDD   Y  120  0.9641   0.8564    0.1s
+   29      1013  MDD  0.671  MDD   Y  120  0.9571   0.8619    0.1s
+   30      1028  MDD  0.950  MDD   Y  119  0.9600   0.8667    0.1s
+  ... fold  6/10: training on 52 subjects (held-out: 7, 11, 17, 1020, 1029, 1031) ...
+   31         7   HC  0.429   HC   Y  120  0.9583   0.8708    0.1s
+   32        11   HC  0.475   HC   Y  120  0.9529   0.8745    0.1s
+   33        17   HC  0.212   HC   Y  120  0.9556   0.8778    0.1s
+   34      1020  MDD  0.250   HC   .  120  0.9410   0.8507    0.1s
+   35      1029  MDD  0.942  MDD   Y  120  0.9444   0.8562    0.1s
+   36      1031  MDD  0.984  MDD   Y  120  0.9475   0.8611    0.1s
+  ... fold  7/10: training on 52 subjects (held-out: 23, 25, 29, 1006, 1024, 1026) ...
+   37        23   HC  0.000   HC   Y  120  0.9503   0.8640    0.1s
+   38        25   HC  0.937  MDD   .  120  0.9278   0.8417    0.1s
+   39        29   HC  0.050   HC   Y  120  0.9312   0.8452    0.1s
+   40      1006  MDD  0.582  MDD   Y  120  0.9273   0.8496    0.1s
+   41      1024  MDD  0.576  MDD   Y  120  0.9238   0.8536    0.1s
+   42      1026  MDD  0.776  MDD   Y  120  0.9229   0.8571    0.1s
+  ... fold  8/10: training on 52 subjects (held-out: 4, 8, 19, 1003, 1014, 1027) ...
+   43         4   HC  0.002   HC   Y  120  0.9264   0.8604    0.1s
+   44         8   HC  0.004   HC   Y  120  0.9296   0.8634    0.1s
+   45        19   HC  0.000   HC   Y  120  0.9325   0.8661    0.1s
+   46      1003  MDD  0.977  MDD   Y   84  0.9356   0.8693    0.1s
+   47      1014  MDD  0.748  MDD   Y  120  0.9348   0.8723    0.1s
+   48      1027  MDD  0.000   HC   .  120  0.8993   0.8542    0.1s
+  ... fold  9/10: training on 53 subjects (held-out: 2, 22, 1010, 1018, 1032) ...
+   49         2   HC  0.017   HC   Y  120  0.9017   0.8567    0.1s
+   50        22   HC  0.996  MDD   .  120  0.8686   0.8397    0.1s
+   51      1010  MDD  0.895  MDD   Y  120  0.8708   0.8431    0.1s
+   52      1018  MDD  1.000  MDD   Y  120  0.8757   0.8462    0.1s
+   53      1032  MDD  0.986  MDD   Y  120  0.8789   0.8490    0.1s
+  ... fold 10/10: training on 53 subjects (held-out: 21, 24, 1009, 1025, 1034) ...
+   54        21   HC  0.003   HC   Y  120  0.8820   0.8519    0.2s
+   55        24   HC  0.186   HC   Y  120  0.8849   0.8545    0.2s
+   56      1009  MDD  0.952  MDD   Y  120  0.8878   0.8571    0.2s
+   57      1025  MDD  0.543  MDD   Y  120  0.8867   0.8596    0.2s
+   58      1034  MDD  0.978  MDD   Y  120  0.8893   0.8619    0.2s
+------------------------------------------------------------------------------
+
+FINAL  stage nr  [10-fold CV]  |  58 subjects (30 MDD / 28 HC)
+  Subject-level ROC-AUC : 0.8893   (primary)
+  Balanced accuracy     : 0.8619  @thr=0.50   |  0.8619  @thr=0.543 (Youden)
+  Macro-F1              : 0.8619  @thr=0.50   |  0.8619  @thr=0.543
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        24         4
+  MDD        4        26
+
+Total wall time: 11.4s

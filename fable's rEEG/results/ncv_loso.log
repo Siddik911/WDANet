@@ -1,0 +1,177 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage ncv (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...
+      [nested-K] inner-CV AUC K0=0.766 K1=0.801 K2=0.799 K3=0.810 K5=0.754  -> K*=3
+    1   2010002  MDD  0.402   HC   .  120     -       -     219.3s
+  ... fold  2/53: training on 52 subjects (held-out sid=2010004) ...
+      [nested-K] inner-CV AUC K0=0.766 K1=0.799 K2=0.792 K3=0.798 K5=0.790  -> K*=1
+    2   2010004  MDD  0.910  MDD   Y   44     -       -      25.3s
+  ... fold  3/53: training on 52 subjects (held-out sid=2010005) ...
+      [nested-K] inner-CV AUC K0=0.763 K1=0.802 K2=0.798 K3=0.807 K5=0.796  -> K*=3
+    3   2010005  MDD  0.246   HC   .  120     -       -      25.3s
+  ... fold  4/53: training on 52 subjects (held-out sid=2010006) ...
+      [nested-K] inner-CV AUC K0=0.780 K1=0.822 K2=0.814 K3=0.834 K5=0.792  -> K*=3
+    4   2010006  MDD  0.083   HC   .  120     -       -      25.8s
+  ... fold  5/53: training on 52 subjects (held-out sid=2010008) ...
+      [nested-K] inner-CV AUC K0=0.750 K1=0.790 K2=0.792 K3=0.808 K5=0.738  -> K*=3
+    5   2010008  MDD  0.820  MDD   Y  120     -       -      29.4s
+  ... fold  6/53: training on 52 subjects (held-out sid=2010010) ...
+      [nested-K] inner-CV AUC K0=0.750 K1=0.789 K2=0.790 K3=0.805 K5=0.753  -> K*=3
+    6   2010010  MDD  0.636  MDD   Y   92     -       -      25.0s
+  ... fold  7/53: training on 52 subjects (held-out sid=2010011) ...
+      [nested-K] inner-CV AUC K0=0.795 K1=0.828 K2=0.828 K3=0.855 K5=0.790  -> K*=3
+    7   2010011  MDD  0.046   HC   .  120     -       -      23.9s
+  ... fold  8/53: training on 52 subjects (held-out sid=2010012) ...
+      [nested-K] inner-CV AUC K0=0.771 K1=0.801 K2=0.795 K3=0.808 K5=0.777  -> K*=3
+    8   2010012  MDD  0.969  MDD   Y  112     -       -      26.4s
+  ... fold  9/53: training on 52 subjects (held-out sid=2010013) ...
+      [nested-K] inner-CV AUC K0=0.756 K1=0.787 K2=0.784 K3=0.784 K5=0.777  -> K*=1
+    9   2010013  MDD  0.997  MDD   Y  120     -       -      24.8s
+  ... fold 10/53: training on 52 subjects (held-out sid=2010015) ...
+      [nested-K] inner-CV AUC K0=0.787 K1=0.822 K2=0.816 K3=0.813 K5=0.742  -> K*=1
+   10   2010015  MDD  0.086   HC   .  120     -       -      24.8s
+  ... fold 11/53: training on 52 subjects (held-out sid=2010016) ...
+      [nested-K] inner-CV AUC K0=0.784 K1=0.808 K2=0.804 K3=0.817 K5=0.763  -> K*=3
+   11   2010016  MDD  0.070   HC   .  120     -       -      23.4s
+  ... fold 12/53: training on 52 subjects (held-out sid=2010018) ...
+      [nested-K] inner-CV AUC K0=0.784 K1=0.807 K2=0.805 K3=0.822 K5=0.780  -> K*=3
+   12   2010018  MDD  0.417   HC   .  120     -       -      23.4s
+  ... fold 13/53: training on 52 subjects (held-out sid=2010019) ...
+      [nested-K] inner-CV AUC K0=0.771 K1=0.801 K2=0.795 K3=0.798 K5=0.777  -> K*=1
+   13   2010019  MDD  0.901  MDD   Y  120     -       -      24.2s
+  ... fold 14/53: training on 52 subjects (held-out sid=2010021) ...
+      [nested-K] inner-CV AUC K0=0.789 K1=0.813 K2=0.810 K3=0.829 K5=0.778  -> K*=3
+   14   2010021  MDD  0.102   HC   .  120     -       -      24.2s
+  ... fold 15/53: training on 52 subjects (held-out sid=2010022) ...
+      [nested-K] inner-CV AUC K0=0.756 K1=0.795 K2=0.793 K3=0.804 K5=0.777  -> K*=3
+   15   2010022  MDD  0.955  MDD   Y  107     -       -      24.3s
+  ... fold 16/53: training on 52 subjects (held-out sid=2010023) ...
+      [nested-K] inner-CV AUC K0=0.754 K1=0.793 K2=0.787 K3=0.790 K5=0.777  -> K*=1
+   16   2010023  MDD  0.481   HC   .  120     -       -      24.4s
+  ... fold 17/53: training on 52 subjects (held-out sid=2010024) ...
+      [nested-K] inner-CV AUC K0=0.763 K1=0.777 K2=0.769 K3=0.780 K5=0.826  -> K*=5
+   17   2010024  MDD  0.996  MDD   Y  120     -       -      23.6s
+  ... fold 18/53: training on 52 subjects (held-out sid=2010025) ...
+      [nested-K] inner-CV AUC K0=0.750 K1=0.787 K2=0.771 K3=0.777 K5=0.805  -> K*=5
+   18   2010025  MDD  0.109   HC   .  120     -       -      22.1s
+  ... fold 19/53: training on 52 subjects (held-out sid=2010026) ...
+      [nested-K] inner-CV AUC K0=0.745 K1=0.784 K2=0.763 K3=0.772 K5=0.793  -> K*=5
+   19   2010026  MDD  0.770  MDD   Y  115     -       -      22.1s
+  ... fold 20/53: training on 52 subjects (held-out sid=2010028) ...
+      [nested-K] inner-CV AUC K0=0.751 K1=0.781 K2=0.778 K3=0.781 K5=0.796  -> K*=5
+   20   2010028  MDD  0.348   HC   .  120     -       -      22.1s
+  ... fold 21/53: training on 52 subjects (held-out sid=2010030) ...
+      [nested-K] inner-CV AUC K0=0.732 K1=0.763 K2=0.754 K3=0.777 K5=0.789  -> K*=5
+   21   2010030  MDD  0.999  MDD   Y  120     -       -      23.2s
+  ... fold 22/53: training on 52 subjects (held-out sid=2010033) ...
+      [nested-K] inner-CV AUC K0=0.759 K1=0.784 K2=0.777 K3=0.808 K5=0.813  -> K*=5
+   22   2010033  MDD  0.602  MDD   Y  120     -       -      23.7s
+  ... fold 23/53: training on 52 subjects (held-out sid=2010034) ...
+      [nested-K] inner-CV AUC K0=0.762 K1=0.783 K2=0.778 K3=0.784 K5=0.820  -> K*=5
+   23   2010034  MDD  0.423   HC   .   70     -       -      22.3s
+  ... fold 24/53: training on 52 subjects (held-out sid=2010036) ...
+      [nested-K] inner-CV AUC K0=0.754 K1=0.777 K2=0.769 K3=0.766 K5=0.784  -> K*=5
+   24   2010036  MDD  0.827  MDD   Y   99     -       -      23.4s
+  ... fold 25/53: training on 52 subjects (held-out sid=2020008) ...
+      [nested-K] inner-CV AUC K0=0.751 K1=0.774 K2=0.763 K3=0.751 K5=0.731  -> K*=1
+   25   2020008   HC  0.728  MDD   .   42  0.4167   0.2500   22.9s
+  ... fold 26/53: training on 52 subjects (held-out sid=2020010) ...
+      [nested-K] inner-CV AUC K0=0.726 K1=0.744 K2=0.740 K3=0.716 K5=0.713  -> K*=1
+   26   2020010   HC  0.015   HC   Y  112  0.7083   0.5000   23.9s
+  ... fold 27/53: training on 52 subjects (held-out sid=2020013) ...
+      [nested-K] inner-CV AUC K0=0.722 K1=0.747 K2=0.737 K3=0.735 K5=0.732  -> K*=1
+   27   2020013   HC  0.012   HC   Y  113  0.8056   0.5833   24.7s
+  ... fold 28/53: training on 52 subjects (held-out sid=2020014) ...
+      [nested-K] inner-CV AUC K0=0.763 K1=0.787 K2=0.768 K3=0.768 K5=0.751  -> K*=1
+   28   2020014   HC  0.599  MDD   .   66  0.7292   0.5000   23.8s
+  ... fold 29/53: training on 52 subjects (held-out sid=2020015) ...
+      [nested-K] inner-CV AUC K0=0.743 K1=0.765 K2=0.759 K3=0.754 K5=0.708  -> K*=1
+   29   2020015   HC  0.887  MDD   .  120  0.6417   0.4500   22.2s
+  ... fold 30/53: training on 52 subjects (held-out sid=2020016) ...
+      [nested-K] inner-CV AUC K0=0.713 K1=0.746 K2=0.737 K3=0.743 K5=0.725  -> K*=1
+   30   2020016   HC  0.358   HC   Y  119  0.6458   0.5000   23.1s
+  ... fold 31/53: training on 52 subjects (held-out sid=2020018) ...
+      [nested-K] inner-CV AUC K0=0.701 K1=0.726 K2=0.719 K3=0.713 K5=0.705  -> K*=1
+   31   2020018   HC  0.022   HC   Y   95  0.6964   0.5357   22.7s
+  ... fold 32/53: training on 52 subjects (held-out sid=2020019) ...
+      [nested-K] inner-CV AUC K0=0.699 K1=0.720 K2=0.714 K3=0.708 K5=0.704  -> K*=1
+   32   2020019   HC  0.012   HC   Y   90  0.7344   0.5625   22.1s
+  ... fold 33/53: training on 52 subjects (held-out sid=2020020) ...
+      [nested-K] inner-CV AUC K0=0.720 K1=0.738 K2=0.735 K3=0.723 K5=0.714  -> K*=1
+   33   2020020   HC  0.131   HC   Y  120  0.7361   0.5833   21.7s
+  ... fold 34/53: training on 52 subjects (held-out sid=2020021) ...
+      [nested-K] inner-CV AUC K0=0.707 K1=0.719 K2=0.725 K3=0.723 K5=0.702  -> K*=2
+   34   2020021   HC  0.066   HC   Y  120  0.7583   0.6000   22.4s
+  ... fold 35/53: training on 52 subjects (held-out sid=2020022) ...
+      [nested-K] inner-CV AUC K0=0.717 K1=0.729 K2=0.732 K3=0.725 K5=0.670  -> K*=2
+   35   2020022   HC  0.002   HC   Y  120  0.7803   0.6136   22.7s
+  ... fold 36/53: training on 52 subjects (held-out sid=2020023) ...
+      [nested-K] inner-CV AUC K0=0.741 K1=0.757 K2=0.760 K3=0.759 K5=0.720  -> K*=2
+   36   2020023   HC  0.885  MDD   .  120  0.7396   0.5833   21.7s
+  ... fold 37/53: training on 52 subjects (held-out sid=2020025) ...
+      [nested-K] inner-CV AUC K0=0.674 K1=0.717 K2=0.702 K3=0.717 K5=0.679  -> K*=1
+   37   2020025   HC  0.211   HC   Y  120  0.7404   0.5962   22.2s
+  ... fold 38/53: training on 52 subjects (held-out sid=2020026) ...
+      [nested-K] inner-CV AUC K0=0.711 K1=0.741 K2=0.735 K3=0.744 K5=0.702  -> K*=3
+   38   2020026   HC  0.224   HC   Y  120  0.7411   0.6071   21.9s
+  ... fold 39/53: training on 52 subjects (held-out sid=2020027) ...
+      [nested-K] inner-CV AUC K0=0.708 K1=0.728 K2=0.717 K3=0.738 K5=0.688  -> K*=3
+   39   2020027   HC  0.342   HC   Y  120  0.7389   0.6167   21.9s
+  ... fold 40/53: training on 52 subjects (held-out sid=2020029) ...
+      [nested-K] inner-CV AUC K0=0.707 K1=0.729 K2=0.720 K3=0.732 K5=0.696  -> K*=3
+   40   2020029   HC  0.011   HC   Y   96  0.7552   0.6250   21.9s
+  ... fold 41/53: training on 52 subjects (held-out sid=2030002) ...
+      [nested-K] inner-CV AUC K0=0.744 K1=0.766 K2=0.765 K3=0.746 K5=0.716  -> K*=1
+   41   2030002   HC  0.249   HC   Y  120  0.7525   0.6324   22.6s
+  ... fold 42/53: training on 52 subjects (held-out sid=2030003) ...
+      [nested-K] inner-CV AUC K0=0.705 K1=0.744 K2=0.722 K3=0.735 K5=0.711  -> K*=1
+   42   2030003   HC  0.156   HC   Y   94  0.7523   0.6389   22.0s
+  ... fold 43/53: training on 52 subjects (held-out sid=2030004) ...
+      [nested-K] inner-CV AUC K0=0.723 K1=0.734 K2=0.723 K3=0.732 K5=0.670  -> K*=1
+   43   2030004   HC  0.530  MDD   .  120  0.7390   0.6184   22.1s
+  ... fold 44/53: training on 52 subjects (held-out sid=2030005) ...
+      [nested-K] inner-CV AUC K0=0.722 K1=0.756 K2=0.750 K3=0.737 K5=0.711  -> K*=1
+   44   2030005   HC  0.708  MDD   .   90  0.7229   0.6000   22.6s
+  ... fold 45/53: training on 52 subjects (held-out sid=2030006) ...
+      [nested-K] inner-CV AUC K0=0.699 K1=0.738 K2=0.732 K3=0.750 K5=0.710  -> K*=3
+   45   2030006   HC  0.000   HC   Y  120  0.7361   0.6071   23.7s
+  ... fold 46/53: training on 52 subjects (held-out sid=2030007) ...
+      [nested-K] inner-CV AUC K0=0.710 K1=0.737 K2=0.705 K3=0.702 K5=0.701  -> K*=1
+   46   2030007   HC  0.001   HC   Y  120  0.7481   0.6136   23.3s
+  ... fold 47/53: training on 52 subjects (held-out sid=2030009) ...
+      [nested-K] inner-CV AUC K0=0.722 K1=0.732 K2=0.720 K3=0.707 K5=0.679  -> K*=1
+   47   2030009   HC  0.015   HC   Y   95  0.7591   0.6196   22.4s
+  ... fold 48/53: training on 52 subjects (held-out sid=2030014) ...
+      [nested-K] inner-CV AUC K0=0.753 K1=0.786 K2=0.762 K3=0.759 K5=0.708  -> K*=1
+   48   2030014   HC  0.979  MDD   .  120  0.7326   0.6042   24.9s
+  ... fold 49/53: training on 52 subjects (held-out sid=2030017) ...
+      [nested-K] inner-CV AUC K0=0.719 K1=0.746 K2=0.732 K3=0.719 K5=0.677  -> K*=1
+   49   2030017   HC  0.510  MDD   .  120  0.7233   0.5900   23.7s
+  ... fold 50/53: training on 52 subjects (held-out sid=2030018) ...
+      [nested-K] inner-CV AUC K0=0.740 K1=0.760 K2=0.751 K3=0.746 K5=0.682  -> K*=1
+   50   2030018   HC  0.951  MDD   .  104  0.7035   0.5769   22.8s
+  ... fold 51/53: training on 52 subjects (held-out sid=2030019) ...
+      [nested-K] inner-CV AUC K0=0.704 K1=0.729 K2=0.714 K3=0.705 K5=0.683  -> K*=1
+   51   2030019   HC  0.003   HC   Y  120  0.7145   0.5833   22.6s
+  ... fold 52/53: training on 52 subjects (held-out sid=2030020) ...
+      [nested-K] inner-CV AUC K0=0.732 K1=0.772 K2=0.757 K3=0.757 K5=0.716  -> K*=1
+   52   2030020   HC  0.957  MDD   .  120  0.6949   0.5714   23.7s
+  ... fold 53/53: training on 52 subjects (held-out sid=2030021) ...
+      [nested-K] inner-CV AUC K0=0.704 K1=0.740 K2=0.726 K3=0.711 K5=0.692  -> K*=1
+   53   2030021   HC  0.005   HC   Y  120  0.7055   0.5776   24.5s
+------------------------------------------------------------------------------
+
+FINAL  stage ncv  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.7055   (primary)
+  Balanced accuracy     : 0.5776  @thr=0.50   |  0.6897  @thr=0.046 (Youden)
+  Macro-F1              : 0.5775  @thr=0.50   |  0.6386  @thr=0.046
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        19        10
+  MDD       12        12
+
+Total wall time: 1440.5s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/ncv_loso.json

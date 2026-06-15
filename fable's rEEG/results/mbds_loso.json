@@ -1,0 +1,99 @@
+{
+  "n": 10,
+  "n_mdd": 5,
+  "n_hc": 5,
+  "auc": 0.2,
+  "bacc": 0.3,
+  "f1": 0.23076923076923078,
+  "cm": [
+    [
+      3,
+      2
+    ],
+    [
+      5,
+      0
+    ]
+  ],
+  "threshold": 0.5,
+  "youden_threshold": 0.4246698683222877,
+  "bacc_youden": 0.5,
+  "f1_youden": 0.3333333333333333,
+  "stage": "mbds",
+  "model_kwargs": {
+    "streams": [
+      "cov",
+      "corr"
+    ],
+    "n_nuisance": 3,
+    "subspace": 16,
+    "epochs": 20,
+    "max_windows": 120,
+    "lr": 0.001,
+    "device": null,
+    "verbose": false
+  },
+  "wall_time_s": 170.7,
+  "per_fold": [
+    {
+      "sid": 2010002,
+      "label": 1,
+      "score": 0.4783369118734562,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010004,
+      "label": 1,
+      "score": 0.45171340699813173,
+      "n_windows": 44
+    },
+    {
+      "sid": 2010005,
+      "label": 1,
+      "score": 0.4246698683222877,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010006,
+      "label": 1,
+      "score": 0.4468393117521323,
+      "n_windows": 120
+    },
+    {
+      "sid": 2010008,
+      "label": 1,
+      "score": 0.48838506700781864,
+      "n_windows": 120
+    },
+    {
+      "sid": 2020008,
+      "label": 0,
+      "score": 0.46741635976109774,
+      "n_windows": 42
+    },
+    {
+      "sid": 2020010,
+      "label": 0,
+      "score": 0.5054893550930917,
+      "n_windows": 112
+    },
+    {
+      "sid": 2020013,
+      "label": 0,
+      "score": 0.5331243100769487,
+      "n_windows": 113
+    },
+    {
+      "sid": 2020014,
+      "label": 0,
+      "score": 0.46048669886929894,
+      "n_windows": 66
+    },
+    {
+      "sid": 2020015,
+      "label": 0,
+      "score": 0.487676351313943,
+      "n_windows": 120
+    }
+  ]
+}

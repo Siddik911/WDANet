@@ -1,0 +1,768 @@
+{
+  "n": 121,
+  "n_mdd": 46,
+  "n_hc": 75,
+  "auc": 0.5518840579710146,
+  "bacc": 0.5457971014492753,
+  "f1": 0.5440455030216851,
+  "cm": [
+    [
+      46,
+      29
+    ],
+    [
+      24,
+      22
+    ]
+  ],
+  "threshold": 0.5,
+  "youden_threshold": 0.37957315837072436,
+  "bacc_youden": 0.5828985507246377,
+  "f1_youden": 0.5453303272528524,
+  "stage": "spddann",
+  "mode": "lodo",
+  "train_datasets": [
+    "modma",
+    "mumtaz"
+  ],
+  "test_dataset": "opennuero",
+  "harmonize": true,
+  "model_kwargs": {
+    "epochs": 80,
+    "lr": 0.01,
+    "subspace": 12,
+    "max_windows": 100,
+    "device": null,
+    "verbose": false,
+    "seed": 2
+  },
+  "wall_time_s": 260.8,
+  "per_fold": [
+    {
+      "sid": 1,
+      "label": 0,
+      "score": 0.45950678979570375,
+      "n_windows": 100
+    },
+    {
+      "sid": 2,
+      "label": 0,
+      "score": 0.03755707866123739,
+      "n_windows": 100
+    },
+    {
+      "sid": 3,
+      "label": 0,
+      "score": 0.2748380720060726,
+      "n_windows": 100
+    },
+    {
+      "sid": 4,
+      "label": 0,
+      "score": 0.37967974630737084,
+      "n_windows": 100
+    },
+    {
+      "sid": 5,
+      "label": 0,
+      "score": 0.06879734802664919,
+      "n_windows": 100
+    },
+    {
+      "sid": 6,
+      "label": 0,
+      "score": 0.038903221117629914,
+      "n_windows": 96
+    },
+    {
+      "sid": 7,
+      "label": 0,
+      "score": 0.05304576372792652,
+      "n_windows": 100
+    },
+    {
+      "sid": 8,
+      "label": 0,
+      "score": 0.1780538565105361,
+      "n_windows": 100
+    },
+    {
+      "sid": 9,
+      "label": 0,
+      "score": 0.84940204686141,
+      "n_windows": 100
+    },
+    {
+      "sid": 10,
+      "label": 0,
+      "score": 0.32367981121912676,
+      "n_windows": 100
+    },
+    {
+      "sid": 11,
+      "label": 0,
+      "score": 0.49973509372345154,
+      "n_windows": 100
+    },
+    {
+      "sid": 12,
+      "label": 0,
+      "score": 0.9999094622957035,
+      "n_windows": 100
+    },
+    {
+      "sid": 13,
+      "label": 0,
+      "score": 0.05978937268702463,
+      "n_windows": 100
+    },
+    {
+      "sid": 14,
+      "label": 0,
+      "score": 0.08558838995843482,
+      "n_windows": 100
+    },
+    {
+      "sid": 15,
+      "label": 0,
+      "score": 0.37669116113703155,
+      "n_windows": 100
+    },
+    {
+      "sid": 16,
+      "label": 0,
+      "score": 0.9874872927771543,
+      "n_windows": 100
+    },
+    {
+      "sid": 17,
+      "label": 0,
+      "score": 0.016649386568784123,
+      "n_windows": 100
+    },
+    {
+      "sid": 18,
+      "label": 0,
+      "score": 0.2222305170254264,
+      "n_windows": 100
+    },
+    {
+      "sid": 19,
+      "label": 0,
+      "score": 0.006183251673930397,
+      "n_windows": 100
+    },
+    {
+      "sid": 20,
+      "label": 0,
+      "score": 0.10611705049724214,
+      "n_windows": 100
+    },
+    {
+      "sid": 21,
+      "label": 0,
+      "score": 0.5855100514099842,
+      "n_windows": 100
+    },
+    {
+      "sid": 22,
+      "label": 0,
+      "score": 0.1337932291406148,
+      "n_windows": 100
+    },
+    {
+      "sid": 23,
+      "label": 0,
+      "score": 0.4766893837315388,
+      "n_windows": 100
+    },
+    {
+      "sid": 24,
+      "label": 0,
+      "score": 0.5422029936320459,
+      "n_windows": 100
+    },
+    {
+      "sid": 25,
+      "label": 0,
+      "score": 0.6209486426066437,
+      "n_windows": 100
+    },
+    {
+      "sid": 26,
+      "label": 0,
+      "score": 0.7951257507970183,
+      "n_windows": 100
+    },
+    {
+      "sid": 27,
+      "label": 0,
+      "score": 0.9770317140248088,
+      "n_windows": 100
+    },
+    {
+      "sid": 28,
+      "label": 0,
+      "score": 0.2104761973632777,
+      "n_windows": 100
+    },
+    {
+      "sid": 29,
+      "label": 0,
+      "score": 0.524339382297433,
+      "n_windows": 100
+    },
+    {
+      "sid": 30,
+      "label": 0,
+      "score": 0.02124099734527486,
+      "n_windows": 100
+    },
+    {
+      "sid": 31,
+      "label": 0,
+      "score": 0.9515342236844859,
+      "n_windows": 100
+    },
+    {
+      "sid": 32,
+      "label": 0,
+      "score": 0.9991834374279978,
+      "n_windows": 100
+    },
+    {
+      "sid": 33,
+      "label": 0,
+      "score": 0.5872192950305709,
+      "n_windows": 100
+    },
+    {
+      "sid": 34,
+      "label": 0,
+      "score": 0.00414450865008527,
+      "n_windows": 100
+    },
+    {
+      "sid": 35,
+      "label": 0,
+      "score": 0.16910467888590724,
+      "n_windows": 100
+    },
+    {
+      "sid": 36,
+      "label": 0,
+      "score": 0.617544136047639,
+      "n_windows": 100
+    },
+    {
+      "sid": 37,
+      "label": 0,
+      "score": 0.1431391747082422,
+      "n_windows": 100
+    },
+    {
+      "sid": 39,
+      "label": 0,
+      "score": 0.8761820672827885,
+      "n_windows": 100
+    },
+    {
+      "sid": 40,
+      "label": 0,
+      "score": 0.7669467901072395,
+      "n_windows": 100
+    },
+    {
+      "sid": 41,
+      "label": 0,
+      "score": 0.1694279001031651,
+      "n_windows": 100
+    },
+    {
+      "sid": 42,
+      "label": 0,
+      "score": 0.9844490279968179,
+      "n_windows": 100
+    },
+    {
+      "sid": 43,
+      "label": 0,
+      "score": 0.32003925877419964,
+      "n_windows": 100
+    },
+    {
+      "sid": 44,
+      "label": 0,
+      "score": 0.41135993422998574,
+      "n_windows": 100
+    },
+    {
+      "sid": 45,
+      "label": 0,
+      "score": 0.4042386863856944,
+      "n_windows": 100
+    },
+    {
+      "sid": 46,
+      "label": 0,
+      "score": 0.03513885908244976,
+      "n_windows": 100
+    },
+    {
+      "sid": 47,
+      "label": 0,
+      "score": 0.4873605401946741,
+      "n_windows": 100
+    },
+    {
+      "sid": 48,
+      "label": 0,
+      "score": 0.4858052370136182,
+      "n_windows": 100
+    },
+    {
+      "sid": 49,
+      "label": 0,
+      "score": 0.8433427719721749,
+      "n_windows": 100
+    },
+    {
+      "sid": 50,
+      "label": 0,
+      "score": 0.9999999927954485,
+      "n_windows": 100
+    },
+    {
+      "sid": 51,
+      "label": 0,
+      "score": 0.6734479433242668,
+      "n_windows": 100
+    },
+    {
+      "sid": 52,
+      "label": 1,
+      "score": 0.9999999874405134,
+      "n_windows": 100
+    },
+    {
+      "sid": 53,
+      "label": 1,
+      "score": 0.5954386304607611,
+      "n_windows": 100
+    },
+    {
+      "sid": 54,
+      "label": 0,
+      "score": 0.13611912228278986,
+      "n_windows": 100
+    },
+    {
+      "sid": 55,
+      "label": 1,
+      "score": 0.9836306289564715,
+      "n_windows": 100
+    },
+    {
+      "sid": 56,
+      "label": 0,
+      "score": 0.9644509117897461,
+      "n_windows": 100
+    },
+    {
+      "sid": 57,
+      "label": 0,
+      "score": 0.5177282083595318,
+      "n_windows": 100
+    },
+    {
+      "sid": 58,
+      "label": 1,
+      "score": 0.9044259613340492,
+      "n_windows": 100
+    },
+    {
+      "sid": 59,
+      "label": 1,
+      "score": 0.1256352734679918,
+      "n_windows": 100
+    },
+    {
+      "sid": 60,
+      "label": 1,
+      "score": 0.38642487973847617,
+      "n_windows": 76
+    },
+    {
+      "sid": 61,
+      "label": 1,
+      "score": 0.9723630795259554,
+      "n_windows": 100
+    },
+    {
+      "sid": 62,
+      "label": 0,
+      "score": 0.37557705834116617,
+      "n_windows": 100
+    },
+    {
+      "sid": 63,
+      "label": 1,
+      "score": 0.7820976902475814,
+      "n_windows": 100
+    },
+    {
+      "sid": 64,
+      "label": 0,
+      "score": 0.2658966064257688,
+      "n_windows": 100
+    },
+    {
+      "sid": 65,
+      "label": 1,
+      "score": 0.024059511948963084,
+      "n_windows": 100
+    },
+    {
+      "sid": 66,
+      "label": 1,
+      "score": 0.013912875346600663,
+      "n_windows": 100
+    },
+    {
+      "sid": 67,
+      "label": 0,
+      "score": 0.37514326059021763,
+      "n_windows": 100
+    },
+    {
+      "sid": 68,
+      "label": 0,
+      "score": 0.4536814684286344,
+      "n_windows": 100
+    },
+    {
+      "sid": 69,
+      "label": 0,
+      "score": 0.7360695348125148,
+      "n_windows": 100
+    },
+    {
+      "sid": 70,
+      "label": 0,
+      "score": 0.4339904662868701,
+      "n_windows": 100
+    },
+    {
+      "sid": 71,
+      "label": 0,
+      "score": 0.4609092078769995,
+      "n_windows": 100
+    },
+    {
+      "sid": 72,
+      "label": 0,
+      "score": 0.43665138427832695,
+      "n_windows": 100
+    },
+    {
+      "sid": 73,
+      "label": 0,
+      "score": 0.9053651448831468,
+      "n_windows": 100
+    },
+    {
+      "sid": 74,
+      "label": 0,
+      "score": 0.7232696312061371,
+      "n_windows": 100
+    },
+    {
+      "sid": 75,
+      "label": 0,
+      "score": 0.10836507639339328,
+      "n_windows": 93
+    },
+    {
+      "sid": 76,
+      "label": 0,
+      "score": 0.9300767617968115,
+      "n_windows": 97
+    },
+    {
+      "sid": 77,
+      "label": 0,
+      "score": 0.04717203272919905,
+      "n_windows": 100
+    },
+    {
+      "sid": 78,
+      "label": 0,
+      "score": 0.7657226255966206,
+      "n_windows": 100
+    },
+    {
+      "sid": 79,
+      "label": 0,
+      "score": 0.4081022575318636,
+      "n_windows": 100
+    },
+    {
+      "sid": 80,
+      "label": 1,
+      "score": 0.6630533514758278,
+      "n_windows": 100
+    },
+    {
+      "sid": 81,
+      "label": 1,
+      "score": 0.002378427539350239,
+      "n_windows": 100
+    },
+    {
+      "sid": 82,
+      "label": 0,
+      "score": 0.9127192586524031,
+      "n_windows": 100
+    },
+    {
+      "sid": 83,
+      "label": 0,
+      "score": 0.33777323481236926,
+      "n_windows": 100
+    },
+    {
+      "sid": 84,
+      "label": 1,
+      "score": 0.9192667318437693,
+      "n_windows": 100
+    },
+    {
+      "sid": 85,
+      "label": 1,
+      "score": 0.1101894886295069,
+      "n_windows": 100
+    },
+    {
+      "sid": 86,
+      "label": 1,
+      "score": 0.798287069413749,
+      "n_windows": 100
+    },
+    {
+      "sid": 87,
+      "label": 0,
+      "score": 0.6585437017665613,
+      "n_windows": 100
+    },
+    {
+      "sid": 88,
+      "label": 1,
+      "score": 0.25278057928205805,
+      "n_windows": 100
+    },
+    {
+      "sid": 89,
+      "label": 1,
+      "score": 0.3901553575708153,
+      "n_windows": 100
+    },
+    {
+      "sid": 90,
+      "label": 0,
+      "score": 0.42372135397330596,
+      "n_windows": 100
+    },
+    {
+      "sid": 91,
+      "label": 1,
+      "score": 0.37957315837072436,
+      "n_windows": 100
+    },
+    {
+      "sid": 92,
+      "label": 1,
+      "score": 0.7328370027245544,
+      "n_windows": 100
+    },
+    {
+      "sid": 93,
+      "label": 0,
+      "score": 0.3164620814680451,
+      "n_windows": 100
+    },
+    {
+      "sid": 94,
+      "label": 0,
+      "score": 0.0674984423628664,
+      "n_windows": 100
+    },
+    {
+      "sid": 95,
+      "label": 0,
+      "score": 0.5623800060045961,
+      "n_windows": 100
+    },
+    {
+      "sid": 96,
+      "label": 1,
+      "score": 0.44600399907475125,
+      "n_windows": 100
+    },
+    {
+      "sid": 97,
+      "label": 1,
+      "score": 0.017008876171900413,
+      "n_windows": 100
+    },
+    {
+      "sid": 98,
+      "label": 1,
+      "score": 0.8120612065852759,
+      "n_windows": 100
+    },
+    {
+      "sid": 99,
+      "label": 1,
+      "score": 0.8412117163109011,
+      "n_windows": 100
+    },
+    {
+      "sid": 100,
+      "label": 1,
+      "score": 0.8853602774837332,
+      "n_windows": 100
+    },
+    {
+      "sid": 101,
+      "label": 1,
+      "score": 0.45779125688610145,
+      "n_windows": 100
+    },
+    {
+      "sid": 102,
+      "label": 1,
+      "score": 0.4657833190030251,
+      "n_windows": 100
+    },
+    {
+      "sid": 103,
+      "label": 1,
+      "score": 0.28633144782079145,
+      "n_windows": 100
+    },
+    {
+      "sid": 104,
+      "label": 1,
+      "score": 7.09693146514806e-05,
+      "n_windows": 100
+    },
+    {
+      "sid": 105,
+      "label": 1,
+      "score": 0.0033144589277867816,
+      "n_windows": 100
+    },
+    {
+      "sid": 106,
+      "label": 1,
+      "score": 0.5737934447402974,
+      "n_windows": 100
+    },
+    {
+      "sid": 107,
+      "label": 1,
+      "score": 0.5107629345019307,
+      "n_windows": 44
+    },
+    {
+      "sid": 108,
+      "label": 1,
+      "score": 0.8716838060472445,
+      "n_windows": 100
+    },
+    {
+      "sid": 109,
+      "label": 1,
+      "score": 0.5695148161666949,
+      "n_windows": 100
+    },
+    {
+      "sid": 110,
+      "label": 1,
+      "score": 0.412612636584838,
+      "n_windows": 100
+    },
+    {
+      "sid": 111,
+      "label": 1,
+      "score": 0.9723186413353129,
+      "n_windows": 100
+    },
+    {
+      "sid": 112,
+      "label": 1,
+      "score": 0.7159437305975674,
+      "n_windows": 100
+    },
+    {
+      "sid": 113,
+      "label": 1,
+      "score": 0.003329117348383943,
+      "n_windows": 100
+    },
+    {
+      "sid": 114,
+      "label": 1,
+      "score": 0.4148620229369189,
+      "n_windows": 100
+    },
+    {
+      "sid": 115,
+      "label": 1,
+      "score": 0.45697264312059555,
+      "n_windows": 100
+    },
+    {
+      "sid": 116,
+      "label": 1,
+      "score": 0.9999924168515575,
+      "n_windows": 100
+    },
+    {
+      "sid": 117,
+      "label": 1,
+      "score": 0.14131540665019443,
+      "n_windows": 100
+    },
+    {
+      "sid": 118,
+      "label": 1,
+      "score": 0.47662011444537883,
+      "n_windows": 100
+    },
+    {
+      "sid": 119,
+      "label": 1,
+      "score": 0.6267144842356785,
+      "n_windows": 100
+    },
+    {
+      "sid": 120,
+      "label": 1,
+      "score": 0.47937969644131945,
+      "n_windows": 100
+    },
+    {
+      "sid": 121,
+      "label": 1,
+      "score": 0.9983698164048026,
+      "n_windows": 100
+    },
+    {
+      "sid": 122,
+      "label": 1,
+      "score": 0.41210660303452434,
+      "n_windows": 100
+    }
+  ]
+}

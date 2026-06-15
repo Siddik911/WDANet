@@ -53,6 +53,9 @@ class Subject:
     sid: int
     label: int                 # 0 = HC, 1 = MDD
     data: np.ndarray           # (N_CHANNELS, n_samples) float32, preprocessed
+    dataset: str = ""          # source dataset id (modma|mumtaz|opennuero); set at load.
+                               # Lets the feature cache + LODO recentring keep subjects from
+                               # different datasets (which can share a sid) distinct.
 
     @property
     def name(self) -> str:
@@ -306,16 +309,29 @@ def build_cache(force: bool = False, verbose: bool = True) -> None:
                   f"label={C.LABEL_NAMES[labels[sid]]}  shape={x.shape}")
 
 
-def load_subjects(limit: int | None = None) -> list[Subject]:
-    """Load all cached subjects (building the cache first if needed)."""
+def load_subjects(limit: int | None = None,
+                  harmonize: bool = False) -> list[Subject]:
+    """Load all cached subjects (building the cache first if needed).
+
+    ``harmonize=True`` projects every subject onto the shared 17-channel 10-20 montage
+    (see ``triad.harmonize``) so correlation matrices are dimension- and electrode-
+    compatible across datasets — required for any cross-dataset (LODO) run.
+    """
     if not C.CACHE_DIR.exists() or not any(C.CACHE_DIR.glob("*.npz")):
         print("Cache not found — building (one-off preprocessing) ...")
         build_cache()
+    sel = None  # harmonisation row selector (identical across a dataset's subjects)
     subs: list[Subject] = []
     for npz in sorted(C.CACHE_DIR.glob("*.npz"), key=lambda p: int(p.stem)):
         z = np.load(npz)
-        subs.append(Subject(sid=int(z["sid"]), label=int(z["label"]),
-                            data=z["data"].astype(np.float32)))
+        data = z["data"].astype(np.float32)
+        if harmonize:
+            from . import harmonize as H
+            if sel is None:
+                sel = H.build_selector(C.DATASET_KIND, z["good_channels"])
+            data = np.ascontiguousarray(data[sel])
+        subs.append(Subject(sid=int(z["sid"]), label=int(z["label"]), data=data,
+                            dataset=C.DATASET))
     if limit is not None:
         # keep a class-balanced subset for quick smoke tests
         mdd = [s for s in subs if s.label == 1][: max(1, limit // 2)]

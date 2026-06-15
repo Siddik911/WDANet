@@ -1,0 +1,112 @@
+% ============================================================
+%  IEEE TNSRE — Riemannian EEG Depression Detection
+%  Main document file — structure only, content in sections/
+% ============================================================
+\documentclass[journal]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% ---------- Packages ----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,fit,backgrounds}
+\newcommand{\hd}[1]{{\footnotesize\bfseries #1}}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{bm}
+\usepackage{cite}
+
+% ---------- Hyphenation hints ----------
+\hyphenation{Rie-mann-ian co-var-i-ance MODMA LODO}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title ----------
+\title{%
+  SpectSPD-DANN: Riemannian Geometry and Adversarial SPD Alignment
+  for Cross-Dataset EEG Depression Recognition%
+}
+
+% ---------- Authors ----------
+% TODO: add all authors, affiliations, ORCID, corresponding author
+\author{%
+  % TODO: Replace with real author block
+  Author One,~\IEEEmembership{Member,~IEEE,}
+  Author Two,
+  and~Author Three%
+  \thanks{Manuscript received XXXX XX, 2026.}%
+  \thanks{TODO: Add grant/funding acknowledgement here.}%
+  \thanks{Corresponding author: TODO (email: TODO@institution.edu).}%
+}
+
+% Running headers
+\markboth{IEEE Transactions on Neural Systems and Rehabilitation Engineering}%
+{Author \MakeLowercase{\textit{et al.}}: SpectSPD-DANN for Cross-Dataset EEG Depression Recognition}
+
+% ---------- Title page ----------
+\maketitle
+
+% ---------- Abstract ----------
+\begin{abstract}
+% TODO: Write abstract — MAX 250 words (TNSRE hard limit).
+% Fill-in-the-blank template (from STYLE.md):
+%   S1. Clinical scale: depression affects X; objective biomarkers needed.
+%   S2. EEG + Riemannian geometry: covariance matrices on SPD manifold;
+%       cite pennec2006riemannian, barachant2012multiclass.
+%   S3. Gap: existing cross-dataset methods (e.g. WDANet) evaluate pairwise
+%       source-to-target; Riemannian SPD geometry not applied to cross-dataset
+%       depression transfer; no 3-way LODO benchmark exists.
+%   S4. Method A (within-dataset): NrDE K=3 — transductive Riemannian K-NN +
+%       DE spectral; 10-fold CV.
+%   S5. Method B (cross-dataset): SpectSPD-DANN — SPD encoder + GRL domain
+%       discriminator; 3-way LODO; 4-seed ensemble.
+%   S6. Results: NrDE mean AUC 0.788 (3 datasets); competitive with EEG-RCformer
+%       (0.7154) on MODMA. SpectSPD-DANN LODO mean AUC 0.723 (MODMA 0.764
+%       >= WDANet 0.74-0.76 on harder 3-way protocol). Pooled N=232 AUC 0.788
+%       Bal-Acc 0.710.
+%   S7. Significance: demonstrates that optimal EEG depression model is
+%       regime-dependent; provides the first 3-way LODO benchmark on three
+%       independent EEG depression corpora under Riemannian geometry.
+%   Write after Results section is complete.
+ABSTRACT PLACEHOLDER — DO NOT SUBMIT.
+\end{abstract}
+
+% ---------- Keywords ----------
+\begin{IEEEkeywords}
+electroencephalography, depression detection, Riemannian geometry,
+symmetric positive definite matrices, domain adaptation, transfer learning
+\end{IEEEkeywords}
+
+% ============================================================
+%  Body — one file per section
+% ============================================================
+\input{sections/intro}
+\input{sections/related}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% ---------- Acknowledgments ----------
+\section*{Acknowledgments}
+% TODO: funding, ethics approval, dataset access acknowledgements
+ACKNOWLEDGMENTS PLACEHOLDER.
+
+% ---------- References ----------
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+% ---------- Biographies (optional for TNSRE) ----------
+% TODO: add author bios when ready
+% \begin{IEEEbiographynophoto}{Author One}
+% Bio text here.
+% \end{IEEEbiographynophoto}
+
+\end{document}

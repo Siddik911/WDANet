@@ -1,0 +1,177 @@
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== LOSO training/evaluation — stage tnr (53 folds) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/53: training on 52 subjects (held-out sid=2010002) ...
+      [tnr sid=2010002 ctrl=transductive] Vdrift=0.040rad  score=1.000
+    1   2010002  MDD  1.000  MDD   Y  120     -       -     163.3s
+  ... fold  2/53: training on 52 subjects (held-out sid=2010004) ...
+      [tnr sid=2010004 ctrl=transductive] Vdrift=0.050rad  score=0.000
+    2   2010004  MDD  0.000   HC   .   44     -       -       8.7s
+  ... fold  3/53: training on 52 subjects (held-out sid=2010005) ...
+      [tnr sid=2010005 ctrl=transductive] Vdrift=0.073rad  score=0.000
+    3   2010005  MDD  0.000   HC   .  120     -       -       8.7s
+  ... fold  4/53: training on 52 subjects (held-out sid=2010006) ...
+      [tnr sid=2010006 ctrl=transductive] Vdrift=0.023rad  score=0.986
+    4   2010006  MDD  0.986  MDD   Y  120     -       -       8.7s
+  ... fold  5/53: training on 52 subjects (held-out sid=2010008) ...
+      [tnr sid=2010008 ctrl=transductive] Vdrift=0.012rad  score=0.978
+    5   2010008  MDD  0.978  MDD   Y  120     -       -       8.8s
+  ... fold  6/53: training on 52 subjects (held-out sid=2010010) ...
+      [tnr sid=2010010 ctrl=transductive] Vdrift=0.014rad  score=0.419
+    6   2010010  MDD  0.419   HC   .   92     -       -       8.8s
+  ... fold  7/53: training on 52 subjects (held-out sid=2010011) ...
+      [tnr sid=2010011 ctrl=transductive] Vdrift=0.025rad  score=0.938
+    7   2010011  MDD  0.938  MDD   Y  120     -       -       8.8s
+  ... fold  8/53: training on 52 subjects (held-out sid=2010012) ...
+      [tnr sid=2010012 ctrl=transductive] Vdrift=0.044rad  score=1.000
+    8   2010012  MDD  1.000  MDD   Y  112     -       -       8.7s
+  ... fold  9/53: training on 52 subjects (held-out sid=2010013) ...
+      [tnr sid=2010013 ctrl=transductive] Vdrift=0.105rad  score=0.001
+    9   2010013  MDD  0.001   HC   .  120     -       -       8.8s
+  ... fold 10/53: training on 52 subjects (held-out sid=2010015) ...
+      [tnr sid=2010015 ctrl=transductive] Vdrift=0.034rad  score=0.017
+   10   2010015  MDD  0.017   HC   .  120     -       -       8.8s
+  ... fold 11/53: training on 52 subjects (held-out sid=2010016) ...
+      [tnr sid=2010016 ctrl=transductive] Vdrift=0.068rad  score=0.000
+   11   2010016  MDD  0.000   HC   .  120     -       -       8.7s
+  ... fold 12/53: training on 52 subjects (held-out sid=2010018) ...
+      [tnr sid=2010018 ctrl=transductive] Vdrift=0.041rad  score=0.000
+   12   2010018  MDD  0.000   HC   .  120     -       -       8.7s
+  ... fold 13/53: training on 52 subjects (held-out sid=2010019) ...
+      [tnr sid=2010019 ctrl=transductive] Vdrift=0.024rad  score=1.000
+   13   2010019  MDD  1.000  MDD   Y  120     -       -       8.8s
+  ... fold 14/53: training on 52 subjects (held-out sid=2010021) ...
+      [tnr sid=2010021 ctrl=transductive] Vdrift=0.078rad  score=1.000
+   14   2010021  MDD  1.000  MDD   Y  120     -       -       8.9s
+  ... fold 15/53: training on 52 subjects (held-out sid=2010022) ...
+      [tnr sid=2010022 ctrl=transductive] Vdrift=0.042rad  score=0.015
+   15   2010022  MDD  0.015   HC   .  107     -       -       8.8s
+  ... fold 16/53: training on 52 subjects (held-out sid=2010023) ...
+      [tnr sid=2010023 ctrl=transductive] Vdrift=0.018rad  score=0.001
+   16   2010023  MDD  0.001   HC   .  120     -       -       8.8s
+  ... fold 17/53: training on 52 subjects (held-out sid=2010024) ...
+      [tnr sid=2010024 ctrl=transductive] Vdrift=0.104rad  score=1.000
+   17   2010024  MDD  1.000  MDD   Y  120     -       -       8.7s
+  ... fold 18/53: training on 52 subjects (held-out sid=2010025) ...
+      [tnr sid=2010025 ctrl=transductive] Vdrift=0.042rad  score=0.003
+   18   2010025  MDD  0.003   HC   .  120     -       -       8.7s
+  ... fold 19/53: training on 52 subjects (held-out sid=2010026) ...
+      [tnr sid=2010026 ctrl=transductive] Vdrift=0.052rad  score=0.000
+   19   2010026  MDD  0.000   HC   .  115     -       -       8.6s
+  ... fold 20/53: training on 52 subjects (held-out sid=2010028) ...
+      [tnr sid=2010028 ctrl=transductive] Vdrift=0.021rad  score=0.460
+   20   2010028  MDD  0.460   HC   .  120     -       -       8.8s
+  ... fold 21/53: training on 52 subjects (held-out sid=2010030) ...
+      [tnr sid=2010030 ctrl=transductive] Vdrift=0.033rad  score=0.774
+   21   2010030  MDD  0.774  MDD   Y  120     -       -       8.6s
+  ... fold 22/53: training on 52 subjects (held-out sid=2010033) ...
+      [tnr sid=2010033 ctrl=transductive] Vdrift=0.145rad  score=0.009
+   22   2010033  MDD  0.009   HC   .  120     -       -       8.7s
+  ... fold 23/53: training on 52 subjects (held-out sid=2010034) ...
+      [tnr sid=2010034 ctrl=transductive] Vdrift=0.034rad  score=0.000
+   23   2010034  MDD  0.000   HC   .   70     -       -       8.7s
+  ... fold 24/53: training on 52 subjects (held-out sid=2010036) ...
+      [tnr sid=2010036 ctrl=transductive] Vdrift=0.075rad  score=0.918
+   24   2010036  MDD  0.918  MDD   Y   99     -       -       8.6s
+  ... fold 25/53: training on 52 subjects (held-out sid=2020008) ...
+      [tnr sid=2020008 ctrl=transductive] Vdrift=0.020rad  score=0.256
+   25   2020008   HC  0.256   HC   Y   42  0.5000   0.7083    8.8s
+  ... fold 26/53: training on 52 subjects (held-out sid=2020010) ...
+      [tnr sid=2020010 ctrl=transductive] Vdrift=0.029rad  score=0.142
+   26   2020010   HC  0.142   HC   Y  112  0.5000   0.7083    8.8s
+  ... fold 27/53: training on 52 subjects (held-out sid=2020013) ...
+      [tnr sid=2020013 ctrl=transductive] Vdrift=0.029rad  score=0.588
+   27   2020013   HC  0.588  MDD   .  113  0.4722   0.5417    8.9s
+  ... fold 28/53: training on 52 subjects (held-out sid=2020014) ...
+      [tnr sid=2020014 ctrl=transductive] Vdrift=0.021rad  score=0.227
+   28   2020014   HC  0.227   HC   Y   66  0.4792   0.5833    8.7s
+  ... fold 29/53: training on 52 subjects (held-out sid=2020015) ...
+      [tnr sid=2020015 ctrl=transductive] Vdrift=0.119rad  score=0.000
+   29   2020015   HC  0.000   HC   Y  120  0.5833   0.6083    8.6s
+  ... fold 30/53: training on 52 subjects (held-out sid=2020016) ...
+      [tnr sid=2020016 ctrl=transductive] Vdrift=0.023rad  score=0.402
+   30   2020016   HC  0.402   HC   Y  119  0.5694   0.6250    8.7s
+  ... fold 31/53: training on 52 subjects (held-out sid=2020018) ...
+      [tnr sid=2020018 ctrl=transductive] Vdrift=0.029rad  score=0.000
+   31   2020018   HC  0.000   HC   Y   95  0.6071   0.6369    8.7s
+  ... fold 32/53: training on 52 subjects (held-out sid=2020019) ...
+      [tnr sid=2020019 ctrl=transductive] Vdrift=0.020rad  score=0.008
+   32   2020019   HC  0.008   HC   Y   90  0.6094   0.6458    8.7s
+  ... fold 33/53: training on 52 subjects (held-out sid=2020020) ...
+      [tnr sid=2020020 ctrl=transductive] Vdrift=0.030rad  score=0.991
+   33   2020020   HC  0.991  MDD   .  120  0.5648   0.5972    8.7s
+  ... fold 34/53: training on 52 subjects (held-out sid=2020021) ...
+      [tnr sid=2020021 ctrl=transductive] Vdrift=0.011rad  score=0.008
+   34   2020021   HC  0.008   HC   Y  120  0.5708   0.6083    8.6s
+  ... fold 35/53: training on 52 subjects (held-out sid=2020022) ...
+      [tnr sid=2020022 ctrl=transductive] Vdrift=0.055rad  score=0.058
+   35   2020022   HC  0.058   HC   Y  120  0.5644   0.6174    8.7s
+  ... fold 36/53: training on 52 subjects (held-out sid=2020023) ...
+      [tnr sid=2020023 ctrl=transductive] Vdrift=0.035rad  score=0.146
+   36   2020023   HC  0.146   HC   Y  120  0.5590   0.6250    8.7s
+  ... fold 37/53: training on 52 subjects (held-out sid=2020025) ...
+      [tnr sid=2020025 ctrl=transductive] Vdrift=0.007rad  score=0.225
+   37   2020025   HC  0.225   HC   Y  120  0.5545   0.6314    8.7s
+  ... fold 38/53: training on 52 subjects (held-out sid=2020026) ...
+      [tnr sid=2020026 ctrl=transductive] Vdrift=0.012rad  score=0.816
+   38   2020026   HC  0.816  MDD   .  120  0.5417   0.6012    8.6s
+  ... fold 39/53: training on 52 subjects (held-out sid=2020027) ...
+      [tnr sid=2020027 ctrl=transductive] Vdrift=0.026rad  score=0.254
+   39   2020027   HC  0.254   HC   Y  120  0.5389   0.6083    8.7s
+  ... fold 40/53: training on 52 subjects (held-out sid=2020029) ...
+      [tnr sid=2020029 ctrl=transductive] Vdrift=0.025rad  score=0.000
+   40   2020029   HC  0.000   HC   Y   96  0.5547   0.6146    8.7s
+  ... fold 41/53: training on 52 subjects (held-out sid=2030002) ...
+      [tnr sid=2030002 ctrl=transductive] Vdrift=0.081rad  score=0.000
+   41   2030002   HC  0.000   HC   Y  120  0.5686   0.6201    8.7s
+  ... fold 42/53: training on 52 subjects (held-out sid=2030003) ...
+      [tnr sid=2030003 ctrl=transductive] Vdrift=0.043rad  score=0.317
+   42   2030003   HC  0.317   HC   Y   94  0.5648   0.6250    8.8s
+  ... fold 43/53: training on 52 subjects (held-out sid=2030004) ...
+      [tnr sid=2030004 ctrl=transductive] Vdrift=0.124rad  score=1.000
+   43   2030004   HC  1.000  MDD   .  120  0.5417   0.6031    8.7s
+  ... fold 44/53: training on 52 subjects (held-out sid=2030005) ...
+      [tnr sid=2030005 ctrl=transductive] Vdrift=0.120rad  score=0.000
+   44   2030005   HC  0.000   HC   Y   90  0.5646   0.6083    8.7s
+  ... fold 45/53: training on 52 subjects (held-out sid=2030006) ...
+      [tnr sid=2030006 ctrl=transductive] Vdrift=0.216rad  score=0.999
+   45   2030006   HC  0.999  MDD   .  120  0.5476   0.5893    8.7s
+  ... fold 46/53: training on 52 subjects (held-out sid=2030007) ...
+      [tnr sid=2030007 ctrl=transductive] Vdrift=0.099rad  score=0.000
+   46   2030007   HC  0.000   HC   Y  120  0.5663   0.5947    8.7s
+  ... fold 47/53: training on 52 subjects (held-out sid=2030009) ...
+      [tnr sid=2030009 ctrl=transductive] Vdrift=0.073rad  score=1.000
+   47   2030009   HC  1.000  MDD   .   95  0.5507   0.5779    8.6s
+  ... fold 48/53: training on 52 subjects (held-out sid=2030014) ...
+      [tnr sid=2030014 ctrl=transductive] Vdrift=0.043rad  score=0.000
+   48   2030014   HC  0.000   HC   Y  120  0.5694   0.5833    8.7s
+  ... fold 49/53: training on 52 subjects (held-out sid=2030017) ...
+      [tnr sid=2030017 ctrl=transductive] Vdrift=0.071rad  score=0.997
+   49   2030017   HC  0.997  MDD   .  120  0.5550   0.5683    8.6s
+  ... fold 50/53: training on 52 subjects (held-out sid=2030018) ...
+      [tnr sid=2030018 ctrl=transductive] Vdrift=0.086rad  score=0.000
+   50   2030018   HC  0.000   HC   Y  104  0.5705   0.5737    8.6s
+  ... fold 51/53: training on 52 subjects (held-out sid=2030019) ...
+      [tnr sid=2030019 ctrl=transductive] Vdrift=0.067rad  score=0.996
+   51   2030019   HC  0.996  MDD   .  120  0.5571   0.5602    8.6s
+  ... fold 52/53: training on 52 subjects (held-out sid=2030020) ...
+      [tnr sid=2030020 ctrl=transductive] Vdrift=0.058rad  score=0.000
+   52   2030020   HC  0.000   HC   Y  120  0.5714   0.5655    8.5s
+  ... fold 53/53: training on 52 subjects (held-out sid=2030021) ...
+      [tnr sid=2030021 ctrl=transductive] Vdrift=0.042rad  score=1.000
+   53   2030021   HC  1.000  MDD   .  120  0.5575   0.5532    8.6s
+------------------------------------------------------------------------------
+
+FINAL  stage tnr  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.5575   (primary)
+  Balanced accuracy     : 0.5532  @thr=0.50   |  0.5948  @thr=0.419 (Youden)
+  Macro-F1              : 0.5500  @thr=0.50   |  0.5945  @thr=0.419
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        20         9
+  MDD       14        10
+
+Total wall time: 616.6s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/tnr_loso.json

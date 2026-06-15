@@ -1,0 +1,4 @@
+config,eval,dataset,auc
+H1_base,LODO,modma,0.6897
+H1_base,LODO,mumtaz,0.6810
+H1_base,LODO,opennuero,0.5890

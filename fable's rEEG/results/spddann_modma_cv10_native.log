@@ -1,0 +1,85 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+=== 10-fold CV training/evaluation — stage spddann (53 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+  ... fold  1/10: training on 47 subjects (held-out: 2010005, 2010012, 2010016, 2020019, 2020021, 2030002) ...
+/home/hasan/fable's rEEG/triad/spddann.py:292: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:838.)
+  tot += float(L_C) * len(bs)
+    1   2010005  MDD  0.886  MDD   Y  100     -       -      33.5s
+    2   2010012  MDD  0.437   HC   .  100     -       -      33.4s
+    3   2010016  MDD  0.996  MDD   Y  100     -       -      33.2s
+    4   2020019   HC  0.039   HC   Y   90  1.0000   0.8333   33.1s
+    5   2020021   HC  0.001   HC   Y  100  1.0000   0.8333   33.2s
+    6   2030002   HC  0.000   HC   Y  100  1.0000   0.8333   33.1s
+  ... fold  2/10: training on 47 subjects (held-out: 2010015, 2010021, 2010022, 2020016, 2020020, 2020029) ...
+    7   2010015  MDD  0.006   HC   .  100  0.9167   0.7500   31.9s
+    8   2010021  MDD  0.009   HC   .  100  0.8667   0.7000   31.9s
+    9   2010022  MDD  1.000  MDD   Y  100  0.8889   0.7500   31.9s
+   10   2020016   HC  0.051   HC   Y  100  0.8333   0.7500   31.9s
+   11   2020020   HC  0.357   HC   Y  100  0.8000   0.7500   31.9s
+   12   2020029   HC  0.621  MDD   .   96  0.7500   0.6667   31.8s
+  ... fold  3/10: training on 47 subjects (held-out: 2010002, 2010028, 2010036, 2020013, 2020023, 2020026) ...
+   13   2010002  MDD  0.951  MDD   Y  100  0.7857   0.7024   31.7s
+   14   2010028  MDD  0.991  MDD   Y  100  0.8125   0.7292   31.7s
+   15   2010036  MDD  0.000   HC   .   99  0.7407   0.6944   31.7s
+   16   2020013   HC  0.065   HC   Y  100  0.7302   0.7063   31.7s
+   17   2020023   HC  0.079   HC   Y  100  0.7222   0.7153   31.7s
+   18   2020026   HC  0.991  MDD   .  100  0.6667   0.6667   31.7s
+  ... fold  4/10: training on 48 subjects (held-out: 2010008, 2010010, 2010030, 2020010, 2030009) ...
+   19   2010008  MDD  0.002   HC   .  100  0.6222   0.6389   38.0s
+   20   2010010  MDD  0.491   HC   .   92  0.6364   0.6162   37.9s
+   21   2010030  MDD  0.272   HC   .  100  0.6389   0.5972   38.0s
+   22   2020010   HC  0.945  MDD   .  100  0.6083   0.5583   38.0s
+   23   2030009   HC  0.999  MDD   .   95  0.5606   0.5265   38.0s
+  ... fold  5/10: training on 48 subjects (held-out: 2010011, 2010018, 2020014, 2020022, 2030021) ...
+   24   2010011  MDD  0.265   HC   .  100  0.5594   0.5105   37.9s
+   25   2010018  MDD  0.736  MDD   Y  100  0.5714   0.5325   37.9s
+   26   2020014   HC  0.512  MDD   .   66  0.5595   0.5060   37.8s
+   27   2020022   HC  0.941  MDD   .  100  0.5385   0.4835   37.9s
+   28   2030021   HC  0.000   HC   Y  100  0.5663   0.5000   37.9s
+  ... fold  6/10: training on 48 subjects (held-out: 2010019, 2010033, 2030006, 2030007, 2030014) ...
+   29   2010019  MDD  0.466   HC   .  100  0.5667   0.4857   38.7s
+   30   2010033  MDD  0.969  MDD   Y  100  0.5848   0.5045   38.7s
+   31   2030006   HC  0.999  MDD   .  100  0.5500   0.4854   38.7s
+   32   2030007   HC  0.000   HC   Y  100  0.5781   0.5000   38.7s
+   33   2030014   HC  0.888  MDD   .  100  0.5625   0.4835   38.7s
+  ... fold  7/10: training on 48 subjects (held-out: 2010004, 2010024, 2020008, 2020018, 2030004) ...
+   34   2010004  MDD  1.000  MDD   Y   44  0.5882   0.5000   38.9s
+   35   2010024  MDD  1.000  MDD   Y  100  0.6111   0.5147   39.2s
+   36   2020008   HC  0.797  MDD   .   42  0.6019   0.5000   38.9s
+   37   2020018   HC  0.997  MDD   .   95  0.5789   0.4868   39.2s
+   38   2030004   HC  0.000   HC   Y  100  0.6000   0.5000   39.2s
+  ... fold  8/10: training on 48 subjects (held-out: 2010006, 2010034, 2020015, 2030005, 2030019) ...
+   39   2010006  MDD  0.390   HC   .  100  0.5947   0.4868   39.4s
+   40   2010034  MDD  0.000   HC   .   70  0.5700   0.4750   39.2s
+   41   2020015   HC  0.849  MDD   .  100  0.5619   0.4631   39.4s
+   42   2030005   HC  0.000   HC   Y   90  0.5795   0.4750   39.3s
+   43   2030019   HC  0.000   HC   Y  100  0.5957   0.4859   39.4s
+  ... fold  9/10: training on 48 subjects (held-out: 2010013, 2010025, 2020027, 2030017, 2030020) ...
+   44   2010013  MDD  0.782  MDD   Y  100  0.5963   0.4990   36.3s
+   45   2010025  MDD  0.000   HC   .  100  0.5731   0.4881   36.3s
+   46   2020027   HC  0.999  MDD   .  100  0.5549   0.4773   36.3s
+   47   2030017   HC  1.000  MDD   .  100  0.5364   0.4673   36.3s
+   48   2030020   HC  1.000  MDD   .  100  0.5192   0.4580   36.3s
+  ... fold 10/10: training on 48 subjects (held-out: 2010023, 2010026, 2020025, 2030003, 2030018) ...
+   49   2010023  MDD  0.794  MDD   Y  100  0.5201   0.4699   36.6s
+   50   2010026  MDD  0.990  MDD   Y  100  0.5288   0.4808   36.6s
+   51   2020025   HC  0.000   HC   Y  100  0.5417   0.4907   36.6s
+   52   2030003   HC  0.932  MDD   .   94  0.5342   0.4821   36.6s
+   53   2030018   HC  0.997  MDD   .  100  0.5201   0.4741   36.6s
+------------------------------------------------------------------------------
+
+FINAL  stage spddann  [10-fold CV]  |  53 subjects (24 MDD / 29 HC)
+  Subject-level ROC-AUC : 0.5201   (primary)
+  Balanced accuracy     : 0.4741  @thr=0.50   |  0.5819  @thr=0.265 (Youden)
+  Macro-F1              : 0.4715  @thr=0.50   |  0.5604  @thr=0.265
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        13        16
+  MDD       12        12
+
+Total wall time: 1911.7s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/spddann_cv10.json

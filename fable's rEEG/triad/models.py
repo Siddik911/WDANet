@@ -166,6 +166,7 @@ class ShallowStage:
                  use_de: bool = False,
                  transductive: bool = False, n_iter: int = 0,
                  protect_class: bool = False, control: str | None = None,
+                 dataset_recenter: bool = False, de_dataset_standardize: bool = False,
                  max_windows: int | None = 120, C_reg: float = 1.0, seed: int = C.SEED):
         assert rep in ("cov", "corr")
         assert clf in ("lr", "lda_subj")
@@ -182,11 +183,27 @@ class ShallowStage:
         self.both_tangent = both_tangent
         self.band = band                      # (lo, hi) Hz band-pass before cov; None=broadband
         self.use_de = use_de                  # append DE (125ch × 5bands) after identity removal
+        # --- per-DATASET DE standardisation (LODO spectral alignment) ---
+        # z-score the DE block per source dataset (not pooled); at test, use the TARGET
+        # dataset's own scaler (fit transductively on its unlabelled DE via set_target).
+        # Removes per-dataset amplifier-gain band-power offsets — the spectral analog of
+        # recentring, but on the stream that actually transfers cross-dataset.
+        self.de_dataset_standardize = de_dataset_standardize
+        self._de_scalers: dict = {}
+        self._de_target_scaler = None
         # --- transductive nuisance-subspace adaptation (stage 'tnr') ---
         self.transductive = transductive      # use held-out subject's UNLABELLED windows in V
         self.n_iter = n_iter                  # refinement iterations (0 = init-only, the base)
         self.protect_class = protect_class    # orthogonalise V against the train class axis
         self.control = control                # None | 'inductive' | 'random_inject' (ablations)
+        # --- per-DATASET Riemannian recentring (LODO alignment, stage flag) ---
+        # Map each dataset's Frechet mean to the identity before the shared tangent
+        # projection (the universal cross-domain primitive). Source means come from train;
+        # the target dataset mean is set transductively from the held-out dataset's
+        # UNLABELLED windows via set_target_reference(). No labels are used.
+        self.dataset_recenter = dataset_recenter
+        self._ds_means: dict = {}             # source dataset -> Frechet mean (set in fit)
+        self._target_mean = None              # target dataset mean (set before predict)
         self.max_windows = max_windows
         self.C_reg = C_reg
         self.seed = seed
@@ -200,8 +217,12 @@ class ShallowStage:
 
     # -- per-subject feature construction (computed once, reused across folds) --
     def _features(self, sub: Subject) -> dict:
-        key = (C.DATASET, sub.sid, self.rep, self.recenter, self.detrend, self.max_windows,
-               self.both_tangent, self.band, self.use_de)
+        # Key by the subject's OWN dataset (not the globally-active one) + its channel count,
+        # so pooled cross-dataset (LODO) fits never collide on a shared sid or confuse a
+        # harmonised 17-ch signal with a native-montage one.
+        ds = getattr(sub, "dataset", "") or C.DATASET
+        key = (ds, sub.data.shape[0], sub.sid, self.rep, self.recenter, self.detrend,
+               self.max_windows, self.both_tangent, self.band, self.use_de)
         cached = self._FEATURE_CACHE.get(key)
         if cached is not None:
             return cached
@@ -235,9 +256,16 @@ class ShallowStage:
     def fit(self, train_subjects: list[Subject]) -> "ShallowStage":
         t0 = time.time()
         feats = [self._features(s) for s in train_subjects]
-        # tangent reference = Riemannian mean of training subjects' means (fast & strict)
-        self._ref = mean_riemann(np.stack([f["mean"] for f in feats]))
-        Xs = [tangent_space(f["mats"], self._ref) for f in feats]
+        if self.dataset_recenter:
+            assert self.clf == "lr" and not self.both_tangent and not self.transductive, \
+                "dataset_recenter supports the plain LR path (nr/nrde) only"
+            mats_list, mean_list = self._fit_dataset_recenter(train_subjects, feats)
+        else:
+            mats_list = [f["mats"] for f in feats]
+            mean_list = [f["mean"] for f in feats]
+        # tangent reference = Riemannian mean of training subjects' (recentred) means
+        self._ref = mean_riemann(np.stack(mean_list))
+        Xs = [tangent_space(m, self._ref) for m in mats_list]
 
         if self.both_tangent:
             # block-diagonal product manifold: each block tangent-mapped at its OWN
@@ -291,12 +319,20 @@ class ShallowStage:
                 Xs = [self._project(x) for x in Xs]
             if self.use_de:
                 # Append DE features AFTER identity removal (V estimated from tangent only).
-                # Fit StandardScaler on all training windows so test DE is commensurate.
                 from sklearn.preprocessing import StandardScaler
-                all_de = np.vstack([f["de"] for f in feats])           # (total_wins, C*5)
-                self._de_scaler = StandardScaler().fit(all_de)
-                Xs = [np.hstack([x, self._de_scaler.transform(f["de"])])
-                      for x, f in zip(Xs, feats)]
+                self._de_scaler = StandardScaler().fit(np.vstack([f["de"] for f in feats]))
+                if self.de_dataset_standardize:
+                    # per-source-dataset scaler; transform each subject by ITS dataset's
+                    by_ds: dict = {}
+                    for s, f in zip(train_subjects, feats):
+                        by_ds.setdefault(s.dataset, []).append(f["de"])
+                    self._de_scalers = {ds: StandardScaler().fit(np.vstack(v))
+                                        for ds, v in by_ds.items()}
+                    de_blocks = [self._de_scalers[s.dataset].transform(f["de"])
+                                 for s, f in zip(train_subjects, feats)]
+                else:
+                    de_blocks = [self._de_scaler.transform(f["de"]) for f in feats]
+                Xs = [np.hstack([x, de]) for x, de in zip(Xs, de_blocks)]
             X = np.concatenate(Xs, axis=0)
             y = np.concatenate([np.full(len(f["mats"]), f["label"]) for f in feats])
             self._clf = LogisticRegression(
@@ -320,6 +356,45 @@ class ShallowStage:
         if self._nuis is None:
             return X
         return X - (X @ self._nuis.T) @ self._nuis
+
+    def _fit_dataset_recenter(self, subjects, feats):
+        """Recentre each source dataset to its own Frechet mean (-> identity).
+
+        Returns (mats_list, mean_list): per-subject recentred correlation matrices and
+        their means, for the shared tangent projection. The dataset mean is the Frechet
+        mean of that dataset's per-subject means; because the AIRM Frechet mean is
+        congruence-equivariant, recentring a subject's mean equals the mean of its
+        recentred matrices, so no per-subject Frechet mean is recomputed.
+        """
+        from collections import defaultdict
+        by_ds = defaultdict(list)
+        for s, f in zip(subjects, feats):
+            by_ds[s.dataset].append(f["mean"])
+        self._ds_means = {ds: mean_riemann(np.stack(ms)) for ds, ms in by_ds.items()}
+        mats_list, mean_list = [], []
+        for s, f in zip(subjects, feats):
+            M = self._ds_means[s.dataset]
+            mats_list.append(_recenter(f["mats"], M))
+            mean_list.append(_recenter(f["mean"][None], M)[0])   # equivariance (cheap)
+        return mats_list, mean_list
+
+    def set_target(self, test_subjects) -> None:
+        """Transductive target adaptation for the held-out dataset's UNLABELLED windows.
+        Under de_dataset_standardize, fit the DE scaler on the target's own DE so its
+        band-power offset is removed the same way each source dataset's was (no labels)."""
+        if self.use_de and self.de_dataset_standardize:
+            from sklearn.preprocessing import StandardScaler
+            de = np.vstack([self._features(s)["de"] for s in test_subjects])
+            self._de_target_scaler = StandardScaler().fit(de)
+
+    def set_target_reference(self, test_subjects) -> None:
+        """Transductively set the target dataset Frechet mean from the held-out dataset's
+        UNLABELLED windows (no labels used). Consumed by predict_subject under
+        dataset_recenter. Called once by the LODO harness before prediction."""
+        if not self.dataset_recenter:
+            return
+        feats = [self._features(s) for s in test_subjects]
+        self._target_mean = mean_riemann(np.stack([f["mean"] for f in feats]))
 
     def _select_k_inner(self, Xs: list, labels: np.ndarray, n_inner: int = 5) -> int:
         """Leakage-free n_nuisance selection: inner stratified CV over the TRAIN subjects
@@ -429,7 +504,11 @@ class ShallowStage:
 
     def predict_subject(self, sub: Subject) -> tuple[float, int]:
         feat = self._features(sub)
-        X = tangent_space(feat["mats"], self._ref)
+        mats = feat["mats"]
+        if self.dataset_recenter and self._target_mean is not None:
+            # transductive: recentre the target dataset to identity (same as sources)
+            mats = _recenter(mats, self._target_mean)
+        X = tangent_space(mats, self._ref)
         if self.transductive:
             return self._predict_transductive(sub, X)
         if self.both_tangent:
@@ -442,7 +521,10 @@ class ShallowStage:
         if self.clf == "lr":
             Xp = self._project(X)
             if self.use_de:
-                Xp = np.hstack([Xp, self._de_scaler.transform(feat["de"])])
+                de_scaler = (self._de_target_scaler
+                             if (self.de_dataset_standardize and self._de_target_scaler is not None)
+                             else self._de_scaler)
+                Xp = np.hstack([Xp, de_scaler.transform(feat["de"])])
             probs = self._clf.predict_proba(Xp)[:, 1]
         else:
             probs = self._lda.predict_proba(self._pca.transform(X))[:, 1]
@@ -1237,4 +1319,7 @@ def build_model(stage: str, **kw):
     if stage == "mbds":
         from .dualspd import build_mbds
         return build_mbds(**kw)
-    raise ValueError(f"unknown stage {stage!r} (use s0|s1|s2|s3|s4|s5|ds|mbds)")
+    if stage == "spddann":
+        from .spddann import SPDDANNStage
+        return SPDDANNStage(**kw)
+    raise ValueError(f"unknown stage {stage!r} (use s0|s1|s2|s3|s4|s5|ds|mbds|spddann)")

@@ -1,0 +1,146 @@
+[dataset] modma  raw=/home/hasan/fable's rEEG/EEG_128channels_resting_lanzhou_2015  cache=/home/hasan/fable's rEEG/cache  fs_orig=250->125Hz  ch=128
+  [train] modma      53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=50 med=144 max=165
+  [train] mumtaz     58 subjects  (30 MDD / 28 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=79 med=141 max=187
+  [test ] opennuero  121 subjects  (46 MDD / 75 HC)  |  fs=125Hz  ch=17  win=4.0s/500smp  windows/subj: min=44 med=142 max=209
+** harmonised to shared 17-channel 10-20 montage **
+
+=== LODO modma+mumtaz -> opennuero training/evaluation — stage spddann (121 subjects) ===
+ fold   subject true  score pred  ok  win  cumAUC  cumBACC    time
+------------------------------------------------------------------------------
+/home/hasan/fable's rEEG/triad/spddann.py:292: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:838.)
+  tot += float(L_C) * len(bs)
+    1         1   HC  0.337   HC   Y  100     -       -       2.2s
+    2         2   HC  0.015   HC   Y  100     -       -       2.2s
+    3         3   HC  0.187   HC   Y  100     -       -       2.2s
+    4         4   HC  0.257   HC   Y  100     -       -       2.2s
+    5         5   HC  0.000   HC   Y  100     -       -       2.2s
+    6         6   HC  0.001   HC   Y   96     -       -       2.2s
+    7         7   HC  0.022   HC   Y  100     -       -       2.2s
+    8         8   HC  0.020   HC   Y  100     -       -       2.2s
+    9         9   HC  0.446   HC   Y  100     -       -       2.2s
+   10        10   HC  0.114   HC   Y  100     -       -       2.2s
+   11        11   HC  0.213   HC   Y  100     -       -       2.2s
+   12        12   HC  1.000  MDD   .  100     -       -       2.2s
+   13        13   HC  0.000   HC   Y  100     -       -       2.2s
+   14        14   HC  0.216   HC   Y  100     -       -       2.2s
+   15        15   HC  0.481   HC   Y  100     -       -       2.2s
+   16        16   HC  0.963  MDD   .  100     -       -       2.2s
+   17        17   HC  0.054   HC   Y  100     -       -       2.2s
+   18        18   HC  0.156   HC   Y  100     -       -       2.2s
+   19        19   HC  0.000   HC   Y  100     -       -       2.2s
+   20        20   HC  0.020   HC   Y  100     -       -       2.2s
+   21        21   HC  0.410   HC   Y  100     -       -       2.2s
+   22        22   HC  0.004   HC   Y  100     -       -       2.2s
+   23        23   HC  0.271   HC   Y  100     -       -       2.2s
+   24        24   HC  0.332   HC   Y  100     -       -       2.2s
+   25        25   HC  0.197   HC   Y  100     -       -       2.2s
+   26        26   HC  0.406   HC   Y  100     -       -       2.2s
+   27        27   HC  0.288   HC   Y  100     -       -       2.2s
+   28        28   HC  0.003   HC   Y  100     -       -       2.2s
+   29        29   HC  0.102   HC   Y  100     -       -       2.2s
+   30        30   HC  0.021   HC   Y  100     -       -       2.2s
+   31        31   HC  0.930  MDD   .  100     -       -       2.2s
+   32        32   HC  0.547  MDD   .  100     -       -       2.2s
+   33        33   HC  0.379   HC   Y  100     -       -       2.2s
+   34        34   HC  0.000   HC   Y  100     -       -       2.2s
+   35        35   HC  0.019   HC   Y  100     -       -       2.2s
+   36        36   HC  0.472   HC   Y  100     -       -       2.2s
+   37        37   HC  0.071   HC   Y  100     -       -       2.2s
+   38        39   HC  0.510  MDD   .  100     -       -       2.2s
+   39        40   HC  0.639  MDD   .  100     -       -       2.2s
+   40        41   HC  0.017   HC   Y  100     -       -       2.2s
+   41        42   HC  0.789  MDD   .  100     -       -       2.2s
+   42        43   HC  0.208   HC   Y  100     -       -       2.2s
+   43        44   HC  0.400   HC   Y  100     -       -       2.2s
+   44        45   HC  0.345   HC   Y  100     -       -       2.2s
+   45        46   HC  0.000   HC   Y  100     -       -       2.2s
+   46        47   HC  0.450   HC   Y  100     -       -       2.2s
+   47        48   HC  0.080   HC   Y  100     -       -       2.2s
+   48        49   HC  0.437   HC   Y  100     -       -       2.2s
+   49        50   HC  1.000  MDD   .  100     -       -       2.2s
+   50        51   HC  0.715  MDD   .  100     -       -       2.2s
+   51        52  MDD  1.000  MDD   Y  100  0.9800   0.9100    2.2s
+   52        53  MDD  0.135   HC   .  100  0.6900   0.6600    2.2s
+   53        54   HC  0.086   HC   Y  100  0.6961   0.6618    2.2s
+   54        55  MDD  0.934  MDD   Y  100  0.7778   0.7451    2.2s
+   55        56   HC  0.928  MDD   .  100  0.7756   0.7372    2.2s
+   56        57   HC  0.268   HC   Y  100  0.7736   0.7390    2.2s
+   57        58  MDD  0.658  MDD   Y  100  0.7972   0.7807    2.2s
+   58        59  MDD  0.173   HC   .  100  0.7208   0.7057    2.2s
+   59        60  MDD  0.049   HC   .   76  0.6478   0.6557    2.2s
+   60        61  MDD  0.893  MDD   Y  100  0.6846   0.6914    2.2s
+   61        62   HC  0.307   HC   Y  100  0.6825   0.6931    2.2s
+   62        63  MDD  0.363   HC   .  100  0.6782   0.6574    2.2s
+   63        64   HC  0.006   HC   Y  100  0.6841   0.6591    2.2s
+   64        65  MDD  0.040   HC   .  100  0.6404   0.6313    2.2s
+   65        66  MDD  0.009   HC   .  100  0.5927   0.6091    2.2s
+   66        67   HC  0.045   HC   Y  100  0.5964   0.6107    2.2s
+   67        68   HC  0.715  MDD   .  100  0.5912   0.6035    2.2s
+   68        69   HC  0.647  MDD   .  100  0.5879   0.5966    2.2s
+   69        70   HC  0.385   HC   Y  100  0.5847   0.5983    2.2s
+   70        71   HC  0.029   HC   Y  100  0.5900   0.6000    2.2s
+   71        72   HC  0.329   HC   Y  100  0.5885   0.6016    2.2s
+   72        73   HC  0.582  MDD   .  100  0.5855   0.5952    2.2s
+   73        74   HC  0.029   HC   Y  100  0.5905   0.5968    2.2s
+   74        75   HC  0.000   HC   Y   93  0.5969   0.5984    2.2s
+   75        76   HC  0.482   HC   Y   97  0.5938   0.6000    2.2s
+   76        77   HC  0.032   HC   Y  100  0.5985   0.6015    2.2s
+   77        78   HC  0.037   HC   Y  100  0.6030   0.6030    2.2s
+   78        79   HC  0.441   HC   Y  100  0.6000   0.6044    2.2s
+   79        80  MDD  0.036   HC   .  100  0.5722   0.5862    2.2s
+   80        81  MDD  0.000   HC   .  100  0.5282   0.5711    2.2s
+   81        82   HC  0.520  MDD   .  100  0.5254   0.5652    2.2s
+   82        83   HC  0.058   HC   Y  100  0.5262   0.5667    2.2s
+   83        84  MDD  0.856  MDD   Y  100  0.5571   0.5923    2.2s
+   84        85  MDD  0.133   HC   .  100  0.5469   0.5786    2.2s
+   85        86  MDD  0.287   HC   .  100  0.5467   0.5667    2.2s
+   86        87   HC  0.027   HC   Y  100  0.5512   0.5681    2.2s
+   87        88  MDD  0.105   HC   .  100  0.5423   0.5577    2.2s
+   88        89  MDD  0.019   HC   .  100  0.5211   0.5485    2.2s
+   89        90   HC  0.017   HC   Y  100  0.5261   0.5498    2.2s
+   90        91  MDD  0.097   HC   .  100  0.5193   0.5417    2.2s
+   91        92  MDD  0.299   HC   .  100  0.5219   0.5344    2.2s
+   92        93   HC  0.176   HC   Y  100  0.5205   0.5357    2.2s
+   93        94   HC  0.053   HC   Y  100  0.5228   0.5370    2.2s
+   94        95   HC  0.469   HC   Y  100  0.5193   0.5382    2.2s
+   95        96  MDD  0.182   HC   .  100  0.5160   0.5317    2.2s
+   96        97  MDD  0.045   HC   .  100  0.5067   0.5257    2.2s
+   97        98  MDD  0.621  MDD   Y  100  0.5230   0.5430    2.2s
+   98        99  MDD  0.833  MDD   Y  100  0.5409   0.5588    2.2s
+   99       100  MDD  0.399   HC   .  100  0.5461   0.5525    2.2s
+  100       101  MDD  0.246   HC   .  100  0.5451   0.5467    2.2s
+  101       102  MDD  0.041   HC   .  100  0.5359   0.5413    2.2s
+  102       103  MDD  0.149   HC   .  100  0.5319   0.5363    2.2s
+  103       104  MDD  0.000   HC   .  100  0.5133   0.5317    2.2s
+  104       105  MDD  0.000   HC   .  100  0.4961   0.5274    2.2s
+  105       106  MDD  0.708  MDD   Y  100  0.5093   0.5400    2.2s
+  106       107  MDD  0.117   HC   .   44  0.5067   0.5357    2.2s
+  107       108  MDD  0.898  MDD   Y  100  0.5200   0.5473    2.2s
+  108       109  MDD  0.547  MDD   Y  100  0.5301   0.5582    2.2s
+  109       110  MDD  0.295   HC   .  100  0.5314   0.5537    2.2s
+  110       111  MDD  0.912  MDD   Y  100  0.5429   0.5638    2.2s
+  111       112  MDD  0.235   HC   .  100  0.5422   0.5594    2.2s
+  112       113  MDD  0.000   HC   .  100  0.5290   0.5553    2.2s
+  113       114  MDD  0.237   HC   .  100  0.5288   0.5514    2.2s
+  114       115  MDD  0.364   HC   .  100  0.5316   0.5477    2.2s
+  115       116  MDD  0.946  MDD   Y  100  0.5423   0.5567    2.2s
+  116       117  MDD  0.035   HC   .  100  0.5363   0.5530    2.2s
+  117       118  MDD  0.422   HC   .  100  0.5403   0.5495    2.2s
+  118       119  MDD  0.529  MDD   Y  100  0.5473   0.5578    2.2s
+  119       120  MDD  0.657  MDD   Y  100  0.5552   0.5658    2.2s
+  120       121  MDD  0.327   HC   .  100  0.5559   0.5622    2.2s
+  121       122  MDD  0.077   HC   .  100  0.5519   0.5588    2.2s
+------------------------------------------------------------------------------
+
+FINAL  stage spddann  [LODO modma+mumtaz -> opennuero]  |  121 subjects (46 MDD / 75 HC)
+  Subject-level ROC-AUC : 0.5519   (primary)
+  Balanced accuracy     : 0.5588  @thr=0.50   |  0.5814  @thr=0.035 (Youden)
+  Macro-F1              : 0.5523  @thr=0.50   |  0.5014  @thr=0.035
+  Confusion matrix @0.50 (rows=true HC/MDD, cols=pred HC/MDD):
+        pred_HC  pred_MDD
+  HC        61        14
+  MDD       32        14
+
+Total wall time: 268.9s
+Saved per-fold results -> /home/hasan/fable's rEEG/results/lodo_opennuero_spddann_harm.json

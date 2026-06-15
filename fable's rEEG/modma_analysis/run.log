@@ -1,0 +1,216 @@
+==================================================================
+  MODMA Dataset Analysis
+==================================================================
+
+Loading subjects from cache ...
+53 subjects  (24 MDD / 29 HC)  |  fs=125Hz  ch=125  win=4.0s/500smp  windows/subj: min=42 med=127 max=160
+
+Epoching 53 subjects (max 60 windows each) ...
+  10/53
+  20/53
+  30/53
+  40/53
+  50/53
+  53/53
+  median 60  min 42  max 60  total 3146
+
+[A] LWF correlation matrices + Riemannian means (broadband) ...
+  10/53
+  20/53
+  30/53
+  40/53
+  50/53
+  53/53
+  Fitting shared tangent space ...
+  Tangent feature dim: 7875
+
+[A2] Pairwise AIRM distance matrix ...
+  row 10/53
+  row 20/53
+  row 30/53
+  row 40/53
+  row 50/53
+  row 53/53
+    → modma_analysis/A2_distance_matrix.png
+  within-MDD : 23.4975
+  within-HC  : 23.8894
+  MDD ↔ HC   : 23.6820
+  sep-ratio  : 0.9995  (<1.05 = class buried in within-class spread)
+
+[B] Variance decomposition: identity vs class vs noise ...
+  Per-window tangent projections ...
+    10/53
+    20/53
+    30/53
+    40/53
+    50/53
+    53/53
+  class signal (||MDD_mean - HC_mean||) : 4.3666
+  mean identity spread (||subj - grand||): 15.9948
+  signal/identity ratio                  : 0.2730  (<0.5 = small needle in large haystack)
+  within-subject window variance          : 0.0083
+    → modma_analysis/B_variance_decomposition.png
+
+[C] PCA visualization ...
+    → modma_analysis/C_pca.png
+  LOO-AUC vs #PCs ...
+    top- 1 PCs: LOO-AUC = 0.000
+    top- 2 PCs: LOO-AUC = 0.194
+    top- 3 PCs: LOO-AUC = 0.401
+    top- 5 PCs: LOO-AUC = 0.443
+    top- 8 PCs: LOO-AUC = 0.674
+    top-10 PCs: LOO-AUC = 0.603
+    top-15 PCs: LOO-AUC = 0.636
+    top-20 PCs: LOO-AUC = 0.626
+    top-30 PCs: LOO-AUC = 0.579
+    → modma_analysis/C2_pca_auc.png
+
+[D] Band-specific analysis (40 windows/subject) ...
+  delta (1-4 Hz) ...
+    AUC = 0.493  effect-size d' = 0.2305
+  theta (4-8 Hz) ...
+    AUC = 0.441  effect-size d' = 0.2237
+  alpha (8-13 Hz) ...
+    AUC = 0.595  effect-size d' = 0.2261
+  beta (13-30 Hz) ...
+    AUC = 0.481  effect-size d' = 0.2382
+    → modma_analysis/D_band_analysis.png
+    → modma_analysis/D2_band_pca.png
+
+[E] Within-subject window stability ...
+  MDD mean var: 0.0079  HC mean var: 0.0086  t=-0.92  p=0.363
+    → modma_analysis/E_stability.png
+
+[F] Per-fold S2 analysis ...
+  Accuracy @0.5: 33/53 = 62.3%
+    → modma_analysis/F_per_fold_scores.png
+    → modma_analysis/F2_discriminant_vs_score.png
+
+[G] Correlation matrix gallery ...
+    → modma_analysis/G_corr_gallery.png
+    → modma_analysis/G2_group_means.png
+
+[H] Learning curve: AUC vs n_training_subjects ...
+  n_train= 6: AUC = 0.536 ± 0.084
+  n_train=10: AUC = 0.549 ± 0.073
+  n_train=14: AUC = 0.582 ± 0.082
+  n_train=18: AUC = 0.578 ± 0.094
+  n_train=24: AUC = 0.616 ± 0.099
+  n_train=32: AUC = 0.617 ± 0.096
+  n_train=40: AUC = 0.640 ± 0.162
+  n_train=48: AUC = 0.692 ± 0.340
+  n_train=52: AUC = 0.733 ± 0.442
+    → modma_analysis/H_learning_curve.png
+
+==================================================================
+SUMMARY
+==================================================================
+{
+  "N": 53,
+  "n_mdd": 24,
+  "n_hc": 29,
+  "median_wins": 60,
+  "total_wins": 3146,
+  "dist_within_mdd": 23.4975,
+  "dist_within_hc": 23.8894,
+  "dist_cross": 23.682,
+  "class_sep_ratio": 0.9995,
+  "class_signal_norm": 4.3666,
+  "identity_spread": 15.9948,
+  "signal_identity_ratio": 0.273,
+  "var_within_subj": 0.0083,
+  "pca_aucs": {
+    "1": 0.0,
+    "2": 0.194,
+    "3": 0.401,
+    "5": 0.443,
+    "8": 0.674,
+    "10": 0.603,
+    "15": 0.636,
+    "20": 0.626,
+    "30": 0.579
+  },
+  "band_results": {
+    "delta": {
+      "auc": 0.493,
+      "dprime": 0.2305,
+      "status": "ok"
+    },
+    "theta": {
+      "auc": 0.441,
+      "dprime": 0.2237,
+      "status": "ok"
+    },
+    "alpha": {
+      "auc": 0.595,
+      "dprime": 0.2261,
+      "status": "ok"
+    },
+    "beta": {
+      "auc": 0.481,
+      "dprime": 0.2382,
+      "status": "ok"
+    }
+  },
+  "within_var_mdd": 0.0079,
+  "within_var_hc": 0.0086,
+  "within_var_pval": 0.363,
+  "var_vs_confidence_r": 0.062,
+  "s2_accuracy_at_thresh_05": 0.623,
+  "discriminant_vs_s2_r": 0.635,
+  "learning_curve": {
+    "6": {
+      "mean": 0.536,
+      "std": 0.084
+    },
+    "10": {
+      "mean": 0.549,
+      "std": 0.073
+    },
+    "14": {
+      "mean": 0.582,
+      "std": 0.082
+    },
+    "18": {
+      "mean": 0.578,
+      "std": 0.094
+    },
+    "24": {
+      "mean": 0.616,
+      "std": 0.099
+    },
+    "32": {
+      "mean": 0.617,
+      "std": 0.096
+    },
+    "40": {
+      "mean": 0.64,
+      "std": 0.162
+    },
+    "48": {
+      "mean": 0.692,
+      "std": 0.34
+    },
+    "52": {
+      "mean": 0.733,
+      "std": 0.442
+    }
+  }
+}
+
+All outputs -> modma_analysis/
+Files written:
+  A2_distance_matrix.png
+  B_variance_decomposition.png
+  C2_pca_auc.png
+  C_pca.png
+  D2_band_pca.png
+  D_band_analysis.png
+  E_stability.png
+  F2_discriminant_vs_score.png
+  F_per_fold_scores.png
+  G2_group_means.png
+  G_corr_gallery.png
+  H_learning_curve.png
+  run.log
+  summary.json

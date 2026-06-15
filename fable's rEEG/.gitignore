@@ -1,0 +1,25 @@
+# === Raw EEG datasets (excluded from backup) ===
+/ds003478-download/
+/EEG_128channels_resting_lanzhou_2015/
+/Mumtaz/
+
+# === Preprocessed cache (regenerable) ===
+/cache/
+
+# === Third-party reference code (cloned external repos) ===
+/example code/
+
+# === Reference papers / archives ===
+/Other Papers/
+/archive/
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db

@@ -1,0 +1,8 @@
+### MODMA-LODO: proj16 + domain-removal (vs proj16=0.632, baseline=0.707) ###
+--- nr-domain-removal 1 ---
+      [nr] removed 1 between-dataset direction(s) from nr stream
+  Subject-level ROC-AUC : 0.6049   (primary)
+--- nr-domain-removal 2 ---
+      [nr] removed 2 between-dataset direction(s) from nr stream
+  Subject-level ROC-AUC : 0.5560   (primary)
+ALL DONE

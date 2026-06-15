@@ -1,0 +1,8 @@
+### WDANet-MMD LODO (vs baseline seed42: MODMA 0.707, Mumtaz 0.913) ###
+--- MODMA align 1.0 ---
+  Subject-level ROC-AUC : 0.6868   (primary)
+--- MODMA align 3.0 ---
+  Subject-level ROC-AUC : 0.7428   (primary)
+--- MUMTAZ align 1.0 ---
+  Subject-level ROC-AUC : 0.6952   (primary)
+ALL DONE

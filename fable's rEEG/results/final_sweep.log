@@ -1,0 +1,17 @@
+
+===== H1_base  {'subspace': '12', 'lr': '1e-2', 'epochs': '80', 'max_windows': '100'} =====
+  within  modma      AUC=0.585 acc=0.547 f1=0.518 sens=0.333 spec=0.724
+  within  mumtaz     AUC=0.937 acc=0.862 f1=0.861 sens=0.900 spec=0.821
+  within  opennuero  AUC=0.713 acc=0.645 f1=0.621 sens=0.522 spec=0.720
+  LODO    modma      AUC=0.718 acc=0.660 f1=0.657 sens=0.625 spec=0.690
+  LODO    mumtaz     AUC=0.575 acc=0.483 f1=0.467 sens=0.300 spec=0.679
+  LODO    opennuero  AUC=0.596 acc=0.661 f1=0.615 sens=0.413 spec=0.813
+  pooled  all3       AUC=0.788 acc=0.741 f1=0.736 sens=0.690 spec=0.780
+
+===== H2_ss8  {'subspace': '8', 'lr': '1e-2', 'epochs': '80', 'max_windows': '100'} =====
+  within  modma      AUC=0.621 acc=0.642 f1=0.615 sens=0.417 spec=0.828
+  within  mumtaz     AUC=0.945 acc=0.879 f1=0.879 sens=0.900 spec=0.857
+  within  opennuero  AUC=0.729 acc=0.678 f1=0.662 sens=0.609 spec=0.720
+  LODO    modma      AUC=0.713 acc=0.642 f1=0.622 sens=0.458 spec=0.793
+  LODO    mumtaz     AUC=0.746 acc=0.534 f1=0.491 sens=0.233 spec=0.857
+  LODO    opennuero  AUC=0.621 acc=0.595 f1=0.560 sens=0.413 spec=0.707

@@ -1,0 +1,8 @@
+### WDANet-MMD on CONNECTIVITY-ONLY (vs baseline seed42: MODMA 0.707, Mumtaz 0.913; prev full-MMD MODMA@3=0.743, Mumtaz@1=0.695) ###
+--- MODMA align 3.0 ---
+  Subject-level ROC-AUC : 0.6408   (primary)
+--- MUMTAZ align 3.0 ---
+  Subject-level ROC-AUC : 0.3774   (primary)
+--- MUMTAZ align 1.0 ---
+  Subject-level ROC-AUC : 0.4548   (primary)
+ALL DONE
